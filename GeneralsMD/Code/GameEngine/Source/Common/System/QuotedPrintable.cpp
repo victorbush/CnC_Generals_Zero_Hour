@@ -159,7 +159,7 @@ UnicodeString QuotedPrintableToUnicodeString(AsciiString original)
 
 	*c = 0;
 
-	UnicodeString out(dest);
+	UnicodeString out((WideChar*)dest);
 	return out;
 }
 

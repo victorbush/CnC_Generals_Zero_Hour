@@ -158,7 +158,7 @@ NetPacketList NetPacket::ConstructBigCommandPacketList(NetCommandRef *ref) {
 
 	if (!DoesCommandRequireACommandID(msg->getNetCommandType())) {
 		DEBUG_CRASH(("Trying to wrap a command that doesn't have a unique command ID"));
-		return NULL;
+		return NetPacketList();
 	}
 
 	UnsignedInt bufferSize = GetBufferSizeNeededForCommand(msg);  // need to implement.  I have a drinking problem.
@@ -5569,7 +5569,7 @@ NetCommandMsg * NetPacket::readDisconnectChatMessage(UnsignedByte *data, Int &i)
 	text[length] = 0;
 
 	UnicodeString unitext;
-	unitext.set(text);
+	unitext.set((WideChar*)text);
 
 	//DEBUG_LOG(("NetPacket::readDisconnectChatMessage - read message, message is %ls\n", unitext.str()));
 
@@ -5596,7 +5596,7 @@ NetCommandMsg * NetPacket::readChatMessage(UnsignedByte *data, Int &i) {
 
 
 	UnicodeString unitext;
-	unitext.set(text);
+	unitext.set((WideChar*)text);
 
 	//DEBUG_LOG(("NetPacket::readChatMessage - read message, message is %ls\n", unitext.str()));
 

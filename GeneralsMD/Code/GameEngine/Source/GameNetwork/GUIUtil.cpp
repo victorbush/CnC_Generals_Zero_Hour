@@ -338,7 +338,8 @@ void PopulateStartingCashComboBox(GameWindow *comboBox, GameInfo *myGame)
   const MultiplayerStartingMoneyList & startingCashMap = TheMultiplayerSettings->getStartingMoneyList(); 
   Int currentSelectionIndex = -1;
   
-  for ( MultiplayerStartingMoneyList::const_iterator it = startingCashMap.begin(); it != startingCashMap.end(); it++ )
+  MultiplayerStartingMoneyList::const_iterator it = startingCashMap.begin();
+  for ( ; it != startingCashMap.end(); it++ )
   {
     Int newIndex = GadgetComboBoxAddEntry(comboBox, formatMoneyForStartingCashComboBox( *it ), 
                                           comboBox->winGetEnabled() ? comboBox->winGetEnabledTextColor() : comboBox->winGetDisabledTextColor());

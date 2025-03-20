@@ -703,7 +703,7 @@ void RefreshGameListBox( GameWindow *win, Bool showMap )
 	GadgetListBoxReset(win);
 
 	// sort our games
-	typedef std::multiset<GameSpyStagingRoom *, GameSortStruct> SortedGameList;
+	typedef std::multiset<GameSpyStagingRoom * /*, GameSortStruct*/> SortedGameList;
 	SortedGameList sgl;
 	StagingRoomMap *srm = TheGameSpyInfo->getStagingRoomList();
 	populateBuddyGames();

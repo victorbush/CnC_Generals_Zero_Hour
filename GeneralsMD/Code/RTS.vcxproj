@@ -179,6 +179,7 @@
       <ObjectFileName>.\Main\Debug\</ObjectFileName>
       <ProgramDataBaseFileName>.\Main\Debug\</ProgramDataBaseFileName>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <ForceConformanceInForLoopScope>false</ForceConformanceInForLoopScope>
     </ClCompile>
     <Midl>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -263,6 +264,7 @@
       <PrecompiledHeaderOutputFile>.\Main\Release\RTS.pch</PrecompiledHeaderOutputFile>
       <ObjectFileName>.\Main\Release\</ObjectFileName>
       <ProgramDataBaseFileName>.\Main\Release\</ProgramDataBaseFileName>
+      <ForceConformanceInForLoopScope>false</ForceConformanceInForLoopScope>
     </ClCompile>
     <Midl>
       <SuppressStartupBanner>true</SuppressStartupBanner>

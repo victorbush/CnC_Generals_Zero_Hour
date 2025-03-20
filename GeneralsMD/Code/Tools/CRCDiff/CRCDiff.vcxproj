@@ -75,6 +75,7 @@
       <PrecompiledHeaderOutputFile>.\Release\CRCDiff.pch</PrecompiledHeaderOutputFile>
       <ObjectFileName>.\Release\</ObjectFileName>
       <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+      <ForceConformanceInForLoopScope>false</ForceConformanceInForLoopScope>
     </ClCompile>
     <Midl>
       <TypeLibraryName>.\Release\CRCDiff.tlb</TypeLibraryName>
@@ -111,6 +112,7 @@
       <ObjectFileName>.\Debug\</ObjectFileName>
       <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <ForceConformanceInForLoopScope>false</ForceConformanceInForLoopScope>
     </ClCompile>
     <Midl>
       <TypeLibraryName>.\Debug\CRCDiff.tlb</TypeLibraryName>

@@ -129,6 +129,7 @@
       <PrecompiledHeaderOutputFile>.\Internal\wwlib.pch</PrecompiledHeaderOutputFile>
       <ObjectFileName>.\Internal\</ObjectFileName>
       <ProgramDataBaseFileName>.\Internal\</ProgramDataBaseFileName>
+      <ForceConformanceInForLoopScope>false</ForceConformanceInForLoopScope>
     </ClCompile>
     <ResourceCompile>
       <Culture>0x0409</Culture>
@@ -159,6 +160,7 @@
       <PrecompiledHeaderOutputFile>.\DebugW3D\wwlib.pch</PrecompiledHeaderOutputFile>
       <ObjectFileName>.\DebugW3D\</ObjectFileName>
       <ProgramDataBaseFileName>.\DebugW3D\</ProgramDataBaseFileName>
+      <ForceConformanceInForLoopScope>false</ForceConformanceInForLoopScope>
     </ClCompile>
     <ResourceCompile>
       <Culture>0x0409</Culture>
@@ -189,6 +191,7 @@
       <ObjectFileName>.\Profile\</ObjectFileName>
       <ProgramDataBaseFileName>.\Profile\</ProgramDataBaseFileName>
       <AdditionalOptions> /Gh </AdditionalOptions>
+      <ForceConformanceInForLoopScope>false</ForceConformanceInForLoopScope>
     </ClCompile>
     <ResourceCompile>
       <Culture>0x0409</Culture>
@@ -218,6 +221,7 @@
       <PrecompiledHeaderOutputFile>.\Debug\wwlib.pch</PrecompiledHeaderOutputFile>
       <ObjectFileName>.\Debug\</ObjectFileName>
       <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <ForceConformanceInForLoopScope>false</ForceConformanceInForLoopScope>
     </ClCompile>
     <ResourceCompile>
       <Culture>0x0409</Culture>
@@ -247,6 +251,7 @@
       <PrecompiledHeaderOutputFile>.\Release\wwlib.pch</PrecompiledHeaderOutputFile>
       <ObjectFileName>.\Release\</ObjectFileName>
       <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+      <ForceConformanceInForLoopScope>false</ForceConformanceInForLoopScope>
     </ClCompile>
     <ResourceCompile>
       <Culture>0x0409</Culture>
@@ -259,6 +264,11 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <OutputFile>..\..\..\Lib\WWLib.lib</OutputFile>
     </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <ClCompile>
+      <ForceConformanceInForLoopScope>false</ForceConformanceInForLoopScope>
+    </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="argv.cpp">

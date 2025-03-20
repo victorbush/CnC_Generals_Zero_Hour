@@ -73,7 +73,7 @@ public:
 	bool		IsCameraShaking(void);
 	void		Update_Camera_Shaker(Vector3 camera_position, Vector3 * shaker_angles);
 
-protected:
+// protected:
 
 	/**
 	** CameraShakerClass 

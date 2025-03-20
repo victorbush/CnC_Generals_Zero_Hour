@@ -135,7 +135,7 @@ WindowMsgHandledType GadgetRadioButtonInput( GameWindow *window, UnsignedInt msg
 			if( BitTestWW( instData->getStyle(), GWS_MOUSE_TRACK ) ) 
 			{
 
-				BitSet( instData->m_state, WIN_STATE_HILITED );
+				BitSetWW( instData->m_state, WIN_STATE_HILITED );
 				TheWindowManager->winSendSystemMsg( instData->getOwner(), 
 																						GBM_MOUSE_ENTERING,
 																						(WindowMsgData)window, 
@@ -205,7 +205,7 @@ WindowMsgHandledType GadgetRadioButtonInput( GameWindow *window, UnsignedInt msg
 					unselectOtherRadioOfGroup(radioData->group, radioData->screen, window );
 
 				// this button is now selected
-				BitSet( instData->m_state, WIN_STATE_SELECTED );
+				BitSetWW( instData->m_state, WIN_STATE_SELECTED );
 
 			}  // end if, not selected
 			else if( BitTestWW( instData->getState(), WIN_STATE_HILITED ) == FALSE )
@@ -250,7 +250,7 @@ WindowMsgHandledType GadgetRadioButtonInput( GameWindow *window, UnsignedInt msg
 								unselectOtherRadioOfGroup(radioData->group, radioData->screen, window );
 
 							// this button is now selected
-							BitSet( instData->m_state, WIN_STATE_SELECTED );
+							BitSetWW( instData->m_state, WIN_STATE_SELECTED );
 
 						}  // end if, not selected
 
@@ -346,7 +346,7 @@ WindowMsgHandledType GadgetRadioButtonSystem( GameWindow *window, UnsignedInt ms
 					unselectOtherRadioOfGroup(radioData->group, radioData->screen, window );
 
 				// this button is now selected
-				BitSet( instData->m_state, WIN_STATE_SELECTED );
+				BitSetWW( instData->m_state, WIN_STATE_SELECTED );
 
 			}  // end if
 

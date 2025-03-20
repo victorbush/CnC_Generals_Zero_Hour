@@ -172,7 +172,7 @@ UnsignedInt Image::setStatus( UnsignedInt bit )
 {
 	UnsignedInt prevStatus = m_status;
 
-	BitSet( m_status, bit );
+	BitSetWW( m_status, bit );
 	return prevStatus;
 
 }  // end setStatus

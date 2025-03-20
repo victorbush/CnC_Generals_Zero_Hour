@@ -151,8 +151,8 @@ Bool ImagePacker::validateImages( void )
 		{
 
 			errors = TRUE;
-			BitSet( image->m_status, ImageInfo::TOOBIG );
-			BitSet( image->m_status, ImageInfo::CANTPROCESS );
+			BitSetWW( image->m_status, ImageInfo::TOOBIG );
+			BitSetWW( image->m_status, ImageInfo::CANTPROCESS );
 
 		}  // end if
 
@@ -164,8 +164,8 @@ Bool ImagePacker::validateImages( void )
 		{
 		
 			errors = TRUE;
-			BitSet( image->m_status, ImageInfo::INVALIDCOLORDEPTH );
-			BitSet( image->m_status, ImageInfo::CANTPROCESS );
+			BitSetWW( image->m_status, ImageInfo::INVALIDCOLORDEPTH );
+			BitSetWW( image->m_status, ImageInfo::CANTPROCESS );
 			
 		}  // end if
 

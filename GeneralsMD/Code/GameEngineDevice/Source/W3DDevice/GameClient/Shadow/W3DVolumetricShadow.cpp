@@ -2485,7 +2485,7 @@ void W3DVolumetricShadow::buildSilhouette(Int meshIndex, Vector3 *lightPosObject
 		// poly is visible from this location
 		//
 		if( Vector3::Dot_Product( lightVector, normal ) < 0.0f )
-			BitSet( polyNeighbor->status, POLY_VISIBLE );
+			BitSetWW( polyNeighbor->status, POLY_VISIBLE );
 
 	}  // end for i
 
@@ -2583,7 +2583,7 @@ void W3DVolumetricShadow::buildSilhouette(Int meshIndex, Vector3 *lightPosObject
 		// polygons that reference back to this one can ignore their
 		// processing cause any edges were already detected
 		//
-		BitSet( polyNeighbor->status, POLY_PROCESSED );
+		BitSetWW( polyNeighbor->status, POLY_PROCESSED );
 
 	}  // end for i
 	

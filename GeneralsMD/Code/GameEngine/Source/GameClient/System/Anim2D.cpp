@@ -577,7 +577,7 @@ void Anim2D::setStatus( UnsignedByte statusBits )
 {
 
 	// set the bits
-	BitSet( m_status, statusBits );
+	BitSetWW( m_status, statusBits );
 
 }  // end setStatus
 

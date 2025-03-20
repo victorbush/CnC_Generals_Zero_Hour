@@ -86,7 +86,7 @@ WindowMsgHandledType GadgetCheckBoxInput( GameWindow *window, UnsignedInt msg,
 			if( BitTestWW( instData->getStyle(), GWS_MOUSE_TRACK ) ) 
 			{
 
-				BitSet( instData->m_state, WIN_STATE_HILITED );
+				BitSetWW( instData->m_state, WIN_STATE_HILITED );
 				TheWindowManager->winSendSystemMsg( window->winGetOwner(), 
 																						GBM_MOUSE_ENTERING,
 																						(WindowMsgData)window, 
@@ -288,7 +288,7 @@ WindowMsgHandledType GadgetCheckBoxSystem( GameWindow *window, UnsignedInt msg,
 			if( mData1 == FALSE )
 				BitClearWW( instData->m_state, WIN_STATE_HILITED );
 			else
-				BitSet( instData->m_state, WIN_STATE_HILITED );
+				BitSetWW( instData->m_state, WIN_STATE_HILITED );
 			TheWindowManager->winSendSystemMsg( window->winGetOwner(), 
 																					GGM_FOCUS_CHANGE,
 																					mData1, 
@@ -332,7 +332,7 @@ void GadgetCheckBoxSetChecked( GameWindow *g, Bool isChecked)
 	WinInstanceData *instData = g->winGetInstanceData();
 	if (isChecked)
 	{
-		BitSet(instData->m_state,  WIN_STATE_SELECTED);
+		BitSetWW(instData->m_state,  WIN_STATE_SELECTED);
 	}
 	else
 	{
@@ -358,7 +358,7 @@ void GadgetCheckBoxToggle( GameWindow *g)
 	}
 	else
 	{
-		BitSet(instData->m_state,  WIN_STATE_SELECTED);
+		BitSetWW(instData->m_state,  WIN_STATE_SELECTED);
 	}
 
 	TheWindowManager->winSendSystemMsg( g->winGetOwner(), GBM_SELECTED,

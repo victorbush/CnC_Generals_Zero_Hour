@@ -468,7 +468,7 @@ Int GameWindow::winActivate( void )
 		return returnCode;
 
 	// activate it and unhide
-	BitSet( m_status, WIN_STATUS_ACTIVE );
+	BitSetWW( m_status, WIN_STATUS_ACTIVE );
 	winHide( FALSE );
 
 	return WIN_ERR_OK;
@@ -642,7 +642,7 @@ Int GameWindow::winEnable( Bool enable )
 	GameWindow *child;
 
 	if( enable )
-		BitSet( m_status, WIN_STATUS_ENABLED );
+		BitSetWW( m_status, WIN_STATUS_ENABLED );
 	else
 		BitClearWW( m_status, WIN_STATUS_ENABLED );
 
@@ -686,7 +686,7 @@ Int GameWindow::winHide( Bool hide )
 		if( !BitTestWW( m_status, WIN_STATUS_NO_FLUSH ) )
 			freeImages();
 
-		BitSet( m_status, WIN_STATUS_HIDDEN );
+		BitSetWW( m_status, WIN_STATUS_HIDDEN );
 
 		// notify the window manger we are hiding
 		TheWindowManager->windowHiding( this );
@@ -721,7 +721,7 @@ UnsignedInt GameWindow::winSetStatus( UnsignedInt status )
 	UnsignedInt oldStatus;
 
 	oldStatus = m_status;
-	BitSet( m_status, status );
+	BitSetWW( m_status, status );
 //	m_status = status;
 
 	return oldStatus;
@@ -769,7 +769,7 @@ void GameWindow::winSetHiliteState( Bool state )
 {
 
 	if( state )
-		BitSet( m_instData.m_state, WIN_STATE_HILITED );
+		BitSetWW( m_instData.m_state, WIN_STATE_HILITED );
 	else
 		BitClearWW( m_instData.m_state, WIN_STATE_HILITED );
 

@@ -825,17 +825,17 @@ UnsignedInt TexturePage::buildFitRegion( IRegion2D *region,
 	//
 	UnsignedInt fitBits = 0;
 	if( *xGutter != 0 )
-		BitSet( fitBits, ImageInfo::FIT_XGUTTER );
+		BitSetWW( fitBits, ImageInfo::FIT_XGUTTER );
 	if( *yGutter != 0 )
-		BitSet( fitBits, ImageInfo::FIT_YGUTTER );
+		BitSetWW( fitBits, ImageInfo::FIT_YGUTTER );
 	if( xBorder >= 1 )
-		BitSet( fitBits, ImageInfo::FIT_XBORDER_RIGHT );
+		BitSetWW( fitBits, ImageInfo::FIT_XBORDER_RIGHT );
 	if( xBorder == 2 )
-		BitSet( fitBits, ImageInfo::FIT_XBORDER_LEFT );
+		BitSetWW( fitBits, ImageInfo::FIT_XBORDER_LEFT );
 	if( yBorder >= 1 )
-		BitSet( fitBits, ImageInfo::FIT_YBORDER_BOTTOM );
+		BitSetWW( fitBits, ImageInfo::FIT_YBORDER_BOTTOM );
 	if( yBorder == 2 )
-		BitSet( fitBits, ImageInfo::FIT_YBORDER_TOP );
+		BitSetWW( fitBits, ImageInfo::FIT_YBORDER_TOP );
 
 	return fitBits;
 
@@ -1106,9 +1106,9 @@ Bool TexturePage::addImage( ImageInfo *image )
 				// we passed all tests, take up this spot
 				//
 				markRegionUsed( &region );  // marks region AND gutter used
-				BitClear( image->m_status, ImageInfo::TOOBIG );
-				BitClear( image->m_status, ImageInfo::UNPACKED );
-				BitSet( image->m_status, ImageInfo::PACKED );
+				BitClearWW( image->m_status, ImageInfo::TOOBIG );
+				BitClearWW( image->m_status, ImageInfo::UNPACKED );
+				BitSetWW( image->m_status, ImageInfo::PACKED );
 				image->m_page = this;
 
 				//
@@ -1127,7 +1127,7 @@ Bool TexturePage::addImage( ImageInfo *image )
 				// when copying the image data
 				//
 				if( tryRotate == TRUE )
-					BitSet( image->m_status, ImageInfo::ROTATED90C );
+					BitSetWW( image->m_status, ImageInfo::ROTATED90C );
 
 				//
 				// save the page position of this image, but do not include
@@ -1222,8 +1222,8 @@ Bool TexturePage::generateTexture( void )
 		sprintf( buffer, "Unable to allocate final packed image buffer\n" );
 		DEBUG_ASSERTCRASH( m_packedImage, (buffer) );
 		MessageBox( NULL, buffer, "Internal Error", MB_OK | MB_ICONERROR );
-		BitSet( m_status, PAGE_ERROR );
-		BitSet( m_status, CANT_ALLOCATE_PACKED_IMAGE );
+		BitSetWW( m_status, PAGE_ERROR );
+		BitSetWW( m_status, CANT_ALLOCATE_PACKED_IMAGE );
 		return FALSE;
 
 	}  // end if
@@ -1246,8 +1246,8 @@ Bool TexturePage::generateTexture( void )
 											bpp, image ) == FALSE )
 		{
 
-			BitSet( m_status, PAGE_ERROR );
-			BitSet( m_status, CANT_ADD_IMAGE_DATA );
+			BitSetWW( m_status, PAGE_ERROR );
+			BitSetWW( m_status, CANT_ADD_IMAGE_DATA );
 			return FALSE;
 
 		}  // end if
@@ -1273,8 +1273,8 @@ Bool TexturePage::writeFile( char *baseFilename )
 	if( baseFilename == NULL || m_targa == NULL )
 	{
 
-		BitSet( m_status, PAGE_ERROR );
-		BitSet( m_status, NO_TEXTURE_DATA );
+		BitSetWW( m_status, PAGE_ERROR );
+		BitSetWW( m_status, NO_TEXTURE_DATA );
 		return FALSE;
 
 	}  // end if
@@ -1288,15 +1288,15 @@ Bool TexturePage::writeFile( char *baseFilename )
 	Bool error = FALSE;
 	long flags = TGAF_IMAGE;
 	if( TheImagePacker->getCompressTextures() == TRUE )
-		BitSet( flags, TGAF_COMPRESS );
+		BitSetWW( flags, TGAF_COMPRESS );
 	error = m_targa->Save( filePath, flags , FALSE );
 
 	if( error != 0 )
 	{
 
 		// there was an error, set a status bit
-		BitSet( m_status, PAGE_ERROR );
-		BitSet( m_status, ERROR_DURING_SAVE );
+		BitSetWW( m_status, PAGE_ERROR );
+		BitSetWW( m_status, ERROR_DURING_SAVE );
 
 	}  // end if
 

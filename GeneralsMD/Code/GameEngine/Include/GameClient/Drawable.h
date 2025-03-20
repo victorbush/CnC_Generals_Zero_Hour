@@ -303,7 +303,7 @@ public:
 	void friend_bindToObject( Object *obj ); ///< bind this drawable to an object ID. for use ONLY by GameLogic!
 	void setIndicatorColor(Color color);
 	
-	void setTintStatus( TintStatus statusBits ) { BitSet( m_tintStatus, statusBits ); };
+	void setTintStatus( TintStatus statusBits ) { BitSetWW( m_tintStatus, statusBits ); };
 	void clearTintStatus( TintStatus statusBits ) { BitClearWW( m_tintStatus, statusBits ); };
 	Bool testTintStatus( TintStatus statusBits ) const { return BitTestWW( m_tintStatus, statusBits ); };
 	TintEnvelope *getColorTintEnvelope( void ) { return m_colorTintEnvelope; }
@@ -363,7 +363,7 @@ public:
 	DrawModule const** getDrawModules() const;
 
 	//---------------------------------------------------------------------------
-	void setDrawableStatus( DrawableStatus bit )  { BitSet( m_status, bit ); }
+	void setDrawableStatus( DrawableStatus bit )  { BitSetWW( m_status, bit ); }
 	void clearDrawableStatus( DrawableStatus bit ) { BitClearWW( m_status, bit ); }
 	inline Bool testDrawableStatus( DrawableStatus bit ) const { return (m_status & bit) != 0; }
 

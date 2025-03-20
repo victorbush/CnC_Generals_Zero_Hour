@@ -1478,7 +1478,7 @@ Int GameWindowManager::winDestroy( GameWindow *window )
 	if( BitTestWW( window->m_status, WIN_STATUS_DESTROYED ) )
 		return WIN_ERR_OK;
 
-	BitSet( window->m_status, WIN_STATUS_DESTROYED );
+	BitSetWW( window->m_status, WIN_STATUS_DESTROYED );
 	window->freeImages();
 
 	if( m_mouseCaptor == window )
@@ -2276,7 +2276,7 @@ GameWindow *GameWindowManager::gogoGadgetSlider( GameWindow *parent,
 	// All sliders need to have the tab stop status in order for
 	// the focus chain to work correctly.
 	//
-	BitSet( status, WIN_STATUS_TAB_STOP );
+	BitSetWW( status, WIN_STATUS_TAB_STOP );
 
 	if( BitTestWW( instData->getStyle(), GWS_HORZ_SLIDER ) ) 
 	{
@@ -2343,7 +2343,7 @@ GameWindow *GameWindowManager::gogoGadgetSlider( GameWindow *parent,
 
 	// if slider tracks, so will this sub control
 	if( BitTestWW( instData->getStyle(), GWS_MOUSE_TRACK ) )
-		BitSet( buttonInstData.m_style, GWS_MOUSE_TRACK );
+		BitSetWW( buttonInstData.m_style, GWS_MOUSE_TRACK );
 
 	if( BitTestWW( instData->getStyle(), GWS_HORZ_SLIDER ) )
 		button = gogoGadgetPushButton( slider, statusFlags, 0, HORIZONTAL_SLIDER_THUMB_POSITION,
@@ -2480,7 +2480,7 @@ GameWindow *GameWindowManager::gogoGadgetComboBox( GameWindow *parent,
 
 	// if listbox tracks, so will this sub control
 	if( BitTestWW( comboBox->winGetStyle(), GWS_MOUSE_TRACK ) )
-		BitSet( winInstData.m_style, GWS_MOUSE_TRACK );
+		BitSetWW( winInstData.m_style, GWS_MOUSE_TRACK );
 	
 	comboBoxData->dropDownButton =
 		 TheWindowManager->gogoGadgetPushButton( comboBox,
@@ -2501,7 +2501,7 @@ GameWindow *GameWindowManager::gogoGadgetComboBox( GameWindow *parent,
   winInstData.m_style |= GWS_ENTRY_FIELD;
 	winInstData.m_textLabelString = "Entry";
 	if( BitTestWW( comboBox->winGetStyle(), GWS_MOUSE_TRACK ) )
-		BitSet( winInstData.m_style, GWS_MOUSE_TRACK );
+		BitSetWW( winInstData.m_style, GWS_MOUSE_TRACK );
 	if( comboBoxData->isEditable)
 	{
 		statusTextEntry = status;
@@ -2529,8 +2529,8 @@ GameWindow *GameWindowManager::gogoGadgetComboBox( GameWindow *parent,
 	
 	winInstData.m_owner = comboBox;
   if( BitTestWW( comboBox->winGetStyle(), GWS_MOUSE_TRACK ) )
-		BitSet( winInstData.m_style, GWS_MOUSE_TRACK );
-	BitSet( winInstData.m_style, WIN_STATUS_HIDDEN );
+		BitSetWW( winInstData.m_style, GWS_MOUSE_TRACK );
+	BitSetWW( winInstData.m_style, WIN_STATUS_HIDDEN );
   winInstData.m_style |= GWS_SCROLL_LISTBOX; 
 	status &= ~(WIN_STATUS_IMAGE);
   comboBoxData->listBox = TheWindowManager->gogoGadgetListBox( comboBox, status | WIN_STATUS_ABOVE | WIN_STATUS_ONE_LINE, 0, height, 
@@ -3752,7 +3752,7 @@ Bool GameWindowManager::initTestGUI( void )
 
 	// make a push button
 	instData.init();
-	BitSet( instData.m_style, GWS_PUSH_BUTTON | GWS_MOUSE_TRACK );
+	BitSetWW( instData.m_style, GWS_PUSH_BUTTON | GWS_MOUSE_TRACK );
 	instData.m_textLabelString = "What Up?";
 	window = TheWindowManager->gogoGadgetPushButton( NULL, 
 																									 WIN_STATUS_ENABLED | WIN_STATUS_IMAGE, 
@@ -3762,7 +3762,7 @@ Bool GameWindowManager::initTestGUI( void )
 
 	// make a push button
 	instData.init();
-	BitSet( instData.m_style, GWS_PUSH_BUTTON | GWS_MOUSE_TRACK );
+	BitSetWW( instData.m_style, GWS_PUSH_BUTTON | GWS_MOUSE_TRACK );
 	instData.m_textLabelString = "Enabled";
 	window = TheWindowManager->gogoGadgetPushButton( NULL, 
 																									 WIN_STATUS_ENABLED, 
@@ -3772,7 +3772,7 @@ Bool GameWindowManager::initTestGUI( void )
 
 	// make a push button
 	instData.init();
-	BitSet( instData.m_style, GWS_PUSH_BUTTON | GWS_MOUSE_TRACK );
+	BitSetWW( instData.m_style, GWS_PUSH_BUTTON | GWS_MOUSE_TRACK );
 	instData.m_textLabelString = "Disabled";
 	window = TheWindowManager->gogoGadgetPushButton( NULL, 
 																									 0, 

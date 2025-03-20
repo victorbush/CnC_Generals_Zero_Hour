@@ -926,7 +926,7 @@ WindowMsgHandledType GadgetListBoxInput( GameWindow *window, UnsignedInt msg,
 			if( BitTestWW( instData->getStyle(), GWS_MOUSE_TRACK ) ) 
 			{
 
-				BitSet( instData->m_state, WIN_STATE_HILITED );
+				BitSetWW( instData->m_state, WIN_STATE_HILITED );
 				TheWindowManager->winSendSystemMsg( window->winGetOwner(), 
 																						GBM_MOUSE_ENTERING,
 																						(WindowMsgData)window, 
@@ -1204,7 +1204,7 @@ WindowMsgHandledType GadgetListBoxMultiInput( GameWindow *window, UnsignedInt ms
 			if( BitTestWW( instData->getStyle(), GWS_MOUSE_TRACK ) ) 
 			{
 
-				BitSet( instData->m_state, WIN_STATE_HILITED );
+				BitSetWW( instData->m_state, WIN_STATE_HILITED );
 				TheWindowManager->winSendSystemMsg( window->winGetOwner(), 
 																						GBM_MOUSE_ENTERING,
 																						(WindowMsgData)window, 
@@ -1992,7 +1992,7 @@ WindowMsgHandledType GadgetListBoxSystem( GameWindow *window, UnsignedInt msg,
 			}
 			else
 			{
-				BitSet( instData->m_state, WIN_STATE_HILITED );
+				BitSetWW( instData->m_state, WIN_STATE_HILITED );
 			}
 
 			TheWindowManager->winSendSystemMsg( window->winGetOwner(), 
@@ -2346,7 +2346,7 @@ void GadgetListboxCreateScrollbar( GameWindow *listbox )
 
 	// if listbox tracks, so will this sub control
 	if( BitTestWW( listbox->winGetStyle(), GWS_MOUSE_TRACK ) )
-		BitSet( winInstData.m_style, GWS_MOUSE_TRACK );
+		BitSetWW( winInstData.m_style, GWS_MOUSE_TRACK );
 
 	listData->upButton = 
 		 TheWindowManager->gogoGadgetPushButton( listbox,
@@ -2365,7 +2365,7 @@ void GadgetListboxCreateScrollbar( GameWindow *listbox )
 
 	// if listbox tracks, so will this sub control
 	if( BitTestWW( listbox->winGetStyle(), GWS_MOUSE_TRACK ) )
-		BitSet( winInstData.m_style, GWS_MOUSE_TRACK );
+		BitSetWW( winInstData.m_style, GWS_MOUSE_TRACK );
 
 	listData->downButton = 
 			 TheWindowManager->gogoGadgetPushButton( listbox,
@@ -2390,7 +2390,7 @@ void GadgetListboxCreateScrollbar( GameWindow *listbox )
 
 	// if listbox tracks, so will this sub control
 	if( BitTestWW( listbox->winGetStyle(), GWS_MOUSE_TRACK ) )
-		BitSet( winInstData.m_style, GWS_MOUSE_TRACK );
+		BitSetWW( winInstData.m_style, GWS_MOUSE_TRACK );
 
 	// intialize sData
 	memset( &sData, 0, sizeof(SliderData) );

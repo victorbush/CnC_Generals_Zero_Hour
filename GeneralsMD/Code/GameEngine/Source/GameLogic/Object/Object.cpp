@@ -1980,7 +1980,7 @@ void Object::healCompletely()
 void Object::setEffectivelyDead(Bool dead)
 {
 	if (dead)
-		BitSet(m_privateStatus, EFFECTIVELY_DEAD);
+		BitSetWW(m_privateStatus, EFFECTIVELY_DEAD);
 	else
 		BitClearWW(m_privateStatus, EFFECTIVELY_DEAD);
 
@@ -1995,7 +1995,7 @@ void Object::setEffectivelyDead(Bool dead)
 void Object::setCaptured(Bool isCaptured)
 {
 	if (isCaptured)
-		BitSet(m_privateStatus, CAPTURED);
+		BitSetWW(m_privateStatus, CAPTURED);
 	else 
 	{
 		DEBUG_LOG(("Clearing Captured Status. This should never happen. jkmcd"));
@@ -5266,7 +5266,7 @@ void Object::setVisionSpied(Bool setting, Int byWhom)
 		for (Int i = 0; i < MAX_PLAYER_COUNT; ++i) 
 		{
 			if( m_visionSpiedBy[i] > 0 )
-				BitSet( workingMask, ( 1 << i ) );
+				BitSetWW( workingMask, ( 1 << i ) );
 			else
 				BitClearWW( workingMask, ( 1 << i ) );
 		}

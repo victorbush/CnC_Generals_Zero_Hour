@@ -1288,7 +1288,7 @@ void WaterRenderObjClass::update( void )
 								fabs( pData->velocity ) < AT_REST_VELOCITY_FUDGE )
 						{
 
-							BitClear( pData->status, WaterRenderObjClass::IN_MOTION );
+							BitClearWW( pData->status, WaterRenderObjClass::IN_MOTION );
 							pData->height = pData->preferredHeight;
 							pData->velocity = 0.0f;
 
@@ -2522,7 +2522,7 @@ void WaterRenderObjClass::addVelocity( Real worldX, Real worldY,
 					meshPoint->velocity = meshPoint->velocity + zVelocity;				
 
 					// this point is now "in motion"
-					BitSet( meshPoint->status, WaterRenderObjClass::IN_MOTION );
+					BitSetWW( meshPoint->status, WaterRenderObjClass::IN_MOTION );
 
 				}
 			}

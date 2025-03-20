@@ -92,7 +92,7 @@ WindowMsgHandledType GadgetHorizontalSliderInput( GameWindow *window, UnsignedIn
 			if( BitTestWW( instData->getStyle(), GWS_MOUSE_TRACK ) ) 
 			{
 
-				BitSet( instData->m_state, WIN_STATE_HILITED );
+				BitSetWW( instData->m_state, WIN_STATE_HILITED );
 				TheWindowManager->winSendSystemMsg( window->winGetOwner(), 
 																						GBM_MOUSE_ENTERING,
 																						(WindowMsgData)window, 
@@ -104,7 +104,7 @@ WindowMsgHandledType GadgetHorizontalSliderInput( GameWindow *window, UnsignedIn
 			if(window->winGetChild() && BitTestWW(window->winGetChild()->winGetStyle(),GWS_PUSH_BUTTON) )
 			{
 				WinInstanceData *instDataChild = window->winGetChild()->winGetInstanceData();
-				BitSet(instDataChild->m_state, WIN_STATE_HILITED);
+				BitSetWW(instDataChild->m_state, WIN_STATE_HILITED);
 			}
 
 			break;
@@ -447,7 +447,7 @@ WindowMsgHandledType GadgetHorizontalSliderSystem( GameWindow *window, UnsignedI
 			if( mData1 == FALSE )
 				BitClearWW( instData->m_state, WIN_STATE_HILITED );
 			else
-				BitSet( instData->m_state, WIN_STATE_HILITED );
+				BitSetWW( instData->m_state, WIN_STATE_HILITED );
 
 			TheWindowManager->winSendSystemMsg( window->winGetOwner(), 
 																					GGM_FOCUS_CHANGE,

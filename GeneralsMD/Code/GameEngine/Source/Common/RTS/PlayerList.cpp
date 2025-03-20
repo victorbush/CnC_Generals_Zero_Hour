@@ -406,7 +406,7 @@ PlayerMaskType PlayerList::getPlayersWithRelationship( Int srcPlayerIndex, Unsig
 		return retVal;
 
 	if (BitTestWW(allowedRelationships, ALLOW_SAME_PLAYER))
-		BitSet(retVal, srcPlayer->getPlayerMask());
+		BitSetWW(retVal, srcPlayer->getPlayerMask());
 
 	for ( Int i = 0; i < getPlayerCount(); ++i )
 	{
@@ -421,15 +421,15 @@ PlayerMaskType PlayerList::getPlayersWithRelationship( Int srcPlayerIndex, Unsig
 		{
 			case ENEMIES:
 				if (BitTestWW(allowedRelationships, ALLOW_ENEMIES))
-					BitSet(retVal, player->getPlayerMask());
+					BitSetWW(retVal, player->getPlayerMask());
 				break;
 			case ALLIES:
 				if (BitTestWW(allowedRelationships, ALLOW_ALLIES))
-					BitSet(retVal, player->getPlayerMask());
+					BitSetWW(retVal, player->getPlayerMask());
 				break;
 			case NEUTRAL:
 				if (BitTestWW(allowedRelationships, ALLOW_NEUTRAL))
-					BitSet(retVal, player->getPlayerMask());
+					BitSetWW(retVal, player->getPlayerMask());
 				break;
 		}
 	}

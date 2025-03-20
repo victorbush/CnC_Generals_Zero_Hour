@@ -229,7 +229,7 @@ WindowMsgHandledType GadgetComboBoxInput( GameWindow *window, UnsignedInt msg,
 			if( BitTestWW( instData->getStyle(), GWS_MOUSE_TRACK ) ) 
 			{
 
-				BitSet( instData->m_state, WIN_STATE_HILITED );
+				BitSetWW( instData->m_state, WIN_STATE_HILITED );
 				TheWindowManager->winSendSystemMsg( window->winGetOwner(), 
 																						GBM_MOUSE_ENTERING,
 																						(WindowMsgData)window, 
@@ -614,7 +614,7 @@ WindowMsgHandledType GadgetComboBoxSystem( GameWindow *window, UnsignedInt msg,
 			}
 			else
 			{
-				BitSet( instData->m_state, WIN_STATE_HILITED );
+				BitSetWW( instData->m_state, WIN_STATE_HILITED );
 			}
 
 			TheWindowManager->winSendSystemMsg( window->winGetOwner(), 
@@ -828,8 +828,8 @@ void GadgetComboBoxSetIsEditable(GameWindow *comboBox, Bool isEditable  )
 	{
 		status = editBox->winGetStatus();
 		
-		BitSet(status, WIN_STATUS_NO_INPUT);
-//		BitSet(status, WIN_STATUS_NO_FOCUS);
+		BitSetWW(status, WIN_STATUS_NO_INPUT);
+//		BitSetWW(status, WIN_STATUS_NO_FOCUS);
 		editBox->winSetStatus(status);
 	}
 }//void GadgetComboBoxSetIsEditable(GameWindow *comboBox, Int maxChars )

@@ -557,7 +557,7 @@ void MainMenuInit( WindowLayout *layout, void *userData )
 	WinInstanceData instData;
 #ifdef TEST_COMPRESSION
 	instData.init();
-	BitSet( instData.m_style, GWS_PUSH_BUTTON | GWS_MOUSE_TRACK );
+	BitSetWW( instData.m_style, GWS_PUSH_BUTTON | GWS_MOUSE_TRACK );
 	instData.m_textLabelString = "Debug: Compress/Decompress Maps";
 	instData.setTooltipText(UnicodeString(L"Only Used in Debug and Internal!"));
 	buttonCompressTest = TheWindowManager->gogoGadgetPushButton( parentMainMenu, 
@@ -568,7 +568,7 @@ void MainMenuInit( WindowLayout *layout, void *userData )
 #endif // TEST_COMPRESSION
 
 	instData.init();
-	BitSet( instData.m_style, GWS_PUSH_BUTTON | GWS_MOUSE_TRACK );
+	BitSetWW( instData.m_style, GWS_PUSH_BUTTON | GWS_MOUSE_TRACK );
 	instData.m_textLabelString = "Debug: Load Map";
 	
 	instData.setTooltipText(UnicodeString(L"Only Used in Debug and Internal!"));

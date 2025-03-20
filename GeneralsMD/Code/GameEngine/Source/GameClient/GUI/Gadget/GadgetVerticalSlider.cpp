@@ -90,7 +90,7 @@ WindowMsgHandledType GadgetVerticalSliderInput( GameWindow *window, UnsignedInt 
 			if( BitTestWW( instData->getStyle(), GWS_MOUSE_TRACK ) ) 
 			{
 
-				BitSet( instData->m_state, WIN_STATE_HILITED );
+				BitSetWW( instData->m_state, WIN_STATE_HILITED );
 				TheWindowManager->winSendSystemMsg( window->winGetOwner(), 
 																						GBM_MOUSE_ENTERING,
 																						(WindowMsgData)window, 
@@ -436,7 +436,7 @@ WindowMsgHandledType GadgetVerticalSliderSystem( GameWindow *window, UnsignedInt
 			{
 				BitClearWW( instData->m_state, WIN_STATE_HILITED );
 			} else {
-				BitSet( instData->m_state, WIN_STATE_HILITED );
+				BitSetWW( instData->m_state, WIN_STATE_HILITED );
 			}
 
 			TheWindowManager->winSendSystemMsg( window->winGetOwner(), 

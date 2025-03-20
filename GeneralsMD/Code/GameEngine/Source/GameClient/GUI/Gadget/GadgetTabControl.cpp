@@ -310,7 +310,7 @@ void GadgetTabControlCreateSubPanes( GameWindow *tabControl )///< Create User Wi
 																																	PassSelectedButtonsToParentSystem,
 																																	NULL);
 			WinInstanceData *instData = tabData->subPanes[paneIndex]->winGetInstanceData();
-			BitSet( instData->m_style, GWS_TAB_PANE  );
+			BitSetWW( instData->m_style, GWS_TAB_PANE  );
 			char buffer[20];
 			sprintf( buffer, "Pane %d", paneIndex );
 			instData->m_decoratedNameString = buffer;

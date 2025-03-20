@@ -82,7 +82,7 @@ void DynamicAudioEventInfo::overrideLoopFlag( Bool newLoopFlag )
   m_overriddenFields.set( OVERRIDE_LOOP_FLAG );
   
   if ( newLoopFlag)
-    BitSet( m_control, AC_LOOP );
+    BitSetWW( m_control, AC_LOOP );
   else
     BitClearWW( m_control, AC_LOOP );
 }
@@ -179,7 +179,7 @@ void DynamicAudioEventInfo::xferNoName( Xfer * xfer )
     {
       if ( m_overriddenFields.test( field ) )
       {
-        BitSet( overriddenFlags, 1 << field );
+        BitSetWW( overriddenFlags, 1 << field );
       }
     }
     xfer->xferUnsignedByte( &overriddenFlags );
@@ -191,7 +191,7 @@ void DynamicAudioEventInfo::xferNoName( Xfer * xfer )
     xfer->xferBool( &loopFlag );
     if ( loopFlag )
     {
-      BitSet( m_control, AC_LOOP );
+      BitSetWW( m_control, AC_LOOP );
     }
     else
     {

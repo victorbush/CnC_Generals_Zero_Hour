@@ -102,7 +102,7 @@ WindowMsgHandledType GadgetPushButtonInput( GameWindow *window,
 
 			if( BitTestWW( instData->getStyle(), GWS_MOUSE_TRACK ) ) 
 			{
-				BitSet( instData->m_state, WIN_STATE_HILITED );
+				BitSetWW( instData->m_state, WIN_STATE_HILITED );
 
 				TheWindowManager->winSendSystemMsg( instData->getOwner(), 
 																						GBM_MOUSE_ENTERING,
@@ -114,7 +114,7 @@ WindowMsgHandledType GadgetPushButtonInput( GameWindow *window,
 			if(window->winGetParent() && BitTestWW(window->winGetParent()->winGetStyle(),GWS_HORZ_SLIDER) )
 			{
 				WinInstanceData *instDataParent = window->winGetParent()->winGetInstanceData();
-				BitSet(instDataParent->m_state, WIN_STATE_HILITED);
+				BitSetWW(instDataParent->m_state, WIN_STATE_HILITED);
 			}
 			break;
 
@@ -186,7 +186,7 @@ WindowMsgHandledType GadgetPushButtonInput( GameWindow *window,
 				if( BitTestWW( instData->m_state, WIN_STATE_SELECTED ) )
 					BitClearWW( instData->m_state, WIN_STATE_SELECTED );
 				else
-					BitSet( instData->m_state, WIN_STATE_SELECTED );
+					BitSetWW( instData->m_state, WIN_STATE_SELECTED );
 
 
 			}  // end if
@@ -194,7 +194,7 @@ WindowMsgHandledType GadgetPushButtonInput( GameWindow *window,
 			{
 				
 				// just select as normal
-				BitSet( instData->m_state, WIN_STATE_SELECTED );
+				BitSetWW( instData->m_state, WIN_STATE_SELECTED );
 
 			}  // end else
 
@@ -269,7 +269,7 @@ WindowMsgHandledType GadgetPushButtonInput( GameWindow *window,
 					if( BitTestWW( instData->m_state, WIN_STATE_SELECTED ) )
 						BitClearWW( instData->m_state, WIN_STATE_SELECTED );
 					else
-						BitSet( instData->m_state, WIN_STATE_SELECTED );
+						BitSetWW( instData->m_state, WIN_STATE_SELECTED );
 
 					TheWindowManager->winSendSystemMsg( instData->getOwner(), GBM_SELECTED_RIGHT,
 																							(WindowMsgData)window, mData1 );
@@ -279,7 +279,7 @@ WindowMsgHandledType GadgetPushButtonInput( GameWindow *window,
 				{
 					
 					// just select as normal
-					BitSet( instData->m_state, WIN_STATE_SELECTED );
+					BitSetWW( instData->m_state, WIN_STATE_SELECTED );
 
 				}  // end else
 
@@ -375,7 +375,7 @@ WindowMsgHandledType GadgetPushButtonInput( GameWindow *window,
 							if( BitTestWW( instData->m_state, WIN_STATE_SELECTED ) )
 								BitClearWW( instData->m_state, WIN_STATE_SELECTED );
 							else
-								BitSet( instData->m_state, WIN_STATE_SELECTED );
+								BitSetWW( instData->m_state, WIN_STATE_SELECTED );
 
 							TheWindowManager->winSendSystemMsg( instData->getOwner(), GBM_SELECTED,
 																									(WindowMsgData)window, mData1 );
@@ -385,7 +385,7 @@ WindowMsgHandledType GadgetPushButtonInput( GameWindow *window,
 						{
 							
 							// just select as normal
-							BitSet( instData->m_state, WIN_STATE_SELECTED );
+							BitSetWW( instData->m_state, WIN_STATE_SELECTED );
 
 						}  // end else
 
@@ -478,7 +478,7 @@ WindowMsgHandledType GadgetPushButtonSystem( GameWindow *window, UnsignedInt msg
 			if( mData1 == FALSE )
 				BitClearWW( instData->m_state, WIN_STATE_HILITED );
 			else
-				BitSet( instData->m_state, WIN_STATE_HILITED );
+				BitSetWW( instData->m_state, WIN_STATE_HILITED );
 
 			TheWindowManager->winSendSystemMsg( instData->getOwner(), 
 																					GGM_FOCUS_CHANGE,
@@ -529,7 +529,7 @@ void GadgetCheckLikeButtonSetVisualCheck( GameWindow *g, Bool checked )
 	{
 
 		if( checked == TRUE )
-			BitSet( instData->m_state, WIN_STATE_SELECTED );
+			BitSetWW( instData->m_state, WIN_STATE_SELECTED );
 		else
 			BitClearWW( instData->m_state, WIN_STATE_SELECTED );
 
@@ -578,7 +578,7 @@ void GadgetButtonEnableCheckLike( GameWindow *g, Bool makeCheckLike, Bool initia
 
 	// set the initially checked "state"
 	if( initiallyChecked )
-		BitSet( instData->m_state, WIN_STATE_SELECTED );
+		BitSetWW( instData->m_state, WIN_STATE_SELECTED );
 	else
 		BitClearWW( instData->m_state, WIN_STATE_SELECTED );
 

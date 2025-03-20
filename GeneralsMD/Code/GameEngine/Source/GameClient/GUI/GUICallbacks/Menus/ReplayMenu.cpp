@@ -294,7 +294,7 @@ void ReplayMenuInit( WindowLayout *layout, void *userData )
 #if defined _DEBUG || defined _INTERNAL
 	WinInstanceData instData;
 	instData.init();
-	BitSet( instData.m_style, GWS_PUSH_BUTTON | GWS_MOUSE_TRACK );
+	BitSetWW( instData.m_style, GWS_PUSH_BUTTON | GWS_MOUSE_TRACK );
 	instData.m_textLabelString = "Debug: Analyze Replay";
 	instData.setTooltipText(UnicodeString(L"Only Used in Debug and Internal!"));
 	buttonAnalyzeReplay = TheWindowManager->gogoGadgetPushButton( parentReplayMenu, 

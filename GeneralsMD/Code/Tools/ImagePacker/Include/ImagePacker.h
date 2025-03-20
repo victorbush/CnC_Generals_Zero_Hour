@@ -204,8 +204,8 @@ inline char *ImagePacker::getOutputFile( void ) { return m_outputFile; }
 inline char *ImagePacker::getOutputDirectory( void ) { return m_outputDirectory; }
 inline void ImagePacker::setCompressTextures( Bool compress ) { m_compressTextures = compress; }
 inline Bool ImagePacker::getCompressTextures( void ) { return m_compressTextures; }
-inline void ImagePacker::setGapMethod( UnsignedInt methodBit ) { BitSet( m_gapMethod, methodBit ); }
-inline void ImagePacker::clearGapMethod( UnsignedInt methodBit ) { BitClear( m_gapMethod, methodBit ); }
+inline void ImagePacker::setGapMethod( UnsignedInt methodBit ) { BitSetWW( m_gapMethod, methodBit ); }
+inline void ImagePacker::clearGapMethod( UnsignedInt methodBit ) { BitClearWW( m_gapMethod, methodBit ); }
 inline UnsignedInt ImagePacker::getGapMethod( void ) { return m_gapMethod; }
 
 ///////////////////////////////////////////////////////////////////////////////

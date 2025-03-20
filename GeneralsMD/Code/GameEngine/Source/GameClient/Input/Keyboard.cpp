@@ -182,7 +182,7 @@ void Keyboard::updateKeys( void )
 		{
 
 			// set in the modifier data into the already existing up/down state
-			BitSet( m_keys[ index ].state, m_modifiers );
+			BitSetWW( m_keys[ index ].state, m_modifiers );
 
 			// next key
 			index++;

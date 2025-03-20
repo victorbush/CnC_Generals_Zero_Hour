@@ -1559,7 +1559,7 @@ GameWindow *GUIEdit::newUserWindow( GameWindow *parent, Int x, Int y,
 
 	// a window created in the editor here is a user window
 	WinInstanceData *instData = window->winGetInstanceData();
-	BitSet( instData->m_style, GWS_USER_WINDOW );
+	BitSetWW( instData->m_style, GWS_USER_WINDOW );
 
 	// set default colors based on the default scheme
 	ImageAndColorInfo *info;

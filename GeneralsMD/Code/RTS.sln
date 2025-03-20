@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31624.102
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Benchmark", "LIBRARIES\Source\Benchmark\Benchmark.vcxproj", "{1AB110EC-6226-41E8-A86C-A197A1514A9D}"
 EndProject
@@ -70,6 +70,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "wwshade", "Libraries\Source\WWVegas\wwshade\wwshade.vcxproj", "{9AF6C7F8-8A46-42D7-A2AF-F1660B680E9B}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "wwutil", "Libraries\Source\WWVegas\Wwutil\wwutil.vcxproj", "{1B1C1D06-CBD5-4833-A60A-ECF52E8E5CE6}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bink", "Libraries\Source\Bink\bink.vcxproj", "{E1201E18-EFA6-497F-A64E-FA9E17640DBD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -724,6 +726,28 @@ Global
 		{1B1C1D06-CBD5-4833-A60A-ECF52E8E5CE6}.Spanish|x86.Build.0 = Debug|Win32
 		{1B1C1D06-CBD5-4833-A60A-ECF52E8E5CE6}.Template|x86.ActiveCfg = Template|Win32
 		{1B1C1D06-CBD5-4833-A60A-ECF52E8E5CE6}.Template|x86.Build.0 = Template|Win32
+		{E1201E18-EFA6-497F-A64E-FA9E17640DBD}.Debug|x86.ActiveCfg = Debug|Win32
+		{E1201E18-EFA6-497F-A64E-FA9E17640DBD}.Debug|x86.Build.0 = Debug|Win32
+		{E1201E18-EFA6-497F-A64E-FA9E17640DBD}.DebugE|x86.ActiveCfg = Debug|Win32
+		{E1201E18-EFA6-497F-A64E-FA9E17640DBD}.DebugE|x86.Build.0 = Debug|Win32
+		{E1201E18-EFA6-497F-A64E-FA9E17640DBD}.DebugW3D|x86.ActiveCfg = Debug|Win32
+		{E1201E18-EFA6-497F-A64E-FA9E17640DBD}.DebugW3D|x86.Build.0 = Debug|Win32
+		{E1201E18-EFA6-497F-A64E-FA9E17640DBD}.French|x86.ActiveCfg = Debug|Win32
+		{E1201E18-EFA6-497F-A64E-FA9E17640DBD}.French|x86.Build.0 = Debug|Win32
+		{E1201E18-EFA6-497F-A64E-FA9E17640DBD}.German|x86.ActiveCfg = Debug|Win32
+		{E1201E18-EFA6-497F-A64E-FA9E17640DBD}.German|x86.Build.0 = Debug|Win32
+		{E1201E18-EFA6-497F-A64E-FA9E17640DBD}.Internal|x86.ActiveCfg = Debug|Win32
+		{E1201E18-EFA6-497F-A64E-FA9E17640DBD}.Internal|x86.Build.0 = Debug|Win32
+		{E1201E18-EFA6-497F-A64E-FA9E17640DBD}.Profile|x86.ActiveCfg = Debug|Win32
+		{E1201E18-EFA6-497F-A64E-FA9E17640DBD}.Profile|x86.Build.0 = Debug|Win32
+		{E1201E18-EFA6-497F-A64E-FA9E17640DBD}.ProfileE|x86.ActiveCfg = Debug|Win32
+		{E1201E18-EFA6-497F-A64E-FA9E17640DBD}.ProfileE|x86.Build.0 = Debug|Win32
+		{E1201E18-EFA6-497F-A64E-FA9E17640DBD}.Release|x86.ActiveCfg = Debug|Win32
+		{E1201E18-EFA6-497F-A64E-FA9E17640DBD}.Release|x86.Build.0 = Debug|Win32
+		{E1201E18-EFA6-497F-A64E-FA9E17640DBD}.Spanish|x86.ActiveCfg = Debug|Win32
+		{E1201E18-EFA6-497F-A64E-FA9E17640DBD}.Spanish|x86.Build.0 = Debug|Win32
+		{E1201E18-EFA6-497F-A64E-FA9E17640DBD}.Template|x86.ActiveCfg = Debug|Win32
+		{E1201E18-EFA6-497F-A64E-FA9E17640DBD}.Template|x86.Build.0 = Debug|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

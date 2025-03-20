@@ -1,0 +1,5 @@
+# Compiled shaders from nvasm.
+# For some reason the output arg to nvasm doesn't work?
+# So they get spit out here and then copied to Run directory as a postbuild step.
+*.pso
+*.vso

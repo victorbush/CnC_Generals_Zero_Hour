@@ -111,21 +111,21 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="emfloat.c" />
-    <ClCompile Include="misc.c" />
-    <ClCompile Include="nbench0.c" />
-    <ClCompile Include="nbench1.c" />
-    <ClCompile Include="sysspec.c" />
+    <ClCompile Include="nbench\emfloat.c" />
+    <ClCompile Include="nbench\misc.c" />
+    <ClCompile Include="nbench\nbench0.c" />
+    <ClCompile Include="nbench\nbench1.c" />
+    <ClCompile Include="nbench\sysspec.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="benchmark.h" />
-    <ClInclude Include="emfloat.h" />
-    <ClInclude Include="misc.h" />
-    <ClInclude Include="nbench0.h" />
-    <ClInclude Include="nbench1.h" />
-    <ClInclude Include="nmglobal.h" />
-    <ClInclude Include="sysspec.h" />
-    <ClInclude Include="wordcat.h" />
+    <ClInclude Include="nbench\benchmark.h" />
+    <ClInclude Include="nbench\emfloat.h" />
+    <ClInclude Include="nbench\misc.h" />
+    <ClInclude Include="nbench\nbench0.h" />
+    <ClInclude Include="nbench\nbench1.h" />
+    <ClInclude Include="nbench\nmglobal.h" />
+    <ClInclude Include="nbench\sysspec.h" />
+    <ClInclude Include="nbench\wordcat.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

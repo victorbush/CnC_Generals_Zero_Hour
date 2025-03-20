@@ -59,7 +59,7 @@ class SnowManager;
 
 /// Function pointers for use by GameClient callback functions.
 typedef void (*GameClientFuncPtr)( Drawable *draw, void *userData ); 
-//typedef std::hash_map<DrawableID, Drawable *, rts::hash<DrawableID>, rts::equal_to<DrawableID> > DrawablePtrHash;
+//typedef std::unordered_map<DrawableID, Drawable *, rts::hash<DrawableID>, rts::equal_to<DrawableID> > DrawablePtrHash;
 //typedef DrawablePtrHash::iterator DrawablePtrHashIt;
 
 typedef std::vector<Drawable*> DrawablePtrVector;

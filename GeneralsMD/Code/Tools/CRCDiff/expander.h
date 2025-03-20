@@ -27,8 +27,8 @@
 #define __EXPANDER_H__
 
 #include <map>
-#include <hash_map>
 #include <string>
+#include <unordered_map>
 
 typedef std::map<std::string, std::string> ExpansionMap;
 

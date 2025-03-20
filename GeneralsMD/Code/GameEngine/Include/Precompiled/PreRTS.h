@@ -90,13 +90,13 @@ class STLSpecialAlloc;
 // srj sez: no, include STLTypesdefs below, instead, thanks
 //#include <algorithm>
 //#include <bitset>
-//#include <hash_map>
 //#include <list>
 //#include <map>
 //#include <queue>
 //#include <set>
 //#include <stack>
 //#include <string>
+//#include <unordered_map>
 //#include <vector>
 
 //------------------------------------------------------------------------------------ RTS Includes

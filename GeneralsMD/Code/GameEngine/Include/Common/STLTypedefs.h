@@ -70,13 +70,13 @@ enum DrawableID;
 
 #include <algorithm>
 #include <bitset>
-#include <hash_map>
 #include <list>
 #include <map>
 #include <queue>
 #include <set>
 #include <stack>
 #include <string>
+#include <unordered_map>
 #include <vector>
 
 // List of AsciiStrings to allow list of ThingTemplate names from INI and such

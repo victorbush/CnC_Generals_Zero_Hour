@@ -1,0 +1,3720 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{f0cb4316-5523-4751-b861-c3e3d7016bfd}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Common">
+      <UniqueIdentifier>{26936c61-84b4-4b61-8c17-3c5c56dae102}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Common\Thing">
+      <UniqueIdentifier>{6245e260-2aa7-4511-9765-1e91e02eaad0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Common\System %28Common%29">
+      <UniqueIdentifier>{4344d293-b511-4172-8d7d-ca6fdd197ed3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Common\System %28Common%29\SaveGame %28Common%29">
+      <UniqueIdentifier>{45f4d5d8-efb3-4aaa-9b04-20007ec9517d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Common\INI">
+      <UniqueIdentifier>{ceb0b93d-0600-4179-91b6-1fdc25ec7627}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Common\Audio">
+      <UniqueIdentifier>{82cad782-090b-4ba3-ab57-19ad25bac8b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Common\RTS">
+      <UniqueIdentifier>{f02004a8-907d-436e-9190-d926f1bbdeef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Common\Bezier">
+      <UniqueIdentifier>{a62cfc52-10f5-49fd-9915-10207303005e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameLogic">
+      <UniqueIdentifier>{398a7f13-daed-4888-a011-b760be86e539}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameLogic\AI">
+      <UniqueIdentifier>{c1247d1d-165e-45d1-a41f-7bcad780b493}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameLogic\Object">
+      <UniqueIdentifier>{73f4c0f8-b629-4dcf-8400-1f124a49d821}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameLogic\Object\Behavior">
+      <UniqueIdentifier>{a979198d-2917-4f7d-b1e6-834bb90bf1de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameLogic\Object\Body">
+      <UniqueIdentifier>{2311b995-b2ee-41ef-a3d2-1cece8478318}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameLogic\Object\Collide">
+      <UniqueIdentifier>{1dde9fa1-b0e4-4b42-b712-5789154ce0a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameLogic\Object\Collide\CrateCollide">
+      <UniqueIdentifier>{516a61a2-77b0-4da2-be73-9f8c3d4ffd38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameLogic\Object\Contain">
+      <UniqueIdentifier>{2481833d-3862-40f0-9d6d-e1e08ee65f6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameLogic\Object\Create">
+      <UniqueIdentifier>{576d8155-1531-4284-bdea-23681470a38d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameLogic\Object\Damage">
+      <UniqueIdentifier>{e5216fff-dc21-4e27-a499-31172f196df5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameLogic\Object\Die">
+      <UniqueIdentifier>{602d687d-9c74-4c3a-bddd-4ecd7fefa0de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameLogic\Object\SpecialPower">
+      <UniqueIdentifier>{7510ea62-2435-4348-9aa3-8b9ae82260eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameLogic\Object\Update">
+      <UniqueIdentifier>{2e52e540-7cc8-4691-9beb-4c6910742428}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameLogic\Object\Update\ProductionExitUpdate">
+      <UniqueIdentifier>{1edfda1f-c9cc-49a3-bd3b-98e337a90bef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameLogic\Object\Update\DockUpdate">
+      <UniqueIdentifier>{2f49d282-87b9-4db8-af61-6cd7fc4e3ec7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameLogic\Object\Update\AIUpdate">
+      <UniqueIdentifier>{24905a6c-8b2a-4932-bfdb-b96691ceec35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameLogic\Object\Upgrade">
+      <UniqueIdentifier>{9be3d80f-ffae-41eb-bd0b-fae9128ac6b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameLogic\Object\Helper">
+      <UniqueIdentifier>{6b6b814c-4e32-45c5-91f7-67ec90506ff0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameLogic\Object\Destroy">
+      <UniqueIdentifier>{a895041c-9c36-474e-a97c-44a3c9422156}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameLogic\System">
+      <UniqueIdentifier>{cb05968e-a5f3-445c-8b9d-76f89df448f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameLogic\Map">
+      <UniqueIdentifier>{b5c43cef-553f-4b6c-b142-706b8cb73684}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameLogic\ScriptEngine">
+      <UniqueIdentifier>{9d81e885-538d-4452-9223-f6db58f756c9}</UniqueIdentifier>
+      <Extensions>*.cpp</Extensions>
+    </Filter>
+    <Filter Include="Source Files\GameClient">
+      <UniqueIdentifier>{06ecec7e-efa9-4b33-8c18-cf0e1018b2d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameClient\MessageStream">
+      <UniqueIdentifier>{a2791fa7-3e3b-41e0-b495-01145c51b605}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameClient\Drawable">
+      <UniqueIdentifier>{412c7e48-485c-486b-9451-18ad3b2706f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameClient\Drawable\Update %28Client%29">
+      <UniqueIdentifier>{fc24f53c-f9c2-4ca4-afb9-2f1b2ea81f76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameClient\System %28GameClient%29">
+      <UniqueIdentifier>{1d6eb29b-7b9c-41bf-a4d7-5b3d0a71538f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameClient\System %28GameClient%29\Debug Displayers">
+      <UniqueIdentifier>{52aaf9ae-7ef7-45fe-ac60-071b1705ae0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameClient\GUI">
+      <UniqueIdentifier>{bdf8ed36-35a7-4c79-99e4-a6cab23b3e0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameClient\GUI\Gadget">
+      <UniqueIdentifier>{af57a9af-672b-48dd-bdc7-03ce87606d20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameClient\GUI\GUICallbacks">
+      <UniqueIdentifier>{e264a7ff-1cac-49f9-b22e-55c5ac2b4a08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameClient\GUI\GUICallbacks\Menus">
+      <UniqueIdentifier>{5129fda0-d7bf-45c6-9110-3545d5ae8f57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameClient\GUI\Shell">
+      <UniqueIdentifier>{588af335-9345-4faf-8018-eb9b434fa234}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameClient\GUI\ControlBar">
+      <UniqueIdentifier>{1846d0b1-46d0-4f93-9a01-294d10bcfa5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameClient\GUI\DisconnectMenu">
+      <UniqueIdentifier>{68ea8447-21ce-4b35-bcc1-80829aaf9a72}</UniqueIdentifier>
+      <Extensions>.cpp</Extensions>
+    </Filter>
+    <Filter Include="Source Files\GameClient\GUI\EstablishConnectionsMenu">
+      <UniqueIdentifier>{00e50934-248e-4cd8-afae-ec55a65db12f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameClient\Input">
+      <UniqueIdentifier>{6c04fd39-ada1-4aef-a10f-8dda4650065a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameClient\Terrain">
+      <UniqueIdentifier>{21c1ab48-99e2-4199-aea1-a8c7d7258058}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameNetwork">
+      <UniqueIdentifier>{cc9cd7ef-a226-484c-8c66-7dd45d61d463}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameNetwork\WOLBrowser">
+      <UniqueIdentifier>{20174730-202b-4384-b723-fffd569154a8}</UniqueIdentifier>
+      <Extensions>.cpp</Extensions>
+    </Filter>
+    <Filter Include="Source Files\GameNetwork\GameSpy">
+      <UniqueIdentifier>{2bb819b4-2899-4e40-aee3-ae79eadd341c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameNetwork\GameSpy\Thread">
+      <UniqueIdentifier>{66d74020-0f9a-402a-84f8-dce113ecb8a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameNetwork\GameSpyEvalImplementation">
+      <UniqueIdentifier>{4daf4f64-a839-4a9c-85f8-56432ebde02e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameNetwork\InGameNetwork">
+      <UniqueIdentifier>{a7457717-a9d5-4fcb-8141-fe8a320ead3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameNetwork\LAN">
+      <UniqueIdentifier>{d7024761-d4d1-4df5-ba15-38b65caef733}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Precompiled">
+      <UniqueIdentifier>{5c711349-5022-4860-b229-47ffedc9fe98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{6417539e-ada2-4bff-bc9c-3b1dcaa60066}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Common H">
+      <UniqueIdentifier>{8d94361d-2a20-445d-afe6-c726d1b69530}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameLogic H">
+      <UniqueIdentifier>{003d838a-5db2-40a0-b917-a2c164c67669}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameLogic H\Module H">
+      <UniqueIdentifier>{49e96098-7814-4b01-8d91-cd88906a4d91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameClient H">
+      <UniqueIdentifier>{a2eafd3f-1c5c-41e8-8932-57bd4308c699}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameClient H\Module H %28Client%29">
+      <UniqueIdentifier>{c20c5629-f91b-4a32-8757-d44f5aedc976}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameNetwork.H">
+      <UniqueIdentifier>{584cd2cd-d10c-49dc-9196-dd502930bc34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameNetwork.H\WOLBrowser H">
+      <UniqueIdentifier>{e3821d13-f5a7-42a5-9e32-7b5b0f5b90c6}</UniqueIdentifier>
+      <Extensions>.h</Extensions>
+    </Filter>
+    <Filter Include="Header Files\GameNetwork.H\GameSpyLibs.H">
+      <UniqueIdentifier>{1f367318-b879-40dc-91d4-78e08bfd6ce8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameNetwork.H\GameSpyLibs.H\md5">
+      <UniqueIdentifier>{1abb179f-d53e-4636-9777-34ee5db1e597}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameNetwork.H\GameSpyLibs.H\queryreporting">
+      <UniqueIdentifier>{08918a9f-fcf2-45fd-a399-8f64cda6ec85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameNetwork.H\GameSpyLibs.H\pinger">
+      <UniqueIdentifier>{2fda9576-6097-44d9-81ac-b5411c79b7e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameNetwork.H\GameSpyLibs.H\CEngine">
+      <UniqueIdentifier>{f54a1d63-4f3f-4c5f-a81d-5dc3f991e264}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameNetwork.H\GameSpyLibs.H\hashtable">
+      <UniqueIdentifier>{0578265a-be24-4712-8b3f-0e11421a1f10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameNetwork.H\GameSpyLibs.H\chat">
+      <UniqueIdentifier>{ea50b592-ff39-4fc5-a81c-99d359a9ee8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameNetwork.H\GameSpyLibs.H\nonport">
+      <UniqueIdentifier>{8c388f94-a428-4104-8756-5dd062b693a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameNetwork.H\GameSpyLibs.H\darray">
+      <UniqueIdentifier>{9d4dbfb9-03aa-44b3-860a-07e8d24e422f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameNetwork.H\GameSpyLibs.H\peer.H">
+      <UniqueIdentifier>{1c28999e-1ab6-44e9-b525-798cc6cd8aed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameNetwork.H\GameSpy.H">
+      <UniqueIdentifier>{6e711c82-c6f3-46ef-aa96-6c7e304f8d9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameNetwork.H\GameSpy.H\Thread.H">
+      <UniqueIdentifier>{2282d3e2-6ebc-4a6b-b97d-39444533defd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Precompiled H">
+      <UniqueIdentifier>{8199c0d2-c92a-4a65-9794-a1f4a65ff35e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\Common\Thing\DrawModule.cpp">
+      <Filter>Source Files\Common\Thing</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\Thing\Module.cpp">
+      <Filter>Source Files\Common\Thing</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\Thing\ModuleFactory.cpp">
+      <Filter>Source Files\Common\Thing</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\Thing\Thing.cpp">
+      <Filter>Source Files\Common\Thing</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\Thing\ThingFactory.cpp">
+      <Filter>Source Files\Common\Thing</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\Thing\ThingTemplate.cpp">
+      <Filter>Source Files\Common\Thing</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\SaveGame\GameState.cpp">
+      <Filter>Source Files\Common\System %28Common%29\SaveGame %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\SaveGame\GameStateMap.cpp">
+      <Filter>Source Files\Common\System %28Common%29\SaveGame %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\ArchiveFile.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\ArchiveFileSystem.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\AsciiString.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\BuildAssistant.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\CDManager.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\Compression.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\CopyProtection.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\CriticalSection.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\DataChunk.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\Debug.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\Directory.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\DisabledTypes.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\encrypt.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\File.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\FileSystem.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\FunctionLexicon.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\GameCommon.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\GameMemory.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\GameType.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\Geometry.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\KindOf.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\List.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\LocalFile.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\LocalFileSystem.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\MemoryInit.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\ObjectStatusTypes.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\QuickTrig.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\QuotedPrintable.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\Radar.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\RAMFile.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\registry.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\Snapshot.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\StackDump.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\StreamingArchiveFile.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\String.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\SubsystemInterface.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\Trig.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\UnicodeString.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\Upgrade.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\Xfer.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\XferCRC.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\XferLoad.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\System\XferSave.cpp">
+      <Filter>Source Files\Common\System %28Common%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\INI\INI.cpp">
+      <Filter>Source Files\Common\INI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\INI\INIAiData.cpp">
+      <Filter>Source Files\Common\INI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\INI\INIAnimation.cpp">
+      <Filter>Source Files\Common\INI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\INI\INIAudioEventInfo.cpp">
+      <Filter>Source Files\Common\INI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\INI\INICommandButton.cpp">
+      <Filter>Source Files\Common\INI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\INI\INICommandSet.cpp">
+      <Filter>Source Files\Common\INI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\INI\INIControlBarScheme.cpp">
+      <Filter>Source Files\Common\INI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\INI\INICrate.cpp">
+      <Filter>Source Files\Common\INI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\INI\INIDamageFX.cpp">
+      <Filter>Source Files\Common\INI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\INI\INIDrawGroupInfo.cpp">
+      <Filter>Source Files\Common\INI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\INI\INIGameData.cpp">
+      <Filter>Source Files\Common\INI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\INI\INIMapCache.cpp">
+      <Filter>Source Files\Common\INI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\INI\INIMapData.cpp">
+      <Filter>Source Files\Common\INI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\INI\INIMappedImage.cpp">
+      <Filter>Source Files\Common\INI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\INI\INIMiscAudio.cpp">
+      <Filter>Source Files\Common\INI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\INI\INIModel.cpp">
+      <Filter>Source Files\Common\INI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\INI\INIMultiplayer.cpp">
+      <Filter>Source Files\Common\INI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\INI\INIObject.cpp">
+      <Filter>Source Files\Common\INI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\INI\INIParticleSys.cpp">
+      <Filter>Source Files\Common\INI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\INI\INISpecialPower.cpp">
+      <Filter>Source Files\Common\INI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\INI\INITerrain.cpp">
+      <Filter>Source Files\Common\INI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\INI\INITerrainBridge.cpp">
+      <Filter>Source Files\Common\INI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\INI\INITerrainRoad.cpp">
+      <Filter>Source Files\Common\INI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\INI\INIUpgrade.cpp">
+      <Filter>Source Files\Common\INI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\INI\INIVideo.cpp">
+      <Filter>Source Files\Common\INI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\INI\INIWater.cpp">
+      <Filter>Source Files\Common\INI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\INI\INIWeapon.cpp">
+      <Filter>Source Files\Common\INI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\INI\INIWebpageURL.cpp">
+      <Filter>Source Files\Common\INI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\Audio\AudioEventRTS.cpp">
+      <Filter>Source Files\Common\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\Audio\AudioRequest.cpp">
+      <Filter>Source Files\Common\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\Audio\DynamicAudioEventInfo.cpp">
+      <Filter>Source Files\Common\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\Audio\GameAudio.cpp">
+      <Filter>Source Files\Common\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\Audio\GameMusic.cpp">
+      <Filter>Source Files\Common\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\Audio\GameSounds.cpp">
+      <Filter>Source Files\Common\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\RTS\AcademyStats.cpp">
+      <Filter>Source Files\Common\RTS</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\RTS\ActionManager.cpp">
+      <Filter>Source Files\Common\RTS</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\RTS\Energy.cpp">
+      <Filter>Source Files\Common\RTS</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\RTS\Handicap.cpp">
+      <Filter>Source Files\Common\RTS</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\RTS\MissionStats.cpp">
+      <Filter>Source Files\Common\RTS</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\RTS\Money.cpp">
+      <Filter>Source Files\Common\RTS</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\RTS\Player.cpp">
+      <Filter>Source Files\Common\RTS</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\RTS\PlayerList.cpp">
+      <Filter>Source Files\Common\RTS</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\RTS\PlayerTemplate.cpp">
+      <Filter>Source Files\Common\RTS</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\RTS\ProductionPrerequisite.cpp">
+      <Filter>Source Files\Common\RTS</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\RTS\ResourceGatheringManager.cpp">
+      <Filter>Source Files\Common\RTS</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\RTS\Science.cpp">
+      <Filter>Source Files\Common\RTS</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\RTS\ScoreKeeper.cpp">
+      <Filter>Source Files\Common\RTS</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\RTS\SpecialPower.cpp">
+      <Filter>Source Files\Common\RTS</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\RTS\Team.cpp">
+      <Filter>Source Files\Common\RTS</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\RTS\TunnelTracker.cpp">
+      <Filter>Source Files\Common\RTS</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\Bezier\BezFwdIterator.cpp">
+      <Filter>Source Files\Common\Bezier</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\Bezier\BezierSegment.cpp">
+      <Filter>Source Files\Common\Bezier</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\BitFlags.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\CommandLine.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\crc.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\CRCDebug.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\DamageFX.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\Dict.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\DiscreteCircle.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\GameEngine.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\GameLOD.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\GameMain.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\GlobalData.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\Language.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\MessageStream.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\MiniLog.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\MultiplayerSettings.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\NameKeyGenerator.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\PartitionSolver.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\PerfTimer.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\RandomValue.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\Recorder.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\SkirmishBattleHonors.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\StateMachine.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\StatsCollector.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\TerrainTypes.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\UserPreferences.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Common\version.cpp">
+      <Filter>Source Files\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\AI\AI.cpp">
+      <Filter>Source Files\GameLogic\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\AI\AIDock.cpp">
+      <Filter>Source Files\GameLogic\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\AI\AIGroup.cpp">
+      <Filter>Source Files\GameLogic\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\AI\AIGuard.cpp">
+      <Filter>Source Files\GameLogic\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\AI\AIGuardRetaliate.cpp">
+      <Filter>Source Files\GameLogic\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\AI\AIPathfind.cpp">
+      <Filter>Source Files\GameLogic\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\AI\AIPlayer.cpp">
+      <Filter>Source Files\GameLogic\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\AI\AISkirmishPlayer.cpp">
+      <Filter>Source Files\GameLogic\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\AI\AIStates.cpp">
+      <Filter>Source Files\GameLogic\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\AI\AITNGuard.cpp">
+      <Filter>Source Files\GameLogic\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\AI\Squad.cpp">
+      <Filter>Source Files\GameLogic\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\AI\TurretAI.cpp">
+      <Filter>Source Files\GameLogic\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Behavior\AutoHealBehavior.cpp">
+      <Filter>Source Files\GameLogic\Object\Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Behavior\BattleBusSlowDeathBehavior.cpp">
+      <Filter>Source Files\GameLogic\Object\Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Behavior\BehaviorModule.cpp">
+      <Filter>Source Files\GameLogic\Object\Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Behavior\BridgeBehavior.cpp">
+      <Filter>Source Files\GameLogic\Object\Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Behavior\BridgeScaffoldBehavior.cpp">
+      <Filter>Source Files\GameLogic\Object\Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Behavior\BridgeTowerBehavior.cpp">
+      <Filter>Source Files\GameLogic\Object\Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Behavior\BunkerBusterBehavior.cpp">
+      <Filter>Source Files\GameLogic\Object\Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Behavior\CountermeasuresBehavior.cpp">
+      <Filter>Source Files\GameLogic\Object\Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Behavior\DumbProjectileBehavior.cpp">
+      <Filter>Source Files\GameLogic\Object\Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Behavior\FireWeaponWhenDamagedBehavior.cpp">
+      <Filter>Source Files\GameLogic\Object\Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Behavior\FireWeaponWhenDeadBehavior.cpp">
+      <Filter>Source Files\GameLogic\Object\Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Behavior\FlightDeckBehavior.cpp">
+      <Filter>Source Files\GameLogic\Object\Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Behavior\GenerateMinefieldBehavior.cpp">
+      <Filter>Source Files\GameLogic\Object\Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Behavior\GrantStealthBehavior.cpp">
+      <Filter>Source Files\GameLogic\Object\Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\HelicopterSlowDeathUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Behavior\InstantDeathBehavior.cpp">
+      <Filter>Source Files\GameLogic\Object\Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Behavior\JetSlowDeathBehavior.cpp">
+      <Filter>Source Files\GameLogic\Object\Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Behavior\MinefieldBehavior.cpp">
+      <Filter>Source Files\GameLogic\Object\Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Behavior\NeutonBlastBehavior.cpp">
+      <Filter>Source Files\GameLogic\Object\Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\NeutronMissileSlowDeathUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Behavior\OverchargeBehavior.cpp">
+      <Filter>Source Files\GameLogic\Object\Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Behavior\ParkingPlaceBehavior.cpp">
+      <Filter>Source Files\GameLogic\Object\Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\PhysicsUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Behavior\PoisonedBehavior.cpp">
+      <Filter>Source Files\GameLogic\Object\Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Behavior\POWTruckBehavior.cpp">
+      <Filter>Source Files\GameLogic\Object\Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Behavior\PrisonBehavior.cpp">
+      <Filter>Source Files\GameLogic\Object\Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Behavior\PropagandaCenterBehavior.cpp">
+      <Filter>Source Files\GameLogic\Object\Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Behavior\PropagandaTowerBehavior.cpp">
+      <Filter>Source Files\GameLogic\Object\Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Behavior\RebuildHoleBehavior.cpp">
+      <Filter>Source Files\GameLogic\Object\Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Behavior\SlowDeathBehavior.cpp">
+      <Filter>Source Files\GameLogic\Object\Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Behavior\SpawnBehavior.cpp">
+      <Filter>Source Files\GameLogic\Object\Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Behavior\SupplyWarehouseCripplingBehavior.cpp">
+      <Filter>Source Files\GameLogic\Object\Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Behavior\TechBuildingBehavior.cpp">
+      <Filter>Source Files\GameLogic\Object\Behavior</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Body\ActiveBody.cpp">
+      <Filter>Source Files\GameLogic\Object\Body</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Body\BodyModule.cpp">
+      <Filter>Source Files\GameLogic\Object\Body</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Body\HighlanderBody.cpp">
+      <Filter>Source Files\GameLogic\Object\Body</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Body\HiveStructureBody.cpp">
+      <Filter>Source Files\GameLogic\Object\Body</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Body\ImmortalBody.cpp">
+      <Filter>Source Files\GameLogic\Object\Body</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Body\InactiveBody.cpp">
+      <Filter>Source Files\GameLogic\Object\Body</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Body\StructureBody.cpp">
+      <Filter>Source Files\GameLogic\Object\Body</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Body\UndeadBody.cpp">
+      <Filter>Source Files\GameLogic\Object\Body</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Collide\CrateCollide\ConvertToCarBombCrateCollide.cpp">
+      <Filter>Source Files\GameLogic\Object\Collide\CrateCollide</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Collide\CrateCollide\ConvertToHijackedVehicleCrateCollide.cpp">
+      <Filter>Source Files\GameLogic\Object\Collide\CrateCollide</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Collide\CrateCollide\CrateCollide.cpp">
+      <Filter>Source Files\GameLogic\Object\Collide\CrateCollide</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Collide\CrateCollide\HealCrateCollide.cpp">
+      <Filter>Source Files\GameLogic\Object\Collide\CrateCollide</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Collide\CrateCollide\MoneyCrateCollide.cpp">
+      <Filter>Source Files\GameLogic\Object\Collide\CrateCollide</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Collide\CrateCollide\SabotageCommandCenterCrateCollide.cpp">
+      <Filter>Source Files\GameLogic\Object\Collide\CrateCollide</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Collide\CrateCollide\SabotageFakeBuilding.cpp">
+      <Filter>Source Files\GameLogic\Object\Collide\CrateCollide</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Collide\CrateCollide\SabotageInternetCenterCrateCollide.cpp">
+      <Filter>Source Files\GameLogic\Object\Collide\CrateCollide</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Collide\CrateCollide\SabotageMilitaryFactoryCrateCollide.cpp">
+      <Filter>Source Files\GameLogic\Object\Collide\CrateCollide</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Collide\CrateCollide\SabotagePowerPlantCrateCollide.cpp">
+      <Filter>Source Files\GameLogic\Object\Collide\CrateCollide</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Collide\CrateCollide\SabotageSuperweaponCrateCollide.cpp">
+      <Filter>Source Files\GameLogic\Object\Collide\CrateCollide</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Collide\CrateCollide\SabotageSupplyCenterCrateCollide.cpp">
+      <Filter>Source Files\GameLogic\Object\Collide\CrateCollide</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Collide\CrateCollide\SabotageSupplyDropzoneCrateCollide.cpp">
+      <Filter>Source Files\GameLogic\Object\Collide\CrateCollide</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Collide\CrateCollide\SalvageCrateCollide.cpp">
+      <Filter>Source Files\GameLogic\Object\Collide\CrateCollide</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Collide\CrateCollide\ShroudCrateCollide.cpp">
+      <Filter>Source Files\GameLogic\Object\Collide\CrateCollide</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Collide\CrateCollide\UnitCrateCollide.cpp">
+      <Filter>Source Files\GameLogic\Object\Collide\CrateCollide</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Collide\CrateCollide\VeterancyCrateCollide.cpp">
+      <Filter>Source Files\GameLogic\Object\Collide\CrateCollide</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Collide\CollideModule.cpp">
+      <Filter>Source Files\GameLogic\Object\Collide</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Collide\FireWeaponCollide.cpp">
+      <Filter>Source Files\GameLogic\Object\Collide</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Collide\SquishCollide.cpp">
+      <Filter>Source Files\GameLogic\Object\Collide</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Contain\CaveContain.cpp">
+      <Filter>Source Files\GameLogic\Object\Contain</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Contain\GarrisonContain.cpp">
+      <Filter>Source Files\GameLogic\Object\Contain</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Contain\HealContain.cpp">
+      <Filter>Source Files\GameLogic\Object\Contain</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Contain\HelixContain.cpp">
+      <Filter>Source Files\GameLogic\Object\Contain</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Contain\InternetHackContain.cpp">
+      <Filter>Source Files\GameLogic\Object\Contain</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Contain\MobNexusContain.cpp">
+      <Filter>Source Files\GameLogic\Object\Contain</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Contain\OpenContain.cpp">
+      <Filter>Source Files\GameLogic\Object\Contain</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Contain\OverlordContain.cpp">
+      <Filter>Source Files\GameLogic\Object\Contain</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Contain\ParachuteContain.cpp">
+      <Filter>Source Files\GameLogic\Object\Contain</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Contain\RailedTransportContain.cpp">
+      <Filter>Source Files\GameLogic\Object\Contain</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Contain\RiderChangeContain.cpp">
+      <Filter>Source Files\GameLogic\Object\Contain</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Contain\TransportContain.cpp">
+      <Filter>Source Files\GameLogic\Object\Contain</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Contain\TunnelContain.cpp">
+      <Filter>Source Files\GameLogic\Object\Contain</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Create\CreateModule.cpp">
+      <Filter>Source Files\GameLogic\Object\Create</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Create\GrantUpgradeCreate.cpp">
+      <Filter>Source Files\GameLogic\Object\Create</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Create\LockWeaponCreate.cpp">
+      <Filter>Source Files\GameLogic\Object\Create</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Create\PreorderCreate.cpp">
+      <Filter>Source Files\GameLogic\Object\Create</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Create\SpecialPowerCreate.cpp">
+      <Filter>Source Files\GameLogic\Object\Create</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Create\SupplyCenterCreate.cpp">
+      <Filter>Source Files\GameLogic\Object\Create</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Create\SupplyWarehouseCreate.cpp">
+      <Filter>Source Files\GameLogic\Object\Create</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Create\VeterancyGainCreate.cpp">
+      <Filter>Source Files\GameLogic\Object\Create</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Damage\BoneFXDamage.cpp">
+      <Filter>Source Files\GameLogic\Object\Damage</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Damage\DamageModule.cpp">
+      <Filter>Source Files\GameLogic\Object\Damage</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Damage\TransitionDamageFX.cpp">
+      <Filter>Source Files\GameLogic\Object\Damage</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Die\CreateCrateDie.cpp">
+      <Filter>Source Files\GameLogic\Object\Die</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Die\CreateObjectDie.cpp">
+      <Filter>Source Files\GameLogic\Object\Die</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Die\CrushDie.cpp">
+      <Filter>Source Files\GameLogic\Object\Die</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Die\DamDie.cpp">
+      <Filter>Source Files\GameLogic\Object\Die</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Die\DestroyDie.cpp">
+      <Filter>Source Files\GameLogic\Object\Die</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Die\DieModule.cpp">
+      <Filter>Source Files\GameLogic\Object\Die</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Die\EjectPilotDie.cpp">
+      <Filter>Source Files\GameLogic\Object\Die</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Die\FXListDie.cpp">
+      <Filter>Source Files\GameLogic\Object\Die</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Die\KeepObjectDie.cpp">
+      <Filter>Source Files\GameLogic\Object\Die</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Die\RebuildHoleExposeDie.cpp">
+      <Filter>Source Files\GameLogic\Object\Die</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Die\SpecialPowerCompletionDie.cpp">
+      <Filter>Source Files\GameLogic\Object\Die</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Die\UpgradeDie.cpp">
+      <Filter>Source Files\GameLogic\Object\Die</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\SpecialPower\BaikonurLaunchPower.cpp">
+      <Filter>Source Files\GameLogic\Object\SpecialPower</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\SpecialPower\CashBountyPower.cpp">
+      <Filter>Source Files\GameLogic\Object\SpecialPower</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\SpecialPower\CashHackSpecialPower.cpp">
+      <Filter>Source Files\GameLogic\Object\SpecialPower</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\SpecialPower\CleanupAreaPower.cpp">
+      <Filter>Source Files\GameLogic\Object\SpecialPower</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\SpecialPower\DefectorSpecialPower.cpp">
+      <Filter>Source Files\GameLogic\Object\SpecialPower</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\SpecialPower\DemoralizeSpecialPower.cpp">
+      <Filter>Source Files\GameLogic\Object\SpecialPower</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\SpecialPower\FireWeaponPower.cpp">
+      <Filter>Source Files\GameLogic\Object\SpecialPower</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\SpecialPower\OCLSpecialPower.cpp">
+      <Filter>Source Files\GameLogic\Object\SpecialPower</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\SpecialPower\SpecialAbility.cpp">
+      <Filter>Source Files\GameLogic\Object\SpecialPower</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\SpecialPower\SpecialPowerModule.cpp">
+      <Filter>Source Files\GameLogic\Object\SpecialPower</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\SpecialPower\SpyVisionSpecialPower.cpp">
+      <Filter>Source Files\GameLogic\Object\SpecialPower</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\ProductionExitUpdate\DefaultProductionExitUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update\ProductionExitUpdate</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\ProductionExitUpdate\QueueProductionExitUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update\ProductionExitUpdate</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\ProductionExitUpdate\SpawnPointProductionExitUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update\ProductionExitUpdate</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\ProductionExitUpdate\SupplyCenterProductionExitUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update\ProductionExitUpdate</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\DockUpdate\DockUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update\DockUpdate</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\DockUpdate\PrisonDockUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update\DockUpdate</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\DockUpdate\RailedTransportDockUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update\DockUpdate</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\DockUpdate\RepairDockUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update\DockUpdate</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\DockUpdate\SupplyCenterDockUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update\DockUpdate</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\DockUpdate\SupplyWarehouseDockUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update\DockUpdate</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\AIUpdate\AssaultTransportAIUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update\AIUpdate</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\AIUpdate\ChinookAIUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update\AIUpdate</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\AIUpdate\DeliverPayloadAIUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update\AIUpdate</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\AIUpdate\DeployStyleAIUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update\AIUpdate</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\AIUpdate\DozerAIUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update\AIUpdate</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\EMPUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update\AIUpdate</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\AIUpdate\HackInternetAIUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update\AIUpdate</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\AIUpdate\JetAIUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update\AIUpdate</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\AIUpdate\MissileAIUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update\AIUpdate</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\AIUpdate\POWTruckAIUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update\AIUpdate</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\AIUpdate\RailedTransportAIUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update\AIUpdate</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\AIUpdate\RailroadGuideAIUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update\AIUpdate</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\AIUpdate\SupplyTruckAIUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update\AIUpdate</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\AIUpdate\TransportAIUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update\AIUpdate</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\AIUpdate\WanderAIUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update\AIUpdate</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\AIUpdate\WorkerAIUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update\AIUpdate</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\AIUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\AnimationSteeringUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\AssistedTargetingUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\AutoDepositUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\AutoFindHealingUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\BaseRenerateUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\BattlePlanUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\BoneFXUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\CheckpointUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\CleanupHazardUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\CommandButtonHuntUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\DeletionUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\DemoTrapUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\DynamicGeometryInfoUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\DynamicShroudClearingRangeUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\EnemyNearUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\FireOCLAfterWeaponCooldownUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\FireSpreadUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\FirestormDynamicGeometryInfoUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\FireWeaponUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\FlammableUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\FloatUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\HeightDieUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\HijackerUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\HordeUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\LifetimeUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\MissileLauncherBuildingUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\MobMemberSlavedUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\NeutronMissileUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\OCLUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\ParticleUplinkCannonUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\PilotFindVehicleUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\PointDefenseLaserUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\PowerPlantUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\ProductionUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\ProjectileStreamUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\ProneUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\RadarUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\RadiusDecalUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\SlavedUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\SmartBombTargetHomingUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\SpecialAbilityUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\SpecialPowerUpdateModule.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\SpectreGunshipDeploymentUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\SpectreGunshipUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\SpyVisionUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\StealthDetectorUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\StealthUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\StickyBombUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\StructureCollapseUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\StructureToppleUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\TensileFormationUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\ToppleUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\UpdateModule.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\WaveGuideUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\WeaponBonusUpdate.cpp">
+      <Filter>Source Files\GameLogic\Object\Update</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Upgrade\ActiveShroudUpgrade.cpp">
+      <Filter>Source Files\GameLogic\Object\Upgrade</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Upgrade\ArmorUpgrade.cpp">
+      <Filter>Source Files\GameLogic\Object\Upgrade</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Upgrade\CommandSetUpgrade.cpp">
+      <Filter>Source Files\GameLogic\Object\Upgrade</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Upgrade\CostModifierUpgrade.cpp">
+      <Filter>Source Files\GameLogic\Object\Upgrade</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Upgrade\ExperienceScalarUpgrade.cpp">
+      <Filter>Source Files\GameLogic\Object\Upgrade</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Upgrade\GrantScienceUpgrade.cpp">
+      <Filter>Source Files\GameLogic\Object\Upgrade</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Upgrade\LocomotorSetUpgrade.cpp">
+      <Filter>Source Files\GameLogic\Object\Upgrade</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Upgrade\MaxHealthUpgrade.cpp">
+      <Filter>Source Files\GameLogic\Object\Upgrade</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Upgrade\ModelConditionUpgrade.cpp">
+      <Filter>Source Files\GameLogic\Object\Upgrade</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Upgrade\ObjectCreationUpgrade.cpp">
+      <Filter>Source Files\GameLogic\Object\Upgrade</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Upgrade\PassengersFireUpgrade.cpp">
+      <Filter>Source Files\GameLogic\Object\Upgrade</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Upgrade\PowerPlantUpgrade.cpp">
+      <Filter>Source Files\GameLogic\Object\Upgrade</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Upgrade\RadarUpgrade.cpp">
+      <Filter>Source Files\GameLogic\Object\Upgrade</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Upgrade\ReplaceObjectUpgrade.cpp">
+      <Filter>Source Files\GameLogic\Object\Upgrade</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Upgrade\StatusBitsUpgrade.cpp">
+      <Filter>Source Files\GameLogic\Object\Upgrade</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Upgrade\StealthUpgrade.cpp">
+      <Filter>Source Files\GameLogic\Object\Upgrade</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Upgrade\SubObjectsUpgrade.cpp">
+      <Filter>Source Files\GameLogic\Object\Upgrade</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Upgrade\UnpauseSpecialPowerUpgrade.cpp">
+      <Filter>Source Files\GameLogic\Object\Upgrade</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Upgrade\UpgradeModule.cpp">
+      <Filter>Source Files\GameLogic\Object\Upgrade</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Upgrade\WeaponBonusUpgrade.cpp">
+      <Filter>Source Files\GameLogic\Object\Upgrade</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Upgrade\WeaponSetUpgrade.cpp">
+      <Filter>Source Files\GameLogic\Object\Upgrade</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Helper\ObjectDefectionHelper.cpp">
+      <Filter>Source Files\GameLogic\Object\Helper</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Helper\ObjectHelper.cpp">
+      <Filter>Source Files\GameLogic\Object\Helper</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Helper\ObjectRepulsorHelper.cpp">
+      <Filter>Source Files\GameLogic\Object\Helper</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Helper\ObjectSMCHelper.cpp">
+      <Filter>Source Files\GameLogic\Object\Helper</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Helper\ObjectWeaponStatusHelper.cpp">
+      <Filter>Source Files\GameLogic\Object\Helper</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Helper\StatusDamageHelper.cpp">
+      <Filter>Source Files\GameLogic\Object\Helper</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Helper\SubdualDamageHelper.cpp">
+      <Filter>Source Files\GameLogic\Object\Helper</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Helper\TempWeaponBonusHelper.cpp">
+      <Filter>Source Files\GameLogic\Object\Helper</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Destroy\DestroyModule.cpp">
+      <Filter>Source Files\GameLogic\Object\Destroy</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Armor.cpp">
+      <Filter>Source Files\GameLogic\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\ExperienceTracker.cpp">
+      <Filter>Source Files\GameLogic\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\FiringTracker.cpp">
+      <Filter>Source Files\GameLogic\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\GhostObject.cpp">
+      <Filter>Source Files\GameLogic\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Locomotor.cpp">
+      <Filter>Source Files\GameLogic\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Object.cpp">
+      <Filter>Source Files\GameLogic\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\ObjectCreationList.cpp">
+      <Filter>Source Files\GameLogic\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\ObjectTypes.cpp">
+      <Filter>Source Files\GameLogic\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\PartitionManager.cpp">
+      <Filter>Source Files\GameLogic\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\SimpleObjectIterator.cpp">
+      <Filter>Source Files\GameLogic\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Weapon.cpp">
+      <Filter>Source Files\GameLogic\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\WeaponSet.cpp">
+      <Filter>Source Files\GameLogic\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\System\CaveSystem.cpp">
+      <Filter>Source Files\GameLogic\System</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\System\CrateSystem.cpp">
+      <Filter>Source Files\GameLogic\System</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\System\Damage.cpp">
+      <Filter>Source Files\GameLogic\System</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\System\GameLogic.cpp">
+      <Filter>Source Files\GameLogic\System</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\System\GameLogicDispatch.cpp">
+      <Filter>Source Files\GameLogic\System</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\System\RankInfo.cpp">
+      <Filter>Source Files\GameLogic\System</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Map\PolygonTrigger.cpp">
+      <Filter>Source Files\GameLogic\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Map\SidesList.cpp">
+      <Filter>Source Files\GameLogic\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Map\TerrainLogic.cpp">
+      <Filter>Source Files\GameLogic\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\ScriptEngine\ScriptActions.cpp">
+      <Filter>Source Files\GameLogic\ScriptEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\ScriptEngine\ScriptConditions.cpp">
+      <Filter>Source Files\GameLogic\ScriptEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\ScriptEngine\ScriptEngine.cpp">
+      <Filter>Source Files\GameLogic\ScriptEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\ScriptEngine\Scripts.cpp">
+      <Filter>Source Files\GameLogic\ScriptEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\ScriptEngine\VictoryConditions.cpp">
+      <Filter>Source Files\GameLogic\ScriptEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\MessageStream\CommandXlat.cpp">
+      <Filter>Source Files\GameClient\MessageStream</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\MessageStream\GUICommandTranslator.cpp">
+      <Filter>Source Files\GameClient\MessageStream</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\MessageStream\HintSpy.cpp">
+      <Filter>Source Files\GameClient\MessageStream</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\MessageStream\HotKey.cpp">
+      <Filter>Source Files\GameClient\MessageStream</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\MessageStream\LookAtXlat.cpp">
+      <Filter>Source Files\GameClient\MessageStream</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\MessageStream\MetaEvent.cpp">
+      <Filter>Source Files\GameClient\MessageStream</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\MessageStream\PlaceEventTranslator.cpp">
+      <Filter>Source Files\GameClient\MessageStream</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\MessageStream\SelectionXlat.cpp">
+      <Filter>Source Files\GameClient\MessageStream</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\MessageStream\WindowXlat.cpp">
+      <Filter>Source Files\GameClient\MessageStream</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\Drawable\Update\AnimatedParticleSysBoneClientUpdate.cpp">
+      <Filter>Source Files\GameClient\Drawable\Update %28Client%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\Drawable\Update\BeaconClientUpdate.cpp">
+      <Filter>Source Files\GameClient\Drawable\Update %28Client%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameLogic\Object\Update\LaserUpdate.cpp">
+      <Filter>Source Files\GameClient\Drawable\Update %28Client%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\Drawable\Update\SwayClientUpdate.cpp">
+      <Filter>Source Files\GameClient\Drawable\Update %28Client%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\Drawable\DrawableManager.cpp">
+      <Filter>Source Files\GameClient\Drawable</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\System\Debug Displayers\AudioDebugDisplay.cpp">
+      <Filter>Source Files\GameClient\System %28GameClient%29\Debug Displayers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\System\Anim2D.cpp">
+      <Filter>Source Files\GameClient\System %28GameClient%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\System\CampaignManager.cpp">
+      <Filter>Source Files\GameClient\System %28GameClient%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\System\DebugDisplay.cpp">
+      <Filter>Source Files\GameClient\System %28GameClient%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\System\Image.cpp">
+      <Filter>Source Files\GameClient\System %28GameClient%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\System\ParticleSys.cpp">
+      <Filter>Source Files\GameClient\System %28GameClient%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\System\RayEffect.cpp">
+      <Filter>Source Files\GameClient\System %28GameClient%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\System\Smudge.cpp">
+      <Filter>Source Files\GameClient\System %28GameClient%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\Gadget\GadgetCheckBox.cpp">
+      <Filter>Source Files\GameClient\GUI\Gadget</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\Gadget\GadgetComboBox.cpp">
+      <Filter>Source Files\GameClient\GUI\Gadget</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\Gadget\GadgetHorizontalSlider.cpp">
+      <Filter>Source Files\GameClient\GUI\Gadget</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\Gadget\GadgetListBox.cpp">
+      <Filter>Source Files\GameClient\GUI\Gadget</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\Gadget\GadgetProgressBar.cpp">
+      <Filter>Source Files\GameClient\GUI\Gadget</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\Gadget\GadgetPushButton.cpp">
+      <Filter>Source Files\GameClient\GUI\Gadget</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\Gadget\GadgetRadioButton.cpp">
+      <Filter>Source Files\GameClient\GUI\Gadget</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\Gadget\GadgetStaticText.cpp">
+      <Filter>Source Files\GameClient\GUI\Gadget</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\Gadget\GadgetTabControl.cpp">
+      <Filter>Source Files\GameClient\GUI\Gadget</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\Gadget\GadgetTextEntry.cpp">
+      <Filter>Source Files\GameClient\GUI\Gadget</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\Gadget\GadgetVerticalSlider.cpp">
+      <Filter>Source Files\GameClient\GUI\Gadget</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Menus\ChallengeMenu.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Menus\CreditsMenu.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Menus\DifficultySelect.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Menus\DisconnectWindow.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Menus\DownloadMenu.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Menus\EstablishConnectionsWindow.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Menus\GameInfoWindow.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Menus\KeyboardOptionsMenu.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Menus\LanGameOptionsMenu.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Menus\LanLobbyMenu.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Menus\LanMapSelectMenu.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Menus\MainMenu.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Menus\MapSelectMenu.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Menus\NetworkDirectConnect.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Menus\OptionsMenu.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Menus\PopupCommunicator.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Menus\PopupHostGame.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Menus\PopupJoinGame.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Menus\PopupLadderSelect.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Menus\PopupPlayerInfo.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Menus\PopupReplay.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Menus\PopupSaveLoad.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Menus\QuitMenu.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Menus\ReplayMenu.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Menus\ScoreScreen.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Menus\SinglePlayerMenu.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Menus\SkirmishGameOptionsMenu.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Menus\SkirmishMapSelectMenu.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Menus\WOLBuddyOverlay.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Menus\WOLCustomScoreScreen.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Menus\WOLGameSetupMenu.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Menus\WOLLadderScreen.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Menus\WOLLobbyMenu.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Menus\WOLLocaleSelectPopup.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Menus\WOLLoginMenu.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Menus\WOLMapSelectMenu.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Menus\WOLMessageWindow.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Menus\WOLQMScoreScreen.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Menus\WOLQuickMatchMenu.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Menus\WOLStatusMenu.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Menus\WOLWelcomeMenu.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks\Menus</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\ControlBarCallback.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\ControlBarPopupDescription.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\Diplomacy.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\ExtendedMessageBox.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\GeneralsExpPoints.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\IMECandidate.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\InGameChat.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\InGamePopupMessage.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\MessageBox.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GUICallbacks\ReplayControls.cpp">
+      <Filter>Source Files\GameClient\GUI\GUICallbacks</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\Shell\Shell.cpp">
+      <Filter>Source Files\GameClient\GUI\Shell</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\Shell\ShellMenuScheme.cpp">
+      <Filter>Source Files\GameClient\GUI\Shell</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\ControlBar\ControlBar.cpp">
+      <Filter>Source Files\GameClient\GUI\ControlBar</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\ControlBar\ControlBarBeacon.cpp">
+      <Filter>Source Files\GameClient\GUI\ControlBar</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\ControlBar\ControlBarCommand.cpp">
+      <Filter>Source Files\GameClient\GUI\ControlBar</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\ControlBar\ControlBarCommandProcessing.cpp">
+      <Filter>Source Files\GameClient\GUI\ControlBar</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\ControlBar\ControlBarMultiSelect.cpp">
+      <Filter>Source Files\GameClient\GUI\ControlBar</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\ControlBar\ControlBarObserver.cpp">
+      <Filter>Source Files\GameClient\GUI\ControlBar</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\ControlBar\ControlBarOCLTimer.cpp">
+      <Filter>Source Files\GameClient\GUI\ControlBar</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\ControlBar\ControlBarPrintPositions.cpp">
+      <Filter>Source Files\GameClient\GUI\ControlBar</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\ControlBar\ControlBarResizer.cpp">
+      <Filter>Source Files\GameClient\GUI\ControlBar</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\ControlBar\ControlBarScheme.cpp">
+      <Filter>Source Files\GameClient\GUI\ControlBar</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\ControlBar\ControlBarStructureInventory.cpp">
+      <Filter>Source Files\GameClient\GUI\ControlBar</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\ControlBar\ControlBarUnderConstruction.cpp">
+      <Filter>Source Files\GameClient\GUI\ControlBar</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\DisconnectMenu\DisconnectMenu.cpp">
+      <Filter>Source Files\GameClient\GUI\DisconnectMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\EstablishConnectionsMenu\EstablishConnectionsMenu.cpp">
+      <Filter>Source Files\GameClient\GUI\EstablishConnectionsMenu</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\AnimateWindowManager.cpp">
+      <Filter>Source Files\GameClient\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\ChallengeGenerals.cpp">
+      <Filter>Source Files\GameClient\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GameFont.cpp">
+      <Filter>Source Files\GameClient\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GameWindow.cpp">
+      <Filter>Source Files\GameClient\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GameWindowGlobal.cpp">
+      <Filter>Source Files\GameClient\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GameWindowManager.cpp">
+      <Filter>Source Files\GameClient\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GameWindowManagerScript.cpp">
+      <Filter>Source Files\GameClient\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GameWindowTransitions.cpp">
+      <Filter>Source Files\GameClient\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\GameWindowTransitionsStyles.cpp">
+      <Filter>Source Files\GameClient\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\HeaderTemplate.cpp">
+      <Filter>Source Files\GameClient\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\IMEManager.cpp">
+      <Filter>Source Files\GameClient\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\LoadScreen.cpp">
+      <Filter>Source Files\GameClient\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\ProcessAnimateWindow.cpp">
+      <Filter>Source Files\GameClient\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\WindowLayout.cpp">
+      <Filter>Source Files\GameClient\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\WindowVideoManager.cpp">
+      <Filter>Source Files\GameClient\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GUI\WinInstanceData.cpp">
+      <Filter>Source Files\GameClient\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\Input\Keyboard.cpp">
+      <Filter>Source Files\GameClient\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\Input\Mouse.cpp">
+      <Filter>Source Files\GameClient\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\Terrain\TerrainRoads.cpp">
+      <Filter>Source Files\GameClient\Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\Terrain\TerrainVisual.cpp">
+      <Filter>Source Files\GameClient\Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\Color.cpp">
+      <Filter>Source Files\GameClient</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\Credits.cpp">
+      <Filter>Source Files\GameClient</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\Display.cpp">
+      <Filter>Source Files\GameClient</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\DisplayString.cpp">
+      <Filter>Source Files\GameClient</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\DisplayStringManager.cpp">
+      <Filter>Source Files\GameClient</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\Drawable.cpp">
+      <Filter>Source Files\GameClient</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\DrawGroupInfo.cpp">
+      <Filter>Source Files\GameClient</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\Eva.cpp">
+      <Filter>Source Files\GameClient</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\FXList.cpp">
+      <Filter>Source Files\GameClient</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GameClient.cpp">
+      <Filter>Source Files\GameClient</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GameClientDispatch.cpp">
+      <Filter>Source Files\GameClient</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GameText.cpp">
+      <Filter>Source Files\GameClient</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GlobalLanguage.cpp">
+      <Filter>Source Files\GameClient</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\GraphDraw.cpp">
+      <Filter>Source Files\GameClient</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\InGameUI.cpp">
+      <Filter>Source Files\GameClient</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\LanguageFilter.cpp">
+      <Filter>Source Files\GameClient</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\Line2D.cpp">
+      <Filter>Source Files\GameClient</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\MapUtil.cpp">
+      <Filter>Source Files\GameClient</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\ParabolicEase.cpp">
+      <Filter>Source Files\GameClient</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\RadiusDecal.cpp">
+      <Filter>Source Files\GameClient</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\SelectionInfo.cpp">
+      <Filter>Source Files\GameClient</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\Snow.cpp">
+      <Filter>Source Files\GameClient</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\Statistics.cpp">
+      <Filter>Source Files\GameClient</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\VideoPlayer.cpp">
+      <Filter>Source Files\GameClient</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\View.cpp">
+      <Filter>Source Files\GameClient</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameClient\Water.cpp">
+      <Filter>Source Files\GameClient</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\WOLBrowser\WebBrowser.cpp">
+      <Filter>Source Files\GameNetwork\WOLBrowser</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\GameSpy\Thread\BuddyThread.cpp">
+      <Filter>Source Files\GameNetwork\GameSpy\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\GameSpy\Thread\GameResultsThread.cpp">
+      <Filter>Source Files\GameNetwork\GameSpy\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\GameSpy\Thread\PeerThread.cpp">
+      <Filter>Source Files\GameNetwork\GameSpy\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\GameSpy\Thread\PersistentStorageThread.cpp">
+      <Filter>Source Files\GameNetwork\GameSpy\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\GameSpy\Thread\PingThread.cpp">
+      <Filter>Source Files\GameNetwork\GameSpy\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\GameSpy\Thread\ThreadUtils.cpp">
+      <Filter>Source Files\GameNetwork\GameSpy\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\GameSpy\Chat.cpp">
+      <Filter>Source Files\GameNetwork\GameSpy</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\DownloadManager.cpp">
+      <Filter>Source Files\GameNetwork\GameSpy</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\GameSpyOverlay.cpp">
+      <Filter>Source Files\GameNetwork\GameSpy</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\GameSpy\GSConfig.cpp">
+      <Filter>Source Files\GameNetwork\GameSpy</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\GameSpy\LadderDefs.cpp">
+      <Filter>Source Files\GameNetwork\GameSpy</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\GameSpy\LobbyUtils.cpp">
+      <Filter>Source Files\GameNetwork\GameSpy</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\GameSpy\MainMenuUtils.cpp">
+      <Filter>Source Files\GameNetwork\GameSpy</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\GameSpy\PeerDefs.cpp">
+      <Filter>Source Files\GameNetwork\GameSpy</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\GameSpy\StagingRoomGameInfo.cpp">
+      <Filter>Source Files\GameNetwork\GameSpy</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\GameSpy.cpp">
+      <Filter>Source Files\GameNetwork\GameSpyEvalImplementation</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\GameSpyChat.cpp">
+      <Filter>Source Files\GameNetwork\GameSpyEvalImplementation</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\GameSpyGameInfo.cpp">
+      <Filter>Source Files\GameNetwork\GameSpyEvalImplementation</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\GameSpyGP.cpp">
+      <Filter>Source Files\GameNetwork\GameSpyEvalImplementation</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\GameSpyPersistentStorage.cpp">
+      <Filter>Source Files\GameNetwork\GameSpyEvalImplementation</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\Connection.cpp">
+      <Filter>Source Files\GameNetwork\InGameNetwork</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\ConnectionManager.cpp">
+      <Filter>Source Files\GameNetwork\InGameNetwork</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\DisconnectManager.cpp">
+      <Filter>Source Files\GameNetwork\InGameNetwork</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\FileTransfer.cpp">
+      <Filter>Source Files\GameNetwork\InGameNetwork</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\FirewallHelper.cpp">
+      <Filter>Source Files\GameNetwork\InGameNetwork</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\FrameData.cpp">
+      <Filter>Source Files\GameNetwork\InGameNetwork</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\FrameDataManager.cpp">
+      <Filter>Source Files\GameNetwork\InGameNetwork</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\FrameMetrics.cpp">
+      <Filter>Source Files\GameNetwork\InGameNetwork</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\NAT.cpp">
+      <Filter>Source Files\GameNetwork\InGameNetwork</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\NetCommandList.cpp">
+      <Filter>Source Files\GameNetwork\InGameNetwork</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\NetCommandMsg.cpp">
+      <Filter>Source Files\GameNetwork\InGameNetwork</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\NetCommandRef.cpp">
+      <Filter>Source Files\GameNetwork\InGameNetwork</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\NetCommandWrapperList.cpp">
+      <Filter>Source Files\GameNetwork\InGameNetwork</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\NetMessageStream.cpp">
+      <Filter>Source Files\GameNetwork\InGameNetwork</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\NetPacket.cpp">
+      <Filter>Source Files\GameNetwork\InGameNetwork</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\Network.cpp">
+      <Filter>Source Files\GameNetwork\InGameNetwork</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\NetworkUtil.cpp">
+      <Filter>Source Files\GameNetwork\InGameNetwork</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\Transport.cpp">
+      <Filter>Source Files\GameNetwork\InGameNetwork</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\udp.cpp">
+      <Filter>Source Files\GameNetwork\InGameNetwork</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\User.cpp">
+      <Filter>Source Files\GameNetwork\InGameNetwork</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\LANAPI.cpp">
+      <Filter>Source Files\GameNetwork\LAN</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\LANAPICallbacks.cpp">
+      <Filter>Source Files\GameNetwork\LAN</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\LANAPIhandlers.cpp">
+      <Filter>Source Files\GameNetwork\LAN</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\LANGameInfo.cpp">
+      <Filter>Source Files\GameNetwork\LAN</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\GameInfo.cpp">
+      <Filter>Source Files\GameNetwork</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\GameMessageParser.cpp">
+      <Filter>Source Files\GameNetwork</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\GUIUtil.cpp">
+      <Filter>Source Files\GameNetwork</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameNetwork\IPEnumeration.cpp">
+      <Filter>Source Files\GameNetwork</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Precompiled\PreRTS.cpp">
+      <Filter>Source Files\Precompiled</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Include\Common\AcademyStats.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\ActionManager.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\ArchiveFile.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\ArchiveFileSystem.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\AsciiString.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\AudioAffect.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\AudioEventInfo.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\AudioEventRTS.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\AudioHandleSpecialValues.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\AudioRandomValue.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\AudioRequest.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\AudioSettings.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\BattleHonors.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\BezFwdIterator.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\BezierSegment.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\BitFlags.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\BitFlagsIO.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\BuildAssistant.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\CDManager.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\ClientUpdateModule.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\CommandLine.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\CopyProtection.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\crc.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\CRCDebug.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\CriticalSection.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\CustomMatchPreferences.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\DamageFX.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\DataChunk.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\Debug.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\Dict.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\Directory.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\DisabledTypes.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\DiscreteCircle.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\DrawModule.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\DynamicAudioEventInfo.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\encrypt.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\Energy.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\Errors.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\file.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\FileSystem.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\FunctionLexicon.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\GameAudio.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\GameCommon.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\GameEngine.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\GameLOD.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\GameMemory.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\GameMusic.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\GameSounds.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\GameSpeech.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\GameSpyMiscPreferences.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\GameState.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\GameStateMap.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\GameType.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\Geometry.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\GlobalData.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\Handicap.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\IgnorePreferences.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\INI.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\INIException.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\KindOf.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\LadderPreferences.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\Language.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\LatchRestore.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\List.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\LocalFile.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\LocalFileSystem.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\MapObject.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\MapReaderWriterInfo.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\MessageStream.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\MiniLog.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\MiscAudio.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\MissionStats.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\ModelState.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\Module.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\ModuleFactory.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\Money.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\MultiplayerSettings.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\NameKeyGenerator.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\ObjectScriptStatusBits.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\ObjectStatusTypes.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\OSDisplay.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\Overridable.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\Override.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\PartitionSolver.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\PerfMetrics.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\PerfTimer.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\Player.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\PlayerList.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\PlayerTemplate.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\ProductionPrerequisite.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\QuickmatchPreferences.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\QuickTrig.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\QuotedPrintable.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\Radar.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\RAMFile.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\RandomValue.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\Recorder.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\Registry.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\ResourceGatheringManager.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\Science.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\ScoreKeeper.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\SkirmishBattleHonors.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\SkirmishPreferences.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\Snapshot.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\SparseMatchFinder.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\SpecialPower.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\SpecialPowerMaskType.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\SpecialPowerType.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\StackDump.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\StateMachine.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\StatsCollector.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\STLTypedefs.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\StreamingArchiveFile.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\string.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\SubsystemInterface.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\SystemInfo.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\Team.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\Terrain.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\TerrainTypes.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\Thing.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\ThingFactory.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\ThingSort.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\ThingTemplate.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\TunnelTracker.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\UnicodeString.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\UnitTimings.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\Upgrade.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\UserPreferences.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\version.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\WellKnownKeys.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\Xfer.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\XferCRC.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\XferDeepCRC.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\XferLoad.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Common\XferSave.h">
+      <Filter>Header Files\Common H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\ActiveBody.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\ActiveShroudUpgrade.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\AITNGuard.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\AIUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\AnimationSteeringUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\ArmorUpgrade.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\AssaultTransportAIUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\AssistedTargetingUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\AutoDepositUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\AutoFindHealingUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\AutoHealBehavior.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\BaikonurLaunchPower.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\BaseRegenerateUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\BattleBusSlowDeathBehavior.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\BattlePlanUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\BehaviorModule.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\BodyModule.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\BoneFXDamage.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\BoneFXUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\BridgeBehavior.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\BridgeScaffoldBehavior.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\BridgeTowerBehavior.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\BunkerBusterBehavior.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\CashBountyPower.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\CashHackSpecialPower.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\CaveContain.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\CheckpointUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\ChinookAIUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\CleanupAreaPower.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\CleanupHazardUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\CollideModule.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\CommandButtonHuntUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\CommandSetUpgrade.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\ContainModule.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\ConvertToCarBombCrateCollide.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\ConvertToHijackedVehicleCrateCollide.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\CostModifierUpgrade.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\CountermeasuresBehavior.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\CrateCollide.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\CreateCrateDie.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\CreateModule.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\CreateObjectDie.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\CrushDie.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\DamageModule.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\DamDie.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\DefaultProductionExitUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\DefectorSpecialPower.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\DeletionUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\DeliverPayloadAIUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\DemoralizeSpecialPower.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\DemoTrapUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\DeployStyleAIUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\DestroyDie.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\DestroyModule.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\DieModule.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\DockUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\DozerAIUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\DumbProjectileBehavior.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\DynamicGeometryInfoUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\DynamicShroudClearingRangeUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\EjectPilotDie.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\EMPUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\EnemyNearUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\ExperienceScalarUpgrade.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\FireOCLAfterWeaponCooldownUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\FireSpreadUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\FirestormDynamicGeometryInfoUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\FireWeaponCollide.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\FireWeaponUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\FireWeaponWhenDamagedBehavior.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\FireWeaponWhenDeadBehavior.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\FlammableUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\FlightDeckBehavior.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\FloatUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\FXListDie.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\GarrisonContain.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\GenerateMinefieldBehavior.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\GrantScienceUpgrade.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\GrantStealthBehavior.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\GrantUpgradeCreate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\HackInternetAIUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\HealContain.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\HealCrateCollide.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\HeightDieUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\HelicopterSlowDeathUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\HelixContain.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\HighlanderBody.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\HijackerUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\HiveStructureBody.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\HordeUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\ImmortalBody.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\InactiveBody.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\InstantDeathBehavior.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\InternetHackContain.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\JetAIUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\JetSlowDeathBehavior.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\KeepObjectDie.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\LifetimeUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\LockWeaponCreate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\LocomotorSetUpgrade.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\MaxHealthUpgrade.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\MinefieldBehavior.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\MissileAIUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\MissileLauncherBuildingUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\MobMemberSlavedUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\MobNexusContain.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\ModelConditionUpgrade.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\MoneyCrateCollide.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\NeutronBlastBehavior.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\NeutronMissileSlowDeathUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\NeutronMissileUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\ObjectCreationUpgrade.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\ObjectDefectionHelper.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\ObjectHelper.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\ObjectRepulsorHelper.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\ObjectSMCHelper.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\ObjectWeaponStatusHelper.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\OCLSpecialPower.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\OCLUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\OpenContain.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\OverchargeBehavior.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\OverlordContain.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\ParachuteContain.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\ParkingPlaceBehavior.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\ParticleUplinkCannonUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\PassengersFireUpgrade.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\PhysicsUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\PilotFindVehicleUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\PointDefenseLaserUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\PoisonedBehavior.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\PowerPlantUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\PowerPlantUpgrade.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\POWTruckAIUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\POWTruckBehavior.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\PreorderCreate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\PrisonBehavior.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\PrisonDockUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\ProductionUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\ProjectileStreamUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\ProneUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\PropagandaCenterBehavior.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\PropagandaTowerBehavior.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\QueueProductionExitUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\RadarUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\RadarUpgrade.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\RadiusDecalUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\RailedTransportAIUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\RailedTransportContain.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\RailedTransportDockUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\RailroadGuideAIUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\RebuildHoleBehavior.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\RebuildHoleExposeDie.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\RepairDockUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\ReplaceObjectUpgrade.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\RiderChangeContain.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\SabotageCommandCenterCrateCollide.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\SabotageFakeBuildingCrateCollide.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\SabotageInternetCenterCrateCollide.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\SabotageMilitaryFactoryCrateCollide.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\SabotagePowerPlantCrateCollide.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\SabotageSuperweaponCrateCollide.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\SabotageSupplyCenterCrateCollide.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\SabotageSupplyDropzoneCrateCollide.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\SalvageCrateCollide.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\ShroudCrateCollide.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\SlavedUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\SlowDeathBehavior.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\SmartBombTargetHomingUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\SpawnBehavior.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\SpawnPointProductionExitUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\SpecialAbility.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\SpecialAbilityUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\SpecialPowerCompletionDie.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\SpecialPowerCreate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\SpecialPowerModule.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\SpecialPowerUpdateModule.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\SpectreGunshipDeploymentUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\SpectreGunshipUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\SpyVisionSpecialPower.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\SpyVisionUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\SquishCollide.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\StatusBitsUpgrade.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\StatusDamageHelper.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\StealthDetectorUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\StealthUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\StealthUpgrade.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\StickyBombUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\StructureBody.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\StructureCollapseUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\StructureToppleUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\SubdualDamageHelper.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\SubObjectsUpgrade.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\SupplyCenterCreate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\SupplyCenterDockUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\SupplyCenterProductionExitUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\SupplyTruckAIUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\SupplyWarehouseCreate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\SupplyWarehouseCripplingBehavior.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\SupplyWarehouseDockUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\TechBuildingBehavior.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\TempWeaponBonusHelper.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\TensileFormationUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\ToppleUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\TransitionDamageFX.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\TransportAIUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\TransportContain.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\TunnelContain.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\UndeadBody.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\UnitCrateCollide.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\UnpauseSpecialPowerUpgrade.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\UpdateModule.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\UpgradeDie.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\UpgradeModule.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\VeterancyCrateCollide.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\VeterancyGainCreate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\WanderAIUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\WaveGuideUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\WeaponBonusUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\WeaponBonusUpgrade.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\WeaponSetUpgrade.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\WorkerAIUpdate.h">
+      <Filter>Header Files\GameLogic H\Module H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\AI.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\AIDock.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\AIGuard.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\AIGuardRetaliate.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\AIPathfind.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\AIPlayer.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\AISkirmishPlayer.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\AIStateMachine.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Armor.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\ArmorSet.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\CaveSystem.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\CrateSystem.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Damage.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\ExperienceTracker.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\FiringTracker.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\FPUControl.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\GameLogic.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\GhostObject.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Locomotor.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\LocomotorSet.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\LogicRandomValue.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Object.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\ObjectCreationList.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\ObjectIter.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\ObjectTypes.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\PartitionManager.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\PolygonTrigger.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Powers.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\RankInfo.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\ScriptActions.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\ScriptConditions.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\ScriptEngine.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Scripts.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\SidesList.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Squad.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\TerrainLogic.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\TurretAI.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\VictoryConditions.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Weapon.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\WeaponBonusConditionFlags.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\WeaponSet.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\WeaponSetFlags.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\WeaponSetType.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\WeaponStatus.h">
+      <Filter>Header Files\GameLogic H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\Module\AnimatedParticleSysBoneClientUpdate.h">
+      <Filter>Header Files\GameClient H\Module H %28Client%29</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\Module\BeaconClientUpdate.h">
+      <Filter>Header Files\GameClient H\Module H %28Client%29</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameLogic\Module\LaserUpdate.h">
+      <Filter>Header Files\GameClient H\Module H %28Client%29</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\Module\SwayClientUpdate.h">
+      <Filter>Header Files\GameClient H\Module H %28Client%29</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\Anim2D.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\AnimateWindowManager.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\CampaignManager.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\CDCheck.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\ChallengeGenerals.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\ClientRandomValue.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\Color.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\CommandXlat.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\ControlBar.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\ControlBarResizer.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\ControlBarScheme.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\Credits.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\DebugDisplay.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\Diplomacy.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\DisconnectMenu.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\Display.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\DisplayString.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\DisplayStringManager.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\Drawable.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\DrawableInfo.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\DrawableManager.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\DrawGroupInfo.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\EstablishConnectionsMenu.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\Eva.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\ExtendedMessageBox.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\FontDesc.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\FXList.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\Gadget.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\GadgetCheckBox.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\GadgetComboBox.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\GadgetListBox.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\GadgetProgressBar.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\GadgetPushButton.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\GadgetRadioButton.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\GadgetSlider.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\GadgetStaticText.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\GadgetTabControl.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\GadgetTextEntry.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\GameClient.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\GameFont.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\GameInfoWindow.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\GameText.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\GameWindow.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\GameWindowGlobal.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\GameWindowID.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\GameWindowManager.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\GameWindowTransitions.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\GlobalLanguage.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\GraphDraw.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\GUICallbacks.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\GUICommandTranslator.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\HeaderTemplate.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\HintSpy.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\HotKey.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\Image.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\IMEManager.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\InGameUI.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\Keyboard.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\KeyDefs.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\LanguageFilter.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\Line2D.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\LoadScreen.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\LookAtXlat.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\MapUtil.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\MessageBox.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\MetaEvent.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\Mouse.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\ParabolicEase.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\ParticleSys.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\PlaceEventTranslator.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\ProcessAnimateWindow.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\RadiusDecal.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\RayEffect.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\SelectionInfo.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\SelectionXlat.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\Shadow.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\Shell.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\ShellHooks.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\ShellMenuScheme.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\Smudge.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\Snow.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\Statistics.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\TerrainRoads.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\TerrainVisual.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\VideoPlayer.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\View.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\Water.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\WindowLayout.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\WindowVideoManager.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\WindowXlat.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameClient\WinInstanceData.h">
+      <Filter>Header Files\GameClient H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\WOLBrowser\FEBDispatch.h">
+      <Filter>Header Files\GameNetwork.H\WOLBrowser H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\WOLBrowser\WebBrowser.h">
+      <Filter>Header Files\GameNetwork.H\WOLBrowser H</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\Source\GameSpy\GameSpy\md5.h">
+      <Filter>Header Files\GameNetwork.H\GameSpyLibs.H\md5</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\Source\GameSpy\GameSpy\queryreporting\gqueryreporting.h">
+      <Filter>Header Files\GameNetwork.H\GameSpyLibs.H\queryreporting</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\Source\GameSpy\GameSpy\pinger\pinger.h">
+      <Filter>Header Files\GameNetwork.H\GameSpyLibs.H\pinger</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\Source\GameSpy\GameSpy\CEngine\goaceng.h">
+      <Filter>Header Files\GameNetwork.H\GameSpyLibs.H\CEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\Source\GameSpy\GameSpy\CEngine\gserver.h">
+      <Filter>Header Files\GameNetwork.H\GameSpyLibs.H\CEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\Source\GameSpy\GameSpy\hashtable.h">
+      <Filter>Header Files\GameNetwork.H\GameSpyLibs.H\hashtable</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\Source\GameSpy\GameSpy\chat\chat.h">
+      <Filter>Header Files\GameNetwork.H\GameSpyLibs.H\chat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\Source\GameSpy\GameSpy\chat\chatCallbacks.h">
+      <Filter>Header Files\GameNetwork.H\GameSpyLibs.H\chat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\Source\GameSpy\GameSpy\chat\chatChannel.h">
+      <Filter>Header Files\GameNetwork.H\GameSpyLibs.H\chat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\Source\GameSpy\GameSpy\Chat\chatCrypt.h">
+      <Filter>Header Files\GameNetwork.H\GameSpyLibs.H\chat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\Source\GameSpy\GameSpy\chat\chatHandlers.h">
+      <Filter>Header Files\GameNetwork.H\GameSpyLibs.H\chat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\Source\GameSpy\GameSpy\chat\chatMain.h">
+      <Filter>Header Files\GameNetwork.H\GameSpyLibs.H\chat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\Source\GameSpy\GameSpy\chat\chatSocket.h">
+      <Filter>Header Files\GameNetwork.H\GameSpyLibs.H\chat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\Source\GameSpy\GameSpy\nonport.h">
+      <Filter>Header Files\GameNetwork.H\GameSpyLibs.H\nonport</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\Source\GameSpy\GameSpy\darray.h">
+      <Filter>Header Files\GameNetwork.H\GameSpyLibs.H\darray</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\Source\GameSpy\GameSpy\peer\peer.h">
+      <Filter>Header Files\GameNetwork.H\GameSpyLibs.H\peer.H</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\Source\GameSpy\GameSpy\peer\peerCallbacks.h">
+      <Filter>Header Files\GameNetwork.H\GameSpyLibs.H\peer.H</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\Source\GameSpy\GameSpy\peer\peerCEngine.h">
+      <Filter>Header Files\GameNetwork.H\GameSpyLibs.H\peer.H</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\Source\GameSpy\GameSpy\peer\peerGlobalCallbacks.h">
+      <Filter>Header Files\GameNetwork.H\GameSpyLibs.H\peer.H</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\Source\GameSpy\GameSpy\peer\peerKeys.h">
+      <Filter>Header Files\GameNetwork.H\GameSpyLibs.H\peer.H</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\Source\GameSpy\GameSpy\peer\peerMain.h">
+      <Filter>Header Files\GameNetwork.H\GameSpyLibs.H\peer.H</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\Source\GameSpy\GameSpy\peer\peerMangle.h">
+      <Filter>Header Files\GameNetwork.H\GameSpyLibs.H\peer.H</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\Source\GameSpy\GameSpy\peer\peerOperations.h">
+      <Filter>Header Files\GameNetwork.H\GameSpyLibs.H\peer.H</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\Source\GameSpy\GameSpy\peer\peerPing.h">
+      <Filter>Header Files\GameNetwork.H\GameSpyLibs.H\peer.H</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\Source\GameSpy\GameSpy\peer\peerPlayers.h">
+      <Filter>Header Files\GameNetwork.H\GameSpyLibs.H\peer.H</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\Source\GameSpy\GameSpy\peer\peerRooms.h">
+      <Filter>Header Files\GameNetwork.H\GameSpyLibs.H\peer.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\GameSpy\BuddyThread.h">
+      <Filter>Header Files\GameNetwork.H\GameSpy.H\Thread.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\GameSpy\GameResultsThread.h">
+      <Filter>Header Files\GameNetwork.H\GameSpy.H\Thread.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\GameSpy\PeerThread.h">
+      <Filter>Header Files\GameNetwork.H\GameSpy.H\Thread.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\GameSpy\PersistentStorageThread.h">
+      <Filter>Header Files\GameNetwork.H\GameSpy.H\Thread.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\GameSpy\PingThread.h">
+      <Filter>Header Files\GameNetwork.H\GameSpy.H\Thread.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\GameSpy\ThreadUtils.h">
+      <Filter>Header Files\GameNetwork.H\GameSpy.H\Thread.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\GameSpy\BuddyDefs.h">
+      <Filter>Header Files\GameNetwork.H\GameSpy.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\GameSpy\GSConfig.h">
+      <Filter>Header Files\GameNetwork.H\GameSpy.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\GameSpy\LadderDefs.h">
+      <Filter>Header Files\GameNetwork.H\GameSpy.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\GameSpy\LobbyUtils.h">
+      <Filter>Header Files\GameNetwork.H\GameSpy.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\GameSpy\MainMenuUtils.h">
+      <Filter>Header Files\GameNetwork.H\GameSpy.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\GameSpy\PeerDefs.h">
+      <Filter>Header Files\GameNetwork.H\GameSpy.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\GameSpy\PeerDefsImplementation.h">
+      <Filter>Header Files\GameNetwork.H\GameSpy.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\GameSpy\PersistentStorageDefs.h">
+      <Filter>Header Files\GameNetwork.H\GameSpy.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\GameSpy\StagingRoomGameInfo.h">
+      <Filter>Header Files\GameNetwork.H\GameSpy.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\Connection.h">
+      <Filter>Header Files\GameNetwork.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\ConnectionManager.h">
+      <Filter>Header Files\GameNetwork.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\DisconnectManager.h">
+      <Filter>Header Files\GameNetwork.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\DownloadManager.h">
+      <Filter>Header Files\GameNetwork.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\FileTransfer.h">
+      <Filter>Header Files\GameNetwork.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\FirewallHelper.h">
+      <Filter>Header Files\GameNetwork.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\FrameData.h">
+      <Filter>Header Files\GameNetwork.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\FrameDataManager.h">
+      <Filter>Header Files\GameNetwork.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\FrameMetrics.h">
+      <Filter>Header Files\GameNetwork.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\GameInfo.h">
+      <Filter>Header Files\GameNetwork.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\GameMessageParser.h">
+      <Filter>Header Files\GameNetwork.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\GameSpy.h">
+      <Filter>Header Files\GameNetwork.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\GameSpyChat.h">
+      <Filter>Header Files\GameNetwork.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\GameSpyGameInfo.h">
+      <Filter>Header Files\GameNetwork.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\GameSpyGP.h">
+      <Filter>Header Files\GameNetwork.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\GameSpyOverlay.h">
+      <Filter>Header Files\GameNetwork.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\GameSpyPersistentStorage.h">
+      <Filter>Header Files\GameNetwork.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\GameSpyThread.h">
+      <Filter>Header Files\GameNetwork.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\GUIUtil.h">
+      <Filter>Header Files\GameNetwork.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\IPEnumeration.h">
+      <Filter>Header Files\GameNetwork.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\LANAPI.h">
+      <Filter>Header Files\GameNetwork.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\LANAPICallbacks.h">
+      <Filter>Header Files\GameNetwork.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\LANGameInfo.h">
+      <Filter>Header Files\GameNetwork.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\LANPlayer.h">
+      <Filter>Header Files\GameNetwork.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\NAT.h">
+      <Filter>Header Files\GameNetwork.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\NetCommandList.h">
+      <Filter>Header Files\GameNetwork.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\NetCommandMsg.h">
+      <Filter>Header Files\GameNetwork.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\NetCommandRef.h">
+      <Filter>Header Files\GameNetwork.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\NetCommandWrapperList.h">
+      <Filter>Header Files\GameNetwork.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\NetPacket.h">
+      <Filter>Header Files\GameNetwork.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\NetworkDefs.h">
+      <Filter>Header Files\GameNetwork.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\NetworkInterface.h">
+      <Filter>Header Files\GameNetwork.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\NetworkUtil.h">
+      <Filter>Header Files\GameNetwork.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\RankPointValue.h">
+      <Filter>Header Files\GameNetwork.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\Transport.h">
+      <Filter>Header Files\GameNetwork.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\udp.h">
+      <Filter>Header Files\GameNetwork.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameNetwork\User.h">
+      <Filter>Header Files\GameNetwork.H</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Precompiled\PreRTS.h">
+      <Filter>Header Files\Precompiled H</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

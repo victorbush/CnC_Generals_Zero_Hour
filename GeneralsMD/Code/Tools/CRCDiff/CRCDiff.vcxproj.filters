@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{5eb2c460-a289-47c2-a0a2-1e219b6f3357}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{d794f5b2-44a6-4cde-b2f6-fde08f8a5fd5}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="html">
+      <UniqueIdentifier>{56c3f02e-960d-430d-ab97-8ef64aa4d686}</UniqueIdentifier>
+      <Extensions>.css;.html</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{6f9f595f-87dd-49f8-905a-4900e1091245}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CRCDiff.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="debug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="expander.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="KVPair.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="debug.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="expander.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="KVPair.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="misc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="bottom.html">
+      <Filter>html</Filter>
+    </CustomBuild>
+    <CustomBuild Include="out.html">
+      <Filter>html</Filter>
+    </CustomBuild>
+    <CustomBuild Include="row.html">
+      <Filter>html</Filter>
+    </CustomBuild>
+    <CustomBuild Include="style.css">
+      <Filter>html</Filter>
+    </CustomBuild>
+    <CustomBuild Include="top.html">
+      <Filter>html</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

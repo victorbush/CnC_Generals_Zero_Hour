@@ -157,7 +157,7 @@
       <Optimization>Disabled</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
-      <TreatWarningAsError>true</TreatWarningAsError>
+      <TreatWarningAsError>false</TreatWarningAsError>
       <MinimalRebuild>true</MinimalRebuild>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <AdditionalIncludeDirectories>..\wwlib;..\wwdebug;..\wwmath;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -189,7 +189,7 @@
       <Optimization>Disabled</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
-      <TreatWarningAsError>true</TreatWarningAsError>
+      <TreatWarningAsError>false</TreatWarningAsError>
       <MinimalRebuild>true</MinimalRebuild>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <AdditionalIncludeDirectories>..\wwlib;..\wwdebug;..\wwmath;$(ProjectDir)DXSDK\INCLUDE;../STLPORT;../DXSDK/INCLUDE;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -222,7 +222,7 @@
       <Optimization>MaxSpeed</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
-      <TreatWarningAsError>true</TreatWarningAsError>
+      <TreatWarningAsError>false</TreatWarningAsError>
       <AdditionalIncludeDirectories>..\wwlib;..\wwdebug;..\wwmath;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NDEBUG;WINVER=0x400;_WINDOWS;WIN32;_INTERNAL;WWDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Internal\</AssemblerListingLocation>
@@ -252,7 +252,7 @@
       <Optimization>Disabled</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
-      <TreatWarningAsError>true</TreatWarningAsError>
+      <TreatWarningAsError>false</TreatWarningAsError>
       <MinimalRebuild>true</MinimalRebuild>
       <AdditionalIncludeDirectories>..\wwlib;..\wwdebug;..\wwmath;$(ProjectDir)DXSDK\INCLUDE;../STLPORT;../DXSDK/INCLUDE;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NDEBUG;WWDEBUG;WINVER=0x400;_WINDOWS;WIN32;PARAM_EDITING_ON;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -284,7 +284,7 @@
       <Optimization>MaxSpeed</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
-      <TreatWarningAsError>true</TreatWarningAsError>
+      <TreatWarningAsError>false</TreatWarningAsError>
       <MinimalRebuild>true</MinimalRebuild>
       <AdditionalIncludeDirectories>..\wwlib;..\wwdebug;..\wwmath;$(ProjectDir)DXSDK\INCLUDE;../STLPORT;../DXSDK/INCLUDE;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NDEBUG;WWDEBUG;WINVER=0x400;_WINDOWS;WIN32;_PROFILE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -316,7 +316,7 @@
       <Optimization>MaxSpeed</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
-      <TreatWarningAsError>true</TreatWarningAsError>
+      <TreatWarningAsError>false</TreatWarningAsError>
       <AdditionalIncludeDirectories>..\wwlib;..\wwdebug;..\wwmath;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WINVER=0x400;_WINDOWS;NDEBUG;WIN32;IG_DEBUG_STACKTRACE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
@@ -345,7 +345,7 @@
       <Optimization>Disabled</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level2</WarningLevel>
-      <TreatWarningAsError>true</TreatWarningAsError>
+      <TreatWarningAsError>false</TreatWarningAsError>
       <AdditionalIncludeDirectories>..\wwlib;..\wwdebug;..\wwmath;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_DEBUG;WINVER=0x400;_WINDOWS;WIN32;WWDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>

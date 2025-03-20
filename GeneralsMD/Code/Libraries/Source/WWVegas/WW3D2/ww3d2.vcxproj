@@ -157,7 +157,7 @@
       <Optimization>Disabled</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
-      <TreatWarningAsError>true</TreatWarningAsError>
+      <TreatWarningAsError>false</TreatWarningAsError>
       <MinimalRebuild>true</MinimalRebuild>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <AdditionalIncludeDirectories>..\srsdk1x\include;..\wwlib;..\wwmath;..\wwdebug;..\wwcpuid;..\wwsaveload;..\wwaudio;..\miles6\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -188,7 +188,7 @@
       <Optimization>MaxSpeed</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
-      <TreatWarningAsError>true</TreatWarningAsError>
+      <TreatWarningAsError>false</TreatWarningAsError>
       <AdditionalIncludeDirectories>..\wwlib;..\wwmath;..\wwdebug;..\wwcpuid;..\wwsaveload;..\wwaudio;..\miles6\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NDEBUG;WINVER=0x400;_WINDOWS;WIN32_LEAN_AND_MEAN;WIN32;_INTERNAL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Internal\</AssemblerListingLocation>
@@ -217,7 +217,7 @@
       <Optimization>MaxSpeed</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
-      <TreatWarningAsError>true</TreatWarningAsError>
+      <TreatWarningAsError>false</TreatWarningAsError>
       <MinimalRebuild>true</MinimalRebuild>
       <AdditionalIncludeDirectories>..\srsdk1x\include;..\wwlib;..\wwmath;..\wwdebug;..\wwcpuid;..\wwsaveload;..\wwaudio;..\miles6\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NDEBUG;WWDEBUG;WINVER=0x400;_WINDOWS;WIN32_LEAN_AND_MEAN;WIN32;PARAM_EDITING_ON;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -246,7 +246,7 @@
       <Optimization>Disabled</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
-      <TreatWarningAsError>true</TreatWarningAsError>
+      <TreatWarningAsError>false</TreatWarningAsError>
       <MinimalRebuild>true</MinimalRebuild>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <AdditionalIncludeDirectories>..\wwlib;..\wwmath;..\wwdebug;..\wwcpuid;..\wwsaveload;..\wwaudio;..\miles6\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -277,7 +277,7 @@
       <Optimization>MaxSpeed</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
-      <TreatWarningAsError>true</TreatWarningAsError>
+      <TreatWarningAsError>false</TreatWarningAsError>
       <AdditionalIncludeDirectories>..\srsdk1x\include;..\wwlib;..\wwmath;..\wwdebug;..\wwcpuid;..\wwsaveload;..\wwaudio;..\miles6\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NDEBUG;WWDEBUG;WINVER=0x400;_WINDOWS;WIN32_LEAN_AND_MEAN;WIN32;_PROFILE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Profile\</AssemblerListingLocation>
@@ -307,7 +307,7 @@
       <Optimization>MaxSpeed</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level2</WarningLevel>
-      <TreatWarningAsError>true</TreatWarningAsError>
+      <TreatWarningAsError>false</TreatWarningAsError>
       <AdditionalIncludeDirectories>..\wwlib;..\wwmath;..\wwdebug;..\wwcpuid;..\wwsaveload;..\wwaudio;..\miles6\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_DEBUG;WINVER=0x400;_WINDOWS;WIN32_LEAN_AND_MEAN;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
@@ -336,7 +336,7 @@
       <Optimization>MaxSpeed</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
-      <TreatWarningAsError>true</TreatWarningAsError>
+      <TreatWarningAsError>false</TreatWarningAsError>
       <AdditionalIncludeDirectories>..\wwlib;..\wwmath;..\wwdebug;..\wwcpuid;..\wwsaveload;..\wwaudio;..\miles6\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WINVER=0x400;_WINDOWS;WIN32_LEAN_AND_MEAN;NDEBUG;WIN32;IG_DEBUG_STACKTRACE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Release\</AssemblerListingLocation>

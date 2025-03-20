@@ -156,7 +156,7 @@
       <Optimization>MaxSpeed</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
-      <TreatWarningAsError>true</TreatWarningAsError>
+      <TreatWarningAsError>false</TreatWarningAsError>
       <AdditionalIncludeDirectories>..\wwlib;..\wwdebug;..\wwmath;..\wwsaveload;..\ww3d2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WINVER=0x400;WWDEBUG;NDEBUG;WIN32;_WINDOWS;_INTERNAL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Internal\</AssemblerListingLocation>

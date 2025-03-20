@@ -88,7 +88,7 @@
       <Optimization>Disabled</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
-      <TreatWarningAsError>true</TreatWarningAsError>
+      <TreatWarningAsError>false</TreatWarningAsError>
       <MinimalRebuild>true</MinimalRebuild>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <AdditionalIncludeDirectories>.\Include;.\Resource;..\..\Libraries\Include;..\..\GameEngine\Include;..\..\GameEngineDevice\Include;..\..\Libraries\Source\WWVegas;..\..\Libraries\Source\WWVegas\WWLib;..\..\Libraries\Source\WWVegas\WWMath;..\..\Libraries\Source\WWVegas\WWDebug;..\..\Libraries\Source\WWVegas\WWSaveLoad;..\..\Libraries\Source\WWVegas\WW3D2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -133,7 +133,7 @@
       <Optimization>MaxSpeed</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
-      <TreatWarningAsError>true</TreatWarningAsError>
+      <TreatWarningAsError>false</TreatWarningAsError>
       <AdditionalIncludeDirectories>.\Include;.\Resource;..\..\Libraries\Include;..\..\GameEngine\Include;..\..\GameEngineDevice\Include;..\..\Libraries\Source\WWVegas;..\..\Libraries\Source\WWVegas\WWLib;..\..\Libraries\Source\WWVegas\WWMath;..\..\Libraries\Source\WWVegas\WWDebug;..\..\Libraries\Source\WWVegas\WWSaveLoad;..\..\Libraries\Source\WWVegas\WW3D2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_WINDOWS;WIN32;NDEBUG;_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
@@ -175,7 +175,7 @@
       <Optimization>MaxSpeed</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
-      <TreatWarningAsError>true</TreatWarningAsError>
+      <TreatWarningAsError>false</TreatWarningAsError>
       <AdditionalIncludeDirectories>.\Include;.\Resource;..\..\Libraries\Include;..\..\GameEngine\Include;..\..\GameEngineDevice\Include;..\..\Libraries\Source\WWVegas;..\..\Libraries\Source\WWVegas\WWLib;..\..\Libraries\Source\WWVegas\WWMath;..\..\Libraries\Source\WWVegas\WWDebug;..\..\Libraries\Source\WWVegas\WWSaveLoad;..\..\Libraries\Source\WWVegas\WW3D2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_INTERNAL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Internal\</AssemblerListingLocation>

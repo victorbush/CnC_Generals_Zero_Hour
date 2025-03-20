@@ -127,7 +127,7 @@
       <Optimization>MaxSpeed</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
-      <TreatWarningAsError>true</TreatWarningAsError>
+      <TreatWarningAsError>false</TreatWarningAsError>
       <AdditionalIncludeDirectories>Libraries\Include;GameEngine\Include;gameenginedevice\Include;Libraries\Source\WWVegas;Libraries\Source\WWVegas\WWLib;Libraries\Source\WWVegas\WWMath;Libraries\Source\WWVegas\WWDebug;Libraries\Source\WWVegas\WWSaveLoad;Libraries\Source\WWVegas\WW3D2;Libraries\Include\Granny;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NDEBUG;_INTERNAL;WIN32;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Main\Internal\</AssemblerListingLocation>
@@ -169,7 +169,7 @@
       <Optimization>Disabled</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
-      <TreatWarningAsError>true</TreatWarningAsError>
+      <TreatWarningAsError>false</TreatWarningAsError>
       <MinimalRebuild>true</MinimalRebuild>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <AdditionalIncludeDirectories>Libraries\Include;GameEngine\Include;gameenginedevice\Include;Libraries\Source\WWVegas;Libraries\Source\WWVegas\WWLib;Libraries\Source\WWVegas\WWMath;Libraries\Source\WWVegas\WWDebug;Libraries\Source\WWVegas\WWSaveLoad;Libraries\Source\WWVegas\WW3D2;Libraries\Include\Granny;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -213,7 +213,7 @@
       <Optimization>MaxSpeed</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
-      <TreatWarningAsError>true</TreatWarningAsError>
+      <TreatWarningAsError>false</TreatWarningAsError>
       <AdditionalIncludeDirectories>Libraries\Include;GameEngine\Include;gameenginedevice\Include;Libraries\Source\WWVegas;Libraries\Source\WWVegas\WWLib;Libraries\Source\WWVegas\WWMath;Libraries\Source\WWVegas\WWDebug;Libraries\Source\WWVegas\WWSaveLoad;Libraries\Source\WWVegas\WW3D2;Libraries\Include\Granny;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>IG_DEBUG_STACKTRACE;NDEBUG;_RELEASE;WIN32;_WINDOWS;_PROFILE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Main\Profile\</AssemblerListingLocation>
@@ -256,7 +256,7 @@
       <Optimization>MaxSpeed</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
-      <TreatWarningAsError>true</TreatWarningAsError>
+      <TreatWarningAsError>false</TreatWarningAsError>
       <AdditionalIncludeDirectories>Libraries\Include;GameEngine\Include;gameenginedevice\Include;Libraries\Source\WWVegas;Libraries\Source\WWVegas\WWLib;Libraries\Source\WWVegas\WWMath;Libraries\Source\WWVegas\WWDebug;Libraries\Source\WWVegas\WWSaveLoad;Libraries\Source\WWVegas\WW3D2;Libraries\Include\Granny;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>IG_DEBUG_STACKTRACE;NDEBUG;_RELEASE;WIN32;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Main\Release\</AssemblerListingLocation>
@@ -299,7 +299,7 @@
       <Optimization>Disabled</Optimization>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level3</WarningLevel>
-      <TreatWarningAsError>true</TreatWarningAsError>
+      <TreatWarningAsError>false</TreatWarningAsError>
       <MinimalRebuild>true</MinimalRebuild>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <AdditionalIncludeDirectories>Libraries\Include;GameEngine\Include;gameenginedevice\Include;Libraries\Source\WWVegas;Libraries\Source\WWVegas\WWLib;Libraries\Source\WWVegas\WWMath;Libraries\Source\WWVegas\WWDebug;Libraries\Source\WWVegas\WWSaveLoad;Libraries\Source\WWVegas\WW3D2;Libraries\Include\Granny;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>

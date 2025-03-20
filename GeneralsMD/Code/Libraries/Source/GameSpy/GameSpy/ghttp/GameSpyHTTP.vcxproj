@@ -60,8 +60,20 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ghttpMain.c">
-    </ClCompile>
+	<ClCompile Include="ghttpBuffer.c"></ClCompile>
+	<ClCompile Include="ghttpCallbacks.c"></ClCompile>
+	<ClCompile Include="ghttpCommon.c"></ClCompile>
+	<ClCompile Include="ghttpConnection.c"></ClCompile>
+    <ClCompile Include="ghttpEncryption.c"></ClCompile>
+	<ClCompile Include="ghttpMain.c"></ClCompile>
+	<ClCompile Include="ghttpPost.c"></ClCompile>
+	<ClCompile Include="ghttpProcess.c"></ClCompile>
+	<ClCompile Include="..\common\gsCrypt.c"></ClCompile>
+	<ClCompile Include="..\common\gsLargeInt.c"></ClCompile>
+	<ClCompile Include="..\common\gsRC4.c"></ClCompile>
+	<ClCompile Include="..\common\gsSHA1.c"></ClCompile>
+	<ClCompile Include="..\common\gsSSL.c"></ClCompile>
+	<ClCompile Include="..\common\gsXML.c"></ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

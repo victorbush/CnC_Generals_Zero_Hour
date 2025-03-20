@@ -3111,10 +3111,10 @@ Bool W3DShaderManager::testMinimumRequirements(ChipsetType *videoChipType, CpuTy
 	if (numRAM)
 		*numRAM=CPUDetectClass::Get_Total_Physical_Memory();
 
-	if (intBenchIndex && floatBenchIndex && memBenchIndex)
-	{
-		RunBenchmark(0, NULL, floatBenchIndex, intBenchIndex, memBenchIndex);
-	}
+	//if (intBenchIndex && floatBenchIndex && memBenchIndex)
+	//{
+	//	RunBenchmark(0, NULL, floatBenchIndex, intBenchIndex, memBenchIndex);
+	//}
 
 	return TRUE;
 }

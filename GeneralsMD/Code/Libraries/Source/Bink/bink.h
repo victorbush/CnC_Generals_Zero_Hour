@@ -24,11 +24,12 @@
 #endif /* !defined __stdcall */
 #endif /* !defined COMPILER_MSVC */
 
-#ifdef BINKDLL
-#define BINKEXPORT __declspec(dllexport)
-#else
-#define BINKEXPORT __declspec(dllimport)
-#endif
+//#ifdef BINKDLL
+//#define BINKEXPORT __declspec(dllexport)
+//#else
+//#define BINKEXPORT __declspec(dllimport)
+//#endif
+#define BINKEXPORT
 
 #ifdef __cplusplus
 extern "C" {

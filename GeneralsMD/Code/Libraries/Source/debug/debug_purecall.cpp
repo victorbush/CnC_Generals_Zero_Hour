@@ -29,8 +29,8 @@
 #include "_pch.h"
 
 // Pure virtual function called
-int __cdecl _purecall(void)
-{
-  DCRASH_RELEASE("Pure virtual function called.");
-  return 0;
-}
+//int __cdecl _purecall(void)
+//{
+//  DCRASH_RELEASE("Pure virtual function called.");
+//  return 0;
+//}

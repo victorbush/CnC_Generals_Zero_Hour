@@ -12,7 +12,7 @@
  *            A full copy of the GNU General Public License can be found in
  *            LICENSE
  */
-#include "mss/mss.h"
+#include "include/mss.h"
 #include <stddef.h>
 
 long __stdcall AIL_3D_sample_volume(H3DSAMPLE sample)

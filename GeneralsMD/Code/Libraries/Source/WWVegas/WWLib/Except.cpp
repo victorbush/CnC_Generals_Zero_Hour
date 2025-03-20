@@ -168,20 +168,20 @@ static char const *ImagehelpFunctionNames[] =
  * HISTORY:                                                                                    *
  *   8/22/00 11:42AM ST : Created                                                              *
  *=============================================================================================*/
-int __cdecl _purecall(void)
-{
-	int return_code = 0;
-
-#ifdef WWDEBUG
-	/*
-	** Use int3 to cause an exception.
-	*/
-	WWDEBUG_SAY(("Pure Virtual Function call. Oh No!\n"));
-	_asm int 0x03;
-#endif	//_DEBUG_ASSERT
-
-	return(return_code);
-}
+//int __cdecl _purecall(void)
+//{
+//	int return_code = 0;
+//
+//#ifdef WWDEBUG
+//	/*
+//	** Use int3 to cause an exception.
+//	*/
+//	WWDEBUG_SAY(("Pure Virtual Function call. Oh No!\n"));
+//	_asm int 0x03;
+//#endif	//_DEBUG_ASSERT
+//
+//	return(return_code);
+//}
 
 
 

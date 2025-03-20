@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C4A42F25-0692-4F12-8BE4-5FCBB051E541}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level2</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Debug\wwutil.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\wwutil.bsc</OutputFile>
+    </Bscmake>
+    <Lib>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>..\..\..\..\Lib\GameSpyPresence.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="gp.c"></ClCompile>
+    <ClCompile Include="gpi.c"></ClCompile>
+    <ClCompile Include="gpiBuddy.c"></ClCompile>
+    <ClCompile Include="gpiBuffer.c"></ClCompile>
+    <ClCompile Include="gpiCallback.c"></ClCompile>
+    <ClCompile Include="gpiConnect.c"></ClCompile>
+    <ClCompile Include="gpiInfo.c"></ClCompile>
+    <ClCompile Include="gpiKeys.c"></ClCompile>
+    <ClCompile Include="gpiOperation.c"></ClCompile>
+    <ClCompile Include="gpiPeer.c"></ClCompile>
+    <ClCompile Include="gpiProfile.c"></ClCompile>
+    <ClCompile Include="gpiSearch.c"></ClCompile>
+    <ClCompile Include="gpiTransfer.c"></ClCompile>
+    <ClCompile Include="gpiUnique.c"></ClCompile>
+    <ClCompile Include="gpiUtility.c"></ClCompile>
+    <ClCompile Include="../common/gsUdpEngine.c"></ClCompile>
+    <ClCompile Include="../gt2/gt2Auth.c"></ClCompile>
+    <ClCompile Include="../gt2/gt2Buffer.c"></ClCompile>
+    <ClCompile Include="../gt2/gt2Callback.c"></ClCompile>
+    <ClCompile Include="../gt2/gt2Connection.c"></ClCompile>
+    <ClCompile Include="../gt2/gt2Filter.c"></ClCompile>
+	<ClCompile Include="../gt2/gt2Main.c"></ClCompile>
+    <ClCompile Include="../gt2/gt2Message.c"></ClCompile>
+    <ClCompile Include="../gt2/gt2Socket.c"></ClCompile>
+    <ClCompile Include="../gt2/gt2Utility.c"></ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

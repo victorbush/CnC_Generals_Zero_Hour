@@ -83,7 +83,7 @@ WindowMsgHandledType GadgetCheckBoxInput( GameWindow *window, UnsignedInt msg,
 		case GWM_MOUSE_ENTERING:
 		{
 
-			if( BitTest( instData->getStyle(), GWS_MOUSE_TRACK ) ) 
+			if( BitTestWW( instData->getStyle(), GWS_MOUSE_TRACK ) ) 
 			{
 
 				BitSet( instData->m_state, WIN_STATE_HILITED );
@@ -102,10 +102,10 @@ WindowMsgHandledType GadgetCheckBoxInput( GameWindow *window, UnsignedInt msg,
 		case GWM_MOUSE_LEAVING:
 		{
 
-			if( BitTest( instData->getStyle(), GWS_MOUSE_TRACK ) ) 
+			if( BitTestWW( instData->getStyle(), GWS_MOUSE_TRACK ) ) 
 			{
 
-				BitClear( instData->m_state, WIN_STATE_HILITED );
+				BitClearWW( instData->m_state, WIN_STATE_HILITED );
 				TheWindowManager->winSendSystemMsg( window->winGetOwner(), 
 																						GBM_MOUSE_LEAVING,
 																						(WindowMsgData)window, 
@@ -137,7 +137,7 @@ WindowMsgHandledType GadgetCheckBoxInput( GameWindow *window, UnsignedInt msg,
 		case GWM_LEFT_UP:
 		{
 
-			if( BitTest( instData->getState(), WIN_STATE_HILITED ) == FALSE )
+			if( BitTestWW( instData->getState(), WIN_STATE_HILITED ) == FALSE )
 			{
 				// this up click was not meant for this button
 				return MSG_IGNORED;
@@ -165,12 +165,12 @@ WindowMsgHandledType GadgetCheckBoxInput( GameWindow *window, UnsignedInt msg,
 		case GWM_RIGHT_UP:
 		{
 			// Need to be specially marked to care about right mouse events
-			if( BitTest( instData->getState(), WIN_STATE_SELECTED ) )
+			if( BitTestWW( instData->getState(), WIN_STATE_SELECTED ) )
 			{
 				TheWindowManager->winSendSystemMsg( instData->getOwner(), GBM_SELECTED_RIGHT,
 																						(WindowMsgData)window, mData1 );
 
-				BitClear( instData->m_state, WIN_STATE_SELECTED );
+				BitClearWW( instData->m_state, WIN_STATE_SELECTED );
 			}
 			else
 			{
@@ -192,7 +192,7 @@ WindowMsgHandledType GadgetCheckBoxInput( GameWindow *window, UnsignedInt msg,
 				case KEY_SPACE:
 				{
 
-					if( BitTest( mData2, KEY_STATE_DOWN ) )
+					if( BitTestWW( mData2, KEY_STATE_DOWN ) )
 					{
 						// Toggle the check state
 						instData->m_state ^= WIN_STATE_SELECTED;
@@ -212,7 +212,7 @@ WindowMsgHandledType GadgetCheckBoxInput( GameWindow *window, UnsignedInt msg,
 				case KEY_TAB:
 				{
 
-					if( BitTest( mData2, KEY_STATE_DOWN ) )
+					if( BitTestWW( mData2, KEY_STATE_DOWN ) )
 						TheWindowManager->winNextTab(window);
 					break;
 
@@ -223,7 +223,7 @@ WindowMsgHandledType GadgetCheckBoxInput( GameWindow *window, UnsignedInt msg,
 				case KEY_LEFT:
 				{
 
-					if( BitTest( mData2, KEY_STATE_DOWN ) )
+					if( BitTestWW( mData2, KEY_STATE_DOWN ) )
 						TheWindowManager->winPrevTab(window);
 					break;
 
@@ -286,7 +286,7 @@ WindowMsgHandledType GadgetCheckBoxSystem( GameWindow *window, UnsignedInt msg,
 		case GWM_INPUT_FOCUS:
 
 			if( mData1 == FALSE )
-				BitClear( instData->m_state, WIN_STATE_HILITED );
+				BitClearWW( instData->m_state, WIN_STATE_HILITED );
 			else
 				BitSet( instData->m_state, WIN_STATE_HILITED );
 			TheWindowManager->winSendSystemMsg( window->winGetOwner(), 
@@ -336,7 +336,7 @@ void GadgetCheckBoxSetChecked( GameWindow *g, Bool isChecked)
 	}
 	else
 	{
-		BitClear(instData->m_state,  WIN_STATE_SELECTED);
+		BitClearWW(instData->m_state,  WIN_STATE_SELECTED);
 	}
 
 	TheWindowManager->winSendSystemMsg( g->winGetOwner(), GBM_SELECTED,
@@ -351,10 +351,10 @@ void GadgetCheckBoxSetChecked( GameWindow *g, Bool isChecked)
 void GadgetCheckBoxToggle( GameWindow *g)
 {
 	WinInstanceData *instData = g->winGetInstanceData();
-	Bool isChecked = BitTest(instData->m_state, WIN_STATE_SELECTED);
+	Bool isChecked = BitTestWW(instData->m_state, WIN_STATE_SELECTED);
 	if (isChecked)
 	{
-		BitClear(instData->m_state,  WIN_STATE_SELECTED);
+		BitClearWW(instData->m_state,  WIN_STATE_SELECTED);
 	}
 	else
 	{
@@ -372,5 +372,5 @@ void GadgetCheckBoxToggle( GameWindow *g)
 Bool GadgetCheckBoxIsChecked( GameWindow *g )
 {
 	WinInstanceData *instData = g->winGetInstanceData();
-	return (BitTest(instData->m_state, WIN_STATE_SELECTED));
+	return (BitTestWW(instData->m_state, WIN_STATE_SELECTED));
 }

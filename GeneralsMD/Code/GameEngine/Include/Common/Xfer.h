@@ -121,7 +121,7 @@ public:
 
 	// xfer management
 	virtual void setOptions( UnsignedInt options ) { BitSet( m_options, options ); }
-	virtual void clearOptions( UnsignedInt options ) { BitClear( m_options, options ); }
+	virtual void clearOptions( UnsignedInt options ) { BitClearWW( m_options, options ); }
 	virtual UnsignedInt getOptions( void ) { return m_options; }
 	virtual void open( AsciiString identifier ) = 0;		///< xfer open event
 	virtual void close( void ) = 0;											///< xfer close event

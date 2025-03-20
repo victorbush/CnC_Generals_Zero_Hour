@@ -106,7 +106,7 @@ WindowMsgHandledType GadgetComboBoxInput( GameWindow *window, UnsignedInt msg,
 				case KEY_RIGHT:
 				case KEY_TAB:
 
-					if( BitTest( mData2, KEY_STATE_DOWN ) )
+					if( BitTestWW( mData2, KEY_STATE_DOWN ) )
 						TheWindowManager->winNextTab(window);
 					break;
 
@@ -114,7 +114,7 @@ WindowMsgHandledType GadgetComboBoxInput( GameWindow *window, UnsignedInt msg,
 				case KEY_UP:
 				case KEY_LEFT:
 
-					if( BitTest( mData2, KEY_STATE_DOWN ) )
+					if( BitTestWW( mData2, KEY_STATE_DOWN ) )
 						TheWindowManager->winPrevTab(window);
 					break;
 
@@ -226,7 +226,7 @@ WindowMsgHandledType GadgetComboBoxInput( GameWindow *window, UnsignedInt msg,
 		case GWM_MOUSE_ENTERING:
 		{
 
-			if( BitTest( instData->getStyle(), GWS_MOUSE_TRACK ) ) 
+			if( BitTestWW( instData->getStyle(), GWS_MOUSE_TRACK ) ) 
 			{
 
 				BitSet( instData->m_state, WIN_STATE_HILITED );
@@ -246,10 +246,10 @@ WindowMsgHandledType GadgetComboBoxInput( GameWindow *window, UnsignedInt msg,
 		case GWM_MOUSE_LEAVING:
 		{
 
-			if( BitTest( instData->getStyle(), GWS_MOUSE_TRACK )) 
+			if( BitTestWW( instData->getStyle(), GWS_MOUSE_TRACK )) 
 			{
 
-				BitClear( instData->m_state, WIN_STATE_HILITED );
+				BitClearWW( instData->m_state, WIN_STATE_HILITED );
 				TheWindowManager->winSendSystemMsg( window->winGetOwner(), 
 																						GBM_MOUSE_LEAVING,
 																						(WindowMsgData)window, 
@@ -264,7 +264,7 @@ WindowMsgHandledType GadgetComboBoxInput( GameWindow *window, UnsignedInt msg,
 		// ------------------------------------------------------------------------
 		case GWM_LEFT_DRAG:
 
-			if (BitTest( instData->getStyle(), GWS_MOUSE_TRACK ) )
+			if (BitTestWW( instData->getStyle(), GWS_MOUSE_TRACK ) )
 				TheWindowManager->winSendSystemMsg( window->winGetOwner(), 
 																						GGM_LEFT_DRAG,
 																						(WindowMsgData)window, 
@@ -610,7 +610,7 @@ WindowMsgHandledType GadgetComboBoxSystem( GameWindow *window, UnsignedInt msg,
 			// If we're losing focus
 			if( mData1 == FALSE )
 			{
-				BitClear( instData->m_state, WIN_STATE_HILITED );
+				BitClearWW( instData->m_state, WIN_STATE_HILITED );
 			}
 			else
 			{
@@ -820,8 +820,8 @@ void GadgetComboBoxSetIsEditable(GameWindow *comboBox, Bool isEditable  )
 	{
 		status = editBox->winGetStatus();
 		
-		BitClear(status, WIN_STATUS_NO_INPUT);
-//		BitClear(status, WIN_STATUS_NO_FOCUS);
+		BitClearWW(status, WIN_STATUS_NO_INPUT);
+//		BitClearWW(status, WIN_STATUS_NO_FOCUS);
 		editBox->winSetStatus(status);
 	}
 	else
@@ -902,7 +902,7 @@ UnicodeString GadgetComboBoxGetText( GameWindow *comboBox )
 		return UnicodeString::TheEmptyString;
 
 	// verify that this is a combo box
-	if( BitTest( comboBox->winGetStyle(), GWS_COMBO_BOX ) == FALSE )
+	if( BitTestWW( comboBox->winGetStyle(), GWS_COMBO_BOX ) == FALSE )
 		return UnicodeString::TheEmptyString;
 	
 	return GadgetTextEntryGetText( GadgetComboBoxGetEditBox(comboBox) );

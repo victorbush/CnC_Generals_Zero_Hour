@@ -188,12 +188,21 @@ namespace rts
 		}
 	};
 
+	// Source: https://github.com/jmarshall2323/CnC_Generals_Zero_Hour/commit/c093abd1833bb878ed63e6eee411f04755a45daa#diff-4a79a6c61d21628dfd00a1fe39cc98284b8e238c814db71012ad2afdf6bb2d0cR207-R222
+	// Fix the hash specialization for AsciiString.
+	// This implementation uses the djb2 algorithm to compute a hash over the actual string content.
 	template<> struct hash<AsciiString>
 	{
-		size_t operator()(AsciiString ast) const
-		{ 
-			std::hash<const char *> tmp;
-			return tmp((const char *) ast.str());
+		size_t operator()(const AsciiString& ast) const
+		{
+			size_t hash = 5381;
+			const char* s = ast.str();
+			size_t len = std::strlen(ast.str());
+			for (size_t i = 0; i < len; i++)
+			{
+				hash = ((hash << 5) + hash) + static_cast<unsigned char>(s[i]); // hash * 33 + s[i]
+			}
+			return hash;
 		}
 	};
 
@@ -201,7 +210,7 @@ namespace rts
 	{
 		Bool operator()(const AsciiString& __t1, const AsciiString& __t2) const
 		{
-			return (__t1 == __t2);
+			return (__t1.compare(__t2) == 0);
 		}
 	};
 

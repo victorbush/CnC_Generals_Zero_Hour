@@ -222,6 +222,8 @@ void SegLineRendererClass::Render
 	Vector4 * rgbas
 )
 {
+// (vmb) TODO: disabled due to crashing. will need to fix.
+#if 0
 	Matrix4x4 view;
 	DX8Wrapper::Get_Transform(D3DTS_VIEW,view);
 
@@ -265,6 +267,7 @@ void SegLineRendererClass::Render
 	// chunk must be reused as the first point of the next chunk. This is also the reason we stop
 	// when chidx = NumPoints - 1: the last point has already been processed in the previous
 	// iteration so we don't need another one).
+
 	for (unsigned int chidx = 0; chidx < num_points - 1; chidx += (chunk_size - 1)) {
 		unsigned int point_cnt = num_points - chidx;
 		point_cnt = MIN(point_cnt, chunk_size);
@@ -1202,6 +1205,7 @@ void SegLineRendererClass::Render
 
 	DX8Wrapper::Set_Transform(D3DTS_VIEW,view);
 
+#endif
 }
 
 

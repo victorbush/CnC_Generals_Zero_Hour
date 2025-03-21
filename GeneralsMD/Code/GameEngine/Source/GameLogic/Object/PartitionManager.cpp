@@ -5551,9 +5551,9 @@ Bool PartitionFilterStealthedAndUndetected::allow( Object *objOther )
 			if( contain->getStealthUnitsContained() == contain->getContainCount() )
 			{
 				//Check if the first object inside is detected (if one is detected, all are detected).
-				ContainedItemsList::const_iterator it = contain->getContainedItemsList()->begin();
-				Object *member = (*it);
-				if( member && !(*it)->getStatusBits().test( OBJECT_STATUS_DETECTED ) )
+				const ContainedItemsList* itemsList = contain->getContainedItemsList();
+				ContainedItemsList::const_iterator it = itemsList->begin();
+				if( it != itemsList->end() && !(*it)->getStatusBits().test(OBJECT_STATUS_DETECTED))
 				{
 					//Finally check the relationship!
 					if( victimApparentController && m_obj->getTeam()->getRelationship( victimApparentController->getDefaultTeam() ) == ENEMIES )

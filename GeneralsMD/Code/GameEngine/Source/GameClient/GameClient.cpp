@@ -453,9 +453,6 @@ void GameClient::reset( void )
 //	m_drawableHash.clear();
 //	m_drawableHash.resize(DRAWABLE_HASH_SIZE);
 
-	m_drawableVector.clear();
-	m_drawableVector.resize(DRAWABLE_HASH_SIZE, NULL);
-
 	// need to reset the in game UI to clear drawables before they are destroyed
 	TheInGameUI->reset();
 
@@ -465,6 +462,10 @@ void GameClient::reset( void )
 		nextDraw = draw->getNextDrawable();
 		destroyDrawable( draw );
 	}
+
+	// Resize drawable lookup table after drawables are destroyed (prevents invalid index access in removeDrawableFromLookupTable())
+	m_drawableVector.clear();
+	m_drawableVector.resize(DRAWABLE_HASH_SIZE, NULL);
 	m_drawableList = NULL;
 
 	TheDisplay->reset();

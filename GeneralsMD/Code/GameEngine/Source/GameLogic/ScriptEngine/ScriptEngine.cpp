@@ -7883,12 +7883,11 @@ void ScriptEngine::setSequentialTimer(Team *team, Int frameCount)
 
 void ScriptEngine::evaluateAndProgressAllSequentialScripts( void )
 {
-	VecSequentialScriptPtrIt it, lastIt;
-	lastIt = m_sequentialScripts.end();
+	VecSequentialScriptPtrIt it;
 
 	Int spinCount = 0;
 	for (it = m_sequentialScripts.begin(); it != m_sequentialScripts.end(); /* empty */) {
-		if (it == lastIt) {
+		if (it == m_sequentialScripts.end()) {
 			++spinCount;
 		} else {
 			spinCount = 0;
@@ -7903,8 +7902,6 @@ void ScriptEngine::evaluateAndProgressAllSequentialScripts( void )
 			++it;
 			continue;
 		}
-
-		lastIt = it;
 		
 		Bool itAdvanced = false;
 

@@ -1450,7 +1450,12 @@ void ControlBar::update( void )
 
 		}  
 		else // get the first and only drawble in the selection list
-			drawToEvaluateFor = TheInGameUI->getAllSelectedDrawables()->front();
+		{
+			const DrawableList* list = TheInGameUI->getAllSelectedDrawables();
+			if (!list->empty())
+				drawToEvaluateFor = list->front();
+		}
+
 		Object *obj = drawToEvaluateFor ? drawToEvaluateFor->getObject() : NULL;
 		setPortraitByObject( obj );
 		

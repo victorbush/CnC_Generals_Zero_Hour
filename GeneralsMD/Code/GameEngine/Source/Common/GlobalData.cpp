@@ -607,7 +607,7 @@ GlobalData::GlobalData()
 	m_dumpAssetUsage = FALSE;
 	m_framesPerSecondLimit = 0;
 	m_chipSetType = 0;
-	m_windowed = 0;
+	m_windowed = TRUE;
 	m_xResolution = 800;
 	m_yResolution = 600;
 	m_maxShellScreens = 0;
@@ -965,7 +965,7 @@ GlobalData::GlobalData()
 	m_weaponBonusSet = newInstance(WeaponBonusSet);
 
 	m_shellMapName.set("Maps\\ShellMap1\\ShellMap1.map");
-	m_shellMapOn =TRUE;
+	m_shellMapOn = TRUE;
 	m_playIntro = TRUE;
 	m_playSizzle = TRUE;
 	m_afterIntro = FALSE;

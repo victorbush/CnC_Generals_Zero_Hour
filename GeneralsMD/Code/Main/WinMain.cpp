@@ -694,11 +694,12 @@ static Bool initializeAppWindows( HINSTANCE hInstance, Int nCmdShow, Bool runWin
   RegisterClass( &wndClass );
 
    // Create our main window
-	windowStyle =  WS_POPUP|WS_VISIBLE;
-	if (runWindowed) 
-		windowStyle |= WS_DLGFRAME | WS_CAPTION | WS_SYSMENU;
-	else
-		windowStyle |= WS_EX_TOPMOST | WS_SYSMENU;
+  windowStyle = WS_OVERLAPPEDWINDOW;
+	//windowStyle =  WS_POPUP|WS_VISIBLE;
+	//if (runWindowed) 
+	//	windowStyle |= WS_DLGFRAME | WS_CAPTION | WS_SYSMENU;
+	//else
+	//	windowStyle |= WS_EX_TOPMOST | WS_SYSMENU;
 
 	RECT rect;
 	rect.left = 0;
@@ -733,7 +734,7 @@ static Bool initializeAppWindows( HINSTANCE hInstance, Int nCmdShow, Bool runWin
 
 
 	if (!runWindowed)
-	{	SetWindowPos(hWnd, HWND_TOPMOST, 0, 0, 0, 0,SWP_NOSIZE |SWP_NOMOVE);
+	{	SetWindowPos(hWnd, HWND_TOP /*HWND_TOPMOST*/, 0, 0, 0, 0,SWP_NOSIZE |SWP_NOMOVE);
 	}
 	else 
 		SetWindowPos(hWnd, HWND_TOP, 0, 0, 0, 0,SWP_NOSIZE |SWP_NOMOVE);

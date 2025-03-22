@@ -218,16 +218,21 @@ UpdateSleepTime RailedTransportAIUpdate::update( void )
 	//
 	if( m_inTransit )
 	{
-	
-		// sanity
-		DEBUG_ASSERTCRASH( m_currentPath != INVALID_PATH,
-											 ("RailedTransportAIUpdate: Invalid current path '%s'\n", m_currentPath) );
+		if (m_currentPath < 0 || m_currentPath >= MAX_WAYPOINT_PATHS)
+		{
+			DEBUG_CRASH(("RailedTransportAIUpdate: Invalid current path '%s'\n", m_currentPath));
+			setInTransit(FALSE);
+			return UPDATE_SLEEP_NONE;
+		}
 
 		// get our target waypoint
 		Waypoint *waypoint = TheTerrainLogic->getWaypointByID( m_path[ m_currentPath ].endWaypointID );
-		
-		// sanity
-		DEBUG_ASSERTCRASH( waypoint, ("RailedTransportAIUpdate: Invalid target waypoint\n") );
+		if (!waypoint)
+		{
+			DEBUG_CRASH(("RailedTransportAIUpdate: Invalid target waypoint\n"));
+			setInTransit(FALSE);
+			return UPDATE_SLEEP_NONE;
+		}
 
 		// how far away are we from the target waypoint
 		const Coord3D *start = us->getPosition();

@@ -99,6 +99,7 @@ SnowManager::~SnowManager()
 {
 	delete [] m_startingHeights;
 	m_startingHeights=NULL;
+	((WeatherSetting*)TheWeatherSetting.getNonOverloadedPointer())->deleteInstance();
 }
 
 OVERRIDE<WeatherSetting> TheWeatherSetting = NULL;

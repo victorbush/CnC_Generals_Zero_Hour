@@ -574,7 +574,7 @@ void LocomotorStore::reset()
 		Overridable *locoTemp = it->second->deleteOverrides();
 		if (!locoTemp)
 		{
-			m_locomotorTemplates.erase(it);
+			it = m_locomotorTemplates.erase(it);
 		}
 		else
 		{

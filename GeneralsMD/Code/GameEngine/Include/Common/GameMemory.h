@@ -51,6 +51,8 @@
 // Turn off memory pool checkpointing for now.
 #define DISABLE_MEMORYPOOL_CHECKPOINTING 1
 
+#define DISABLE_MEMORYPOOL_DEBUG 1
+
 #if (defined(_DEBUG) || defined(_INTERNAL)) && !defined(MEMORYPOOL_DEBUG_CUSTOM_NEW) && !defined(DISABLE_MEMORYPOOL_DEBUG_CUSTOM_NEW)
 	#define MEMORYPOOL_DEBUG_CUSTOM_NEW
 #endif

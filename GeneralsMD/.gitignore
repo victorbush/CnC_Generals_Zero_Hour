@@ -101,3 +101,9 @@ generatedVersion.h
 *.ncb
 *.opt
 *.plg
+
+# CMake
+cmake*/
+
+# CLion
+.idea/

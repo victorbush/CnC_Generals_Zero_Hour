@@ -37,6 +37,7 @@
 #endif
 
 // Define which libraries to use. 
+/*
 #if defined(_INTERNAL)
 #  pragma comment (lib,"profileinternal.lib")
 #elif defined(_DEBUG)
@@ -46,6 +47,7 @@
 #else
 #  pragma comment (lib,"profile.lib")
 #endif
+*/
 
 // include all our public header files (use double quotes here)
 #include "profile_doc.h"

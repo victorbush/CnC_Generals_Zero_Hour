@@ -1,0 +1,134 @@
+add_library(WW3D2 STATIC
+        aabtree.cpp
+        aabtreebuilder.cpp
+        agg_def.cpp
+        animatedsoundmgr.cpp
+        animobj.cpp
+        assetmgr.cpp
+        assetstatus.cpp
+        bitmaphandler.cpp
+        bmp2d.cpp
+        boxrobj.cpp
+        bwrender.cpp
+        camera.cpp
+        collect.cpp
+        coltest.cpp
+        composite.cpp
+        dazzle.cpp
+        ddsfile.cpp
+        decalmsh.cpp
+        decalsys.cpp
+        distlod.cpp
+        dx8caps.cpp
+        dx8fvf.cpp
+        dx8indexbuffer.cpp
+        dx8polygonrenderer.cpp
+        dx8renderer.cpp
+        dx8rendererdebugger.cpp
+        dx8texman.cpp
+        dx8vertexbuffer.cpp
+        dx8webbrowser.cpp
+        dx8wrapper.cpp
+        dynamesh.cpp
+        font3d.cpp
+        formconv.cpp
+        FramGrab.cpp
+        hanim.cpp
+        hanimmgr.cpp
+        hcanim.cpp
+        hlod.cpp
+        hmdldef.cpp
+        hmorphanim.cpp
+        hrawanim.cpp
+        htree.cpp
+        htreemgr.cpp
+        intersec.cpp
+        layer.cpp
+        light.cpp
+        lightenvironment.cpp
+        line3d.cpp
+        linegrp.cpp
+        mapper.cpp
+        matinfo.cpp
+        matpass.cpp
+        matrixmapper.cpp
+        mesh.cpp
+        meshbuild.cpp
+        meshdam.cpp
+        meshgeometry.cpp
+        meshmatdesc.cpp
+        meshmdl.cpp
+        meshmdlio.cpp
+        metalmap.cpp
+        missingtexture.cpp
+        motchan.cpp
+        nullrobj.cpp
+        part_buf.cpp
+        part_emt.cpp
+        part_ldr.cpp
+        pivot.cpp
+        pointgr.cpp
+        polyinfo.cpp
+        predlod.cpp
+        prim_anim.cpp
+        projector.cpp
+        proto.cpp
+        render2d.cpp
+        render2dsentence.cpp
+        renderobjectrecycler.cpp
+        rendobj.cpp
+        rinfo.cpp
+        ringobj.cpp
+        scene.cpp
+        segline.cpp
+        seglinerenderer.cpp
+        shader.cpp
+        shattersystem.cpp
+        snappts.cpp
+        sortingrenderer.cpp
+        soundrobj.cpp
+        sphereobj.cpp
+        static_sort_list.cpp
+        statistics.cpp
+        streak.cpp
+        streakRender.cpp
+        stripoptimizer.cpp
+        surfaceclass.cpp
+        texfcach.cpp
+        texproject.cpp
+        texture.cpp
+        texturefilter.cpp
+        textureloader.cpp
+        texturethumbnail.cpp
+        txt.cpp
+        vertmaterial.cpp
+        visrasterizer.cpp
+        w3dexclusionlist.cpp
+        w3d_dep.cpp
+        w3d_util.cpp
+        ww3d.cpp
+        ww3dformat.cpp
+)
+
+target_link_libraries(WW3D2 INTERFACE Compiler)
+
+target_compile_definitions(WW3D2 PRIVATE
+    WINVER=0x400 _WINDOWS WIN32_LEAN_AND_MEAN
+    $<$<CONFIG:Release>:IG_DEBUG_STACKTRACE>
+    $<$<CONFIG:Debug>:_DEBUG WWDEBUG DEBUG>
+)
+
+target_compile_options(WW3D2 PRIVATE
+        # for loop variable scope (ForceConformanceInForLoopScope)
+        "/Zc:forScope-"
+)
+
+target_include_directories(WW3D2 PRIVATE
+    ../WWAudio
+    ../WWDebug
+    ../WWLib
+    ../WWMath
+    ../WWSaveLoad
+    ../../dx8
+    ../../Miles6/include
+)

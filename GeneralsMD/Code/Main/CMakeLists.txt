@@ -1,0 +1,48 @@
+add_executable(RTS WIN32
+    WinMain.cpp
+        RTS.RC
+)
+
+target_include_directories(RTS PRIVATE
+    ../GameEngine/Include
+    ../GameEngineDevice/Include
+    ../Libraries/Include
+    ../Libraries/Source/WWVegas
+    ../Libraries/Source/WWVegas/WWLib
+    ../Libraries/Source/WWVegas/WWMath
+    ../Libraries/Source/WWVegas/WWDebug
+    ../Libraries/Source/WWVegas/WWSaveLoad
+    ../Libraries/Source/WWVegas/WW3D2
+    ../Libraries/Source/Miles6/include
+    ../Libraries/Source/dx8
+    ../Libraries/Source/Bink
+)
+
+target_link_libraries(RTS PRIVATE
+#    Benchmark
+    WW3D2
+    WWDebug
+    WWLib
+    WWUtil
+    WWMath
+    WWDownload
+    GameEngine
+    GameEngineDevice
+    GameSpy
+    Bink
+    Miles6
+        EABrowserDispatch
+    d3d8lib
+      odbc32.lib
+        odbccp32.lib
+        winmm.lib
+    vfw32.lib
+        dsound.lib
+        wsock32.lib
+        imm32.lib
+        wininet.lib
+)
+
+set_target_properties(RTS PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/Run")
+set_target_properties(RTS PROPERTIES RUNTIME_OUTPUT_DIRECTORY_DEBUG "${CMAKE_SOURCE_DIR}/Run")
+set_target_properties(RTS PROPERTIES RUNTIME_OUTPUT_DIRECTORY_RELEASE "${CMAKE_SOURCE_DIR}/Run")

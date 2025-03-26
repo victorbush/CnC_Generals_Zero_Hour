@@ -86,7 +86,7 @@ public:
 protected:
 
 	virtual FileSystem *createFileSystem( void );								///< Factory for FileSystem classes
-	virtual LocalFileSystem *createLocalFileSystem( void ) = 0;	///< Factory for LocalFileSystem classes
+	virtual LocalFileSystem *createLocalFileSystem(const std::vector<std::experimental::filesystem::path>& ordered_base_paths ) = 0;	///< Factory for LocalFileSystem classes
 	virtual ArchiveFileSystem *createArchiveFileSystem( void ) = 0;	///< Factory for ArchiveFileSystem classes
 	virtual GameLogic *createGameLogic( void ) = 0;							///< Factory for GameLogic classes.
 	virtual GameClient *createGameClient( void ) = 0;						///< Factory for GameClient classes.

@@ -32,6 +32,7 @@
 #include "Common/AudioAffect.h"
 #include "Common/BuildAssistant.h"
 #include "Common/CRCDebug.h"
+#include "Common/Mod.h"
 #include "Common/Radar.h"
 #include "Common/PlayerTemplate.h"
 #include "Common/Team.h"
@@ -281,6 +282,10 @@ void GameEngine::init( int argc, char *argv[] )
 		PerfGather::initPerfDump("AAAPerfStats", PerfGather::PERF_NETTIME);
 	#endif
 
+
+
+		ModManager mm("Mods");
+		Mod mod = mm.load_mod("com.ea.generals.zh");
 
 
 

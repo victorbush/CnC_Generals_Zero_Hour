@@ -34,8 +34,14 @@
 #include "Win32Device/Common/Win32LocalFile.h"
 #include <io.h>
 
-Win32LocalFileSystem::Win32LocalFileSystem() : LocalFileSystem() 
+#include <experimental/filesystem>
+
+namespace fs = std::experimental::filesystem;
+
+Win32LocalFileSystem::Win32LocalFileSystem(const std::vector<std::experimental::filesystem::path>& ordered_base_paths) :
+	ordered_base_paths(ordered_base_paths)
 {
+	throw std::invalid_argument("At least one base path must be provided to Win32LocalFileSystem.");
 }
 
 Win32LocalFileSystem::~Win32LocalFileSystem() {
@@ -52,7 +58,11 @@ File * Win32LocalFileSystem::openFile(const Char *filename, Int access /* = 0 */
 		return NULL;
 	}
 
+	fs::path filePath;
+
 	if (access & File::WRITE) {
+		filePath = getPreferredFilePath(filename);
+
 		// if opening the file for writing, we need to make sure the directory is there
 		// before we try to create the file.
 		AsciiString string;
@@ -68,8 +78,14 @@ File * Win32LocalFileSystem::openFile(const Char *filename, Int access /* = 0 */
 			dirName.concat(token);
 		}
 	}
+	else
+	{
+		// Opening for read, find the file using search paths
+		if (!tryFindFile(filename, filePath))
+			return NULL;
+	}
 
-	if (file->open(filename, access) == FALSE) {
+	if (file->open(filePath.string().c_str(), access) == FALSE) {
 		file->close();
 		file->deleteInstance();
 		file = NULL;
@@ -114,10 +130,11 @@ void Win32LocalFileSystem::reset()
 //DECLARE_PERF_TIMER(Win32LocalFileSystem_doesFileExist)
 Bool Win32LocalFileSystem::doesFileExist(const Char *filename) const
 {
-	//USE_PERF_TIMER(Win32LocalFileSystem_doesFileExist)
-	if (_access(filename, 0) == 0) {
+	std::experimental::filesystem::path path;
+
+	if (tryFindFile(filename, path))
 		return TRUE;
-	}
+
 	return FALSE;
 }
 
@@ -126,12 +143,18 @@ void Win32LocalFileSystem::getFileListInDirectory(const AsciiString& currentDire
 	HANDLE fileHandle = NULL;
 	WIN32_FIND_DATA findData;
 
+	fs::path basePath = originalDirectory.str();
+	basePath.concat(currentDirectory.str()).concat(searchName.str());
+
+	if (basePath.string().length() >= _MAX_PATH)
+		throw std::invalid_argument("The path is too long");
+
 	char search[_MAX_PATH];
-	AsciiString asciisearch;
-	asciisearch = originalDirectory;
-	asciisearch.concat(currentDirectory);
-	asciisearch.concat(searchName);
-	strcpy(search, asciisearch.str());
+	// AsciiString asciisearch;
+	// asciisearch = originalDirectory;
+	// asciisearch.concat(currentDirectory);
+	// asciisearch.concat(searchName);
+	strcpy(search, basePath.string().c_str());
 
 	Bool done = FALSE;
 
@@ -143,12 +166,16 @@ void Win32LocalFileSystem::getFileListInDirectory(const AsciiString& currentDire
 				(strcmp(findData.cFileName, ".") && strcmp(findData.cFileName, ".."))) {
 			// if we haven't already, add this filename to the list.
 				// a stl set should only allow one copy of each filename
-				AsciiString newFilename;
-				newFilename = originalDirectory;
-				newFilename.concat(currentDirectory);
-				newFilename.concat(findData.cFileName);
-				if (filenameList.find(newFilename) == filenameList.end()) {
-					filenameList.insert(newFilename);
+
+				fs::path newFilePath = originalDirectory.str();
+				newFilePath = newFilePath / currentDirectory.str() / findData.cFileName;
+
+				// AsciiString newFilename;
+				// newFilename = originalDirectory;
+				// newFilename.concat(currentDirectory);
+				// newFilename.concat(findData.cFileName);
+				if (filenameList.find(newFilePath.string().c_str()) == filenameList.end()) {
+					filenameList.insert(newFilePath.string().c_str());
 				}
 		}
 
@@ -157,24 +184,29 @@ void Win32LocalFileSystem::getFileListInDirectory(const AsciiString& currentDire
 	FindClose(fileHandle);
 
 	if (searchSubdirectories) {
-		AsciiString subdirsearch;
-		subdirsearch = originalDirectory;
-		subdirsearch.concat(currentDirectory);
-		subdirsearch.concat("*.");
-		fileHandle = FindFirstFile(subdirsearch.str(), &findData);
+		fs::path subdirPath = originalDirectory.str();
+		subdirPath = subdirPath / currentDirectory.str() / "*.";
+
+		// AsciiString subdirsearch;
+		// subdirsearch = originalDirectory;
+		// subdirsearch.concat(currentDirectory);
+		// subdirsearch.concat("*.");
+		fileHandle = FindFirstFile(subdirPath.string().c_str(), &findData);
 		done = fileHandle == INVALID_HANDLE_VALUE;
 
 		while (!done) {
 			if ((findData.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY) &&
 					(strcmp(findData.cFileName, ".") && strcmp(findData.cFileName, ".."))) {
 
-					AsciiString tempsearchstr;
-					tempsearchstr.concat(currentDirectory);
-					tempsearchstr.concat(findData.cFileName);
-					tempsearchstr.concat('\\');
-					
+					fs::path tempSearchPath = currentDirectory.str();
+					tempSearchPath.concat(findData.cFileName).concat(fs::path::preferred_separator);
+					// AsciiString tempsearchstr;
+					// tempsearchstr.concat(currentDirectory);
+					// tempsearchstr.concat(findData.cFileName);
+					// tempsearchstr.concat('\\');
+
 					// recursively add files in subdirectories if required.
-					getFileListInDirectory(tempsearchstr, originalDirectory, searchName, filenameList, searchSubdirectories);
+					getFileListInDirectory(tempSearchPath.string().c_str(), originalDirectory, searchName, filenameList, searchSubdirectories);
 			}
 
 			done = (FindNextFile(fileHandle, &findData) == 0);
@@ -187,10 +219,12 @@ void Win32LocalFileSystem::getFileListInDirectory(const AsciiString& currentDire
 
 Bool Win32LocalFileSystem::getFileInfo(const AsciiString& filename, FileInfo *fileInfo) const 
 {
-	WIN32_FIND_DATA findData;
-	HANDLE findHandle = NULL;
-	findHandle = FindFirstFile(filename.str(), &findData);
+	fs::path filePath;
+	if (!tryFindFile(filename.str(), filePath))
+		return FALSE;
 
+	WIN32_FIND_DATA findData;
+	HANDLE findHandle = FindFirstFile(filePath.string().c_str(), &findData);
 	if (findHandle == INVALID_HANDLE_VALUE) {
 		return FALSE;
 	}
@@ -207,8 +241,49 @@ Bool Win32LocalFileSystem::getFileInfo(const AsciiString& filename, FileInfo *fi
 
 Bool Win32LocalFileSystem::createDirectory(AsciiString directory) 
 {
-	if ((directory.getLength() > 0) && (directory.getLength() < _MAX_DIR)) {
-		return (CreateDirectory(directory.str(), NULL) != 0);
+	std::string path = getPreferredFilePath(directory.str()).string();
+
+	if ((path.size() > 0) && (path.size() < _MAX_DIR)) {
+		return (CreateDirectory(path.c_str(), NULL) != 0);
 	}
 	return FALSE;
+}
+
+Bool Win32LocalFileSystem::tryFindFile(const char* rawFileName, fs::path& outPath) const
+{
+	fs::path fileName = rawFileName;
+
+	// For absolute paths there is nothing else to check except the path itself
+	if (fileName.is_absolute() && exists(fileName))
+	{
+		outPath = fileName;
+		return true;
+	}
+
+	// For relative paths, search using all base paths in order of priority
+	for (const auto& basePath : ordered_base_paths)
+	{
+		fs::path p = basePath / fileName;
+		if (exists(p))
+		{
+			outPath = p;
+			return true;
+		}
+	}
+
+	return false;
+}
+
+fs::path Win32LocalFileSystem::getPreferredFilePath(const char* fileOrDir) const
+{
+	fs::path path = fileOrDir;
+
+	// The preferred file path is either:
+	// 1. The input path (if absolute)
+	// 2. The input path relative to the first base path given to this LocalFileSystem
+
+	if (path.is_absolute())
+		return path;
+
+	return ordered_base_paths.front() / fileOrDir;
 }

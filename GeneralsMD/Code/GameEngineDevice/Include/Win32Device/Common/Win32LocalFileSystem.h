@@ -32,10 +32,12 @@
 #define __WIN32LOCALFILESYSTEM_H
 #include "Common/LocalFileSystem.h"
 
+#include <experimental/filesystem>
+
 class Win32LocalFileSystem : public LocalFileSystem
 {
 public:
-	Win32LocalFileSystem();
+	Win32LocalFileSystem(const std::vector<std::experimental::filesystem::path>& ordered_base_paths);
 	virtual ~Win32LocalFileSystem();
 
 	virtual void init();
@@ -51,6 +53,14 @@ public:
 	virtual Bool createDirectory(AsciiString directory);
 
 protected:
+
+private:
+	Bool tryFindFile(const char* filename, std::experimental::filesystem::path& outPath) const;
+	std::experimental::filesystem::path Win32LocalFileSystem::getPreferredFilePath(const char* fileOrDir) const;
+
+	/// List of directories to search for files (or other directories) in when using relative paths. Ordered by priority.
+	/// At least one path is required. The first path in the list is used when creating/writing files using relative paths.
+	const std::vector<std::experimental::filesystem::path>& ordered_base_paths;
 };
 
 #endif // __WIN32LOCALFILESYSTEM_H

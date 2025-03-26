@@ -50,7 +50,7 @@
 #include "W3DDevice/Common/W3DFunctionLexicon.h"
 #include "W3DDevice/Common/W3DThingFactory.h"
 
-
+#include <experimental/filesystem>
 
 
 //-------------------------------------------------------------------------------------------------
@@ -76,7 +76,7 @@ protected:
 	virtual ModuleFactory *createModuleFactory( void );			///< factory for creating modules
 	virtual ThingFactory *createThingFactory( void );				///< factory for the thing factory
 	virtual FunctionLexicon *createFunctionLexicon( void ); ///< factory for function lexicon
-	virtual LocalFileSystem *createLocalFileSystem( void ); ///< factory for local file system
+	virtual LocalFileSystem *createLocalFileSystem(const std::vector<std::experimental::filesystem::path>& ordered_base_paths ); ///< factory for local file system
 	virtual ArchiveFileSystem *createArchiveFileSystem( void );	///< factory for archive file system
 	virtual NetworkInterface *createNetwork( void );				///< Factory for the network
 	virtual Radar *createRadar( void );											///< Factory for radar
@@ -95,7 +95,7 @@ inline GameClient *Win32GameEngine::createGameClient( void ) { return NEW W3DGam
 inline ModuleFactory *Win32GameEngine::createModuleFactory( void ) { return NEW W3DModuleFactory; }
 inline ThingFactory *Win32GameEngine::createThingFactory( void ) { return NEW W3DThingFactory; }
 inline FunctionLexicon *Win32GameEngine::createFunctionLexicon( void ) { return NEW W3DFunctionLexicon; }
-inline LocalFileSystem *Win32GameEngine::createLocalFileSystem( void ) { return NEW Win32LocalFileSystem; }
+inline LocalFileSystem *Win32GameEngine::createLocalFileSystem( const std::vector<std::experimental::filesystem::path>& ordered_base_paths ) { return NEW Win32LocalFileSystem(ordered_base_paths); }
 inline ArchiveFileSystem *Win32GameEngine::createArchiveFileSystem( void ) { return NEW Win32BIGFileSystem; }
 inline ParticleSystemManager* Win32GameEngine::createParticleSystemManager( void ) { return NEW W3DParticleSystemManager; }
 

@@ -585,6 +585,7 @@ add_library(GameEngine STATIC
         Source/GameNetwork/User.cpp
         Source/GameNetwork/WOLBrowser/WebBrowser.cpp
         Source/Precompiled/PreRTS.cpp
+        Source/Common/Mod/Mod.cpp
 )
 
 target_precompile_headers(GameEngine PRIVATE Include/Precompiled/PreRTS.h)
@@ -625,3 +626,6 @@ target_compile_options(GameEngine PRIVATE
 set_target_properties(GameEngine PROPERTIES OUTPUT_NAME
     $<$<CONFIG:Debug>:GameEngineDebug>
 )
+
+
+target_compile_definitions(GameEngine PRIVATE _SILENCE_EXPERIMENTAL_FILESYSTEM_DEPRECATION_WARNING)

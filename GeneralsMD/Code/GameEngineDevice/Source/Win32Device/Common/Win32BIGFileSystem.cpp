@@ -61,16 +61,16 @@ void Win32BIGFileSystem::init() {
 	loadBigFilesFromDirectory("", "*.big");
 
     // load original Generals assets
-    AsciiString installPath;
-    GetStringFromGeneralsRegistry("", "InstallPath", installPath );
-    //@todo this will need to be ramped up to a crash for release
-#ifndef _INTERNAL
-    // had to make this non-internal only, otherwise we can't autobuild
-    // GeneralsZH...
-    DEBUG_ASSERTCRASH(installPath != "", ("Be 1337! Go install Generals!"));
-#endif
-    if (installPath!="")
-      loadBigFilesFromDirectory(installPath, "*.big");
+//     AsciiString installPath;
+//     GetStringFromGeneralsRegistry("", "InstallPath", installPath );
+//     //@todo this will need to be ramped up to a crash for release
+// #ifndef _INTERNAL
+//     // had to make this non-internal only, otherwise we can't autobuild
+//     // GeneralsZH...
+//     DEBUG_ASSERTCRASH(installPath != "", ("Be 1337! Go install Generals!"));
+// #endif
+//     if (installPath!="")
+//       loadBigFilesFromDirectory(installPath, "*.big");
 }
 
 void Win32BIGFileSystem::reset() {

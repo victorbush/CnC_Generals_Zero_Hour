@@ -3,6 +3,8 @@ add_executable(RTS WIN32
         RTS.RC
 )
 
+target_compile_features(RTS PRIVATE cxx_std_17)
+
 target_include_directories(RTS PRIVATE
     ../GameEngine/Include
     ../GameEngineDevice/Include

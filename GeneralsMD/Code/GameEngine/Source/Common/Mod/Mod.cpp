@@ -40,6 +40,19 @@ Mod ModManager::load_mod(const std::string& mod_id)
     mod.title = mod_config["title"].as_string();
     mod.directory = target_mod_dir;
 
-    // TODO : Dependencies
+    // TODO : Circular dependencies ?
+
+    if (mod_config.contains("depends"))
+    {
+        auto d = mod_config["depends"].as_array();
+        for (const auto& a : d)
+        {
+            Mod dependency = load_mod(a.as_string());
+            mod.dependencies.push_back(dependency);
+        }
+    }
+
+
+
     return mod;
 }

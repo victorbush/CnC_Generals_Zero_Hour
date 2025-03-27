@@ -5,6 +5,8 @@ add_executable(RTS WIN32
 
 target_compile_features(RTS PRIVATE cxx_std_17)
 
+target_compile_definitions(RTS PRIVATE _SILENCE_EXPERIMENTAL_FILESYSTEM_DEPRECATION_WARNING)
+
 target_include_directories(RTS PRIVATE
     ../GameEngine/Include
     ../GameEngineDevice/Include

@@ -60,7 +60,7 @@ private:
 
 	/// List of directories to search for files (or other directories) in when using relative paths. Ordered by priority.
 	/// At least one path is required. The first path in the list is used when creating/writing files using relative paths.
-	const std::vector<std::experimental::filesystem::path>& ordered_base_paths;
+	std::vector<std::experimental::filesystem::path> m_orderedBasePaths;
 };
 
 #endif // __WIN32LOCALFILESYSTEM_H

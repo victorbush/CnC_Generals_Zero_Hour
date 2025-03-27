@@ -130,3 +130,5 @@ target_compile_options(GameEngineDevice PRIVATE
         # for loop variable scope (ForceConformanceInForLoopScope)
         "/Zc:forScope-"
 )
+
+target_compile_definitions(GameEngineDevice PRIVATE _SILENCE_EXPERIMENTAL_FILESYSTEM_DEPRECATION_WARNING)

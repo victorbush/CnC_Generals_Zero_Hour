@@ -58,6 +58,7 @@ void Win32BIGFileSystem::init() {
 		return;
 	}
 
+	// TODO : Load big files from all mod / dependency directories
 	loadBigFilesFromDirectory("", "*.big");
 
     // load original Generals assets

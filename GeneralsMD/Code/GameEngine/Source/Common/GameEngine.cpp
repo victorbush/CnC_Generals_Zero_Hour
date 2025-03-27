@@ -344,7 +344,15 @@ void GameEngine::init( int argc, char *argv[] )
 		xferCRC.open("lightCRC");
 
 
-		initSubsystem(TheLocalFileSystem, "TheLocalFileSystem", createLocalFileSystem(), NULL);
+		std::vector<std::experimental::filesystem::path> ordered_base_paths;
+		ordered_base_paths.push_back(mod.directory);
+		for (const auto& d : mod.dependencies)
+		{
+			ordered_base_paths.push_back(d.directory);
+			// TODO : Support recursive dependencies? (Make sure to handle circulars)
+		}
+
+		initSubsystem(TheLocalFileSystem, "TheLocalFileSystem", createLocalFileSystem(ordered_base_paths), NULL);
 
 
     	#ifdef DUMP_PERF_STATS///////////////////////////////////////////////////////////////////////////

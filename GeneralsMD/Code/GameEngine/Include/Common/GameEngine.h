@@ -34,6 +34,8 @@
 #include "Common/SubsystemInterface.h"
 #include "Common/GameType.h"
 
+#include <experimental/filesystem>
+
 #define DEFAULT_MAX_FPS		45
 
 // forward declarations

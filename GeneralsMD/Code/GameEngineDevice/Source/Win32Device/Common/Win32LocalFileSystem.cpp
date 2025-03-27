@@ -38,10 +38,19 @@
 
 namespace fs = std::experimental::filesystem;
 
-Win32LocalFileSystem::Win32LocalFileSystem(const std::vector<std::experimental::filesystem::path>& ordered_base_paths) :
-	ordered_base_paths(ordered_base_paths)
+Win32LocalFileSystem::Win32LocalFileSystem(const std::vector<std::experimental::filesystem::path>& ordered_base_paths)
 {
-	throw std::invalid_argument("At least one base path must be provided to Win32LocalFileSystem.");
+	if (ordered_base_paths.size() == 0)
+		throw std::invalid_argument("At least one base path must be provided to Win32LocalFileSystem.");
+
+	// Force absolute paths using current working directory
+	for (int i = 0; i < ordered_base_paths.size(); i++)
+	{
+		if (ordered_base_paths.at(i).is_relative())
+			m_orderedBasePaths.push_back(fs::current_path() / ordered_base_paths.at(i));
+		else
+			m_orderedBasePaths.push_back(ordered_base_paths.at(i));
+	}
 }
 
 Win32LocalFileSystem::~Win32LocalFileSystem() {
@@ -144,21 +153,25 @@ void Win32LocalFileSystem::getFileListInDirectory(const AsciiString& currentDire
 	WIN32_FIND_DATA findData;
 
 	fs::path basePath = originalDirectory.str();
-	basePath.concat(currentDirectory.str()).concat(searchName.str());
+	basePath.concat(currentDirectory.str());
 
-	if (basePath.string().length() >= _MAX_PATH)
+	if (!tryFindFile(basePath.string().c_str(), basePath))
+		return;
+
+	fs::path searchPath = basePath / searchName.str();
+	if (searchPath.string().length() >= _MAX_PATH)
 		throw std::invalid_argument("The path is too long");
 
-	char search[_MAX_PATH];
+	// char search[_MAX_PATH];
 	// AsciiString asciisearch;
 	// asciisearch = originalDirectory;
 	// asciisearch.concat(currentDirectory);
 	// asciisearch.concat(searchName);
-	strcpy(search, basePath.string().c_str());
+	// strcpy(search, searchPath.string().c_str());
 
 	Bool done = FALSE;
 
-	fileHandle = FindFirstFile(search, &findData);
+	fileHandle = FindFirstFile(searchPath.string().c_str(), &findData);
 	done = (fileHandle == INVALID_HANDLE_VALUE);
 
 	while (!done)	{
@@ -167,8 +180,7 @@ void Win32LocalFileSystem::getFileListInDirectory(const AsciiString& currentDire
 			// if we haven't already, add this filename to the list.
 				// a stl set should only allow one copy of each filename
 
-				fs::path newFilePath = originalDirectory.str();
-				newFilePath = newFilePath / currentDirectory.str() / findData.cFileName;
+				fs::path newFilePath = basePath / findData.cFileName;
 
 				// AsciiString newFilename;
 				// newFilename = originalDirectory;
@@ -184,8 +196,7 @@ void Win32LocalFileSystem::getFileListInDirectory(const AsciiString& currentDire
 	FindClose(fileHandle);
 
 	if (searchSubdirectories) {
-		fs::path subdirPath = originalDirectory.str();
-		subdirPath = subdirPath / currentDirectory.str() / "*.";
+		fs::path subdirPath = basePath / "*.";
 
 		// AsciiString subdirsearch;
 		// subdirsearch = originalDirectory;
@@ -198,8 +209,8 @@ void Win32LocalFileSystem::getFileListInDirectory(const AsciiString& currentDire
 			if ((findData.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY) &&
 					(strcmp(findData.cFileName, ".") && strcmp(findData.cFileName, ".."))) {
 
-					fs::path tempSearchPath = currentDirectory.str();
-					tempSearchPath.concat(findData.cFileName).concat(fs::path::preferred_separator);
+					fs::path tempSearchPath = basePath / findData.cFileName;
+
 					// AsciiString tempsearchstr;
 					// tempsearchstr.concat(currentDirectory);
 					// tempsearchstr.concat(findData.cFileName);
@@ -261,11 +272,12 @@ Bool Win32LocalFileSystem::tryFindFile(const char* rawFileName, fs::path& outPat
 	}
 
 	// For relative paths, search using all base paths in order of priority
-	for (const auto& basePath : ordered_base_paths)
+	for (const auto& basePath : m_orderedBasePaths)
 	{
 		fs::path p = basePath / fileName;
 		if (exists(p))
 		{
+			// Convert to absolute path before returning
 			outPath = p;
 			return true;
 		}
@@ -285,5 +297,5 @@ fs::path Win32LocalFileSystem::getPreferredFilePath(const char* fileOrDir) const
 	if (path.is_absolute())
 		return path;
 
-	return ordered_base_paths.front() / fileOrDir;
+	return m_orderedBasePaths.front() / fileOrDir;
 }

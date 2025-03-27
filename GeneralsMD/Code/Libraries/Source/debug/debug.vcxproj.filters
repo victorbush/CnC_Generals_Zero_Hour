@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Precompiled header">
+      <UniqueIdentifier>{e6d36fc4-d3f3-4270-8f3e-214335dba876}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Doxygen">
+      <UniqueIdentifier>{5bef7a19-17d2-4e14-8776-dbc25068b74c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IO Classes">
+      <UniqueIdentifier>{36817291-c6db-4e17-a8c6-aabfe9b55b9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Exception handler">
+      <UniqueIdentifier>{9c75efd6-f997-4276-b06e-24a51b67eda5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Stack walk">
+      <UniqueIdentifier>{521c3f65-afcf-4147-9206-02415f3fc82f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Command interface">
+      <UniqueIdentifier>{5106eb33-8539-43e3-be92-813802152206}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Proxy header">
+      <UniqueIdentifier>{b565a402-12ac-441b-868f-3b62887449a9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="_pch.cpp">
+      <Filter>Precompiled header</Filter>
+    </ClCompile>
+    <ClCompile Include="debug_io_con.cpp">
+      <Filter>IO Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="debug_io_flat.cpp">
+      <Filter>IO Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="debug_io_net.cpp">
+      <Filter>IO Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="debug_io_ods.cpp">
+      <Filter>IO Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="debug_except.cpp">
+      <Filter>Exception handler</Filter>
+    </ClCompile>
+    <ClCompile Include="debug_stack.cpp">
+      <Filter>Stack walk</Filter>
+    </ClCompile>
+    <ClCompile Include="debug_cmd.cpp">
+      <Filter>Command interface</Filter>
+    </ClCompile>
+    <ClCompile Include="debug_getdefaultcommands.cpp">
+      <Filter>Command interface</Filter>
+    </ClCompile>
+    <ClCompile Include="debug.cpp" />
+    <ClCompile Include="debug_debug.cpp" />
+    <ClCompile Include="debug_internal.cpp" />
+    <ClCompile Include="debug_purecall.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="_pch.h">
+      <Filter>Precompiled header</Filter>
+    </ClInclude>
+    <ClInclude Include="debug_io.h">
+      <Filter>IO Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="internal_io.h">
+      <Filter>IO Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="internal_except.h">
+      <Filter>Exception handler</Filter>
+    </ClInclude>
+    <ClInclude Include="debug_stack.h">
+      <Filter>Stack walk</Filter>
+    </ClInclude>
+    <ClInclude Include="debug_cmd.h">
+      <Filter>Command interface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\rts\debug.h">
+      <Filter>Proxy header</Filter>
+    </ClInclude>
+    <ClInclude Include="debug.h" />
+    <ClInclude Include="debug_debug.h" />
+    <ClInclude Include="debug_doc.h" />
+    <ClInclude Include="debug_macro.h" />
+    <ClInclude Include="internal.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="compile_doxygen.bat">
+      <Filter>Doxygen</Filter>
+    </CustomBuild>
+    <CustomBuild Include="debug.dox">
+      <Filter>Doxygen</Filter>
+    </CustomBuild>
+    <CustomBuild Include="debug_priv.dox">
+      <Filter>Doxygen</Filter>
+    </CustomBuild>
+    <CustomBuild Include="rc_exception.inl">
+      <Filter>Exception handler</Filter>
+    </CustomBuild>
+    <CustomBuild Include="debug_stack.inl">
+      <Filter>Stack walk</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

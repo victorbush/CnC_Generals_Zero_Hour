@@ -3,15 +3,15 @@
 [Rr]un
 
 # Build output folders
-[Rr]elease*
-[Pp]rofile*
-[Ii]nternal*
-[Dd]ebug*
-[Hh]ybrid*
-[Ee]nglish
-[Ff]rench
-[Gg]erman
-[Ss]panish
+#[Rr]elease*
+#[Pp]rofile*
+#[Ii]nternal*
+#[Dd]ebug*
+#[Hh]ybrid*
+#[Ee]nglish
+#[Ff]rench
+#[Gg]erman
+#[Ss]panish
 Max4Release
 Max4Hybrid
 

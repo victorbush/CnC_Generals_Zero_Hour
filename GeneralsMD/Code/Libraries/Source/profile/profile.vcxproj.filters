@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Precompiled header">
+      <UniqueIdentifier>{d8a582b3-3c79-4cc9-9152-476902768577}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Doxygen">
+      <UniqueIdentifier>{c31cfcda-c95f-4e11-bbd5-6f1219588e2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Function level">
+      <UniqueIdentifier>{b2f9b7b4-13bc-4d61-a3ef-ee5921075537}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="High level">
+      <UniqueIdentifier>{9b993f1a-5bea-40cd-b6b3-be2950fa7031}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Command interface">
+      <UniqueIdentifier>{1e88c1a3-6e25-4604-9735-d871f5afd59c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Result functions">
+      <UniqueIdentifier>{d68d64a2-66ea-4ef2-83fa-1fe7a3c5ee03}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="_pch.cpp">
+      <Filter>Precompiled header</Filter>
+    </ClCompile>
+    <ClCompile Include="profile_funclevel.cpp">
+      <Filter>Function level</Filter>
+    </ClCompile>
+    <ClCompile Include="profile_highlevel.cpp">
+      <Filter>High level</Filter>
+    </ClCompile>
+    <ClCompile Include="profile_cmd.cpp">
+      <Filter>Command interface</Filter>
+    </ClCompile>
+    <ClCompile Include="profile_result.cpp">
+      <Filter>Result functions</Filter>
+    </ClCompile>
+    <ClCompile Include="profile.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="_pch.h">
+      <Filter>Precompiled header</Filter>
+    </ClInclude>
+    <ClInclude Include="internal_funclevel.h">
+      <Filter>Function level</Filter>
+    </ClInclude>
+    <ClInclude Include="profile_funclevel.h">
+      <Filter>Function level</Filter>
+    </ClInclude>
+    <ClInclude Include="internal_highlevel.h">
+      <Filter>High level</Filter>
+    </ClInclude>
+    <ClInclude Include="profile_highlevel.h">
+      <Filter>High level</Filter>
+    </ClInclude>
+    <ClInclude Include="internal_cmd.h">
+      <Filter>Command interface</Filter>
+    </ClInclude>
+    <ClInclude Include="internal_result.h">
+      <Filter>Result functions</Filter>
+    </ClInclude>
+    <ClInclude Include="profile_result.h">
+      <Filter>Result functions</Filter>
+    </ClInclude>
+    <ClInclude Include="internal.h" />
+    <ClInclude Include="profile.h" />
+    <ClInclude Include="profile_doc.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="compile_doxygen.bat">
+      <Filter>Doxygen</Filter>
+    </CustomBuild>
+    <CustomBuild Include="profile.dox">
+      <Filter>Doxygen</Filter>
+    </CustomBuild>
+    <CustomBuild Include="profile_priv.dox">
+      <Filter>Doxygen</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

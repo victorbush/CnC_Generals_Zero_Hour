@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.30)
 project(GeneralsMD)
 
+set(CMAKE_CONFIGURATION_TYPES "Release;Profile;Internal;Debug")
+
 add_subdirectory(Code)
 
 add_library(Compiler INTERFACE)

@@ -6,15 +6,17 @@
 
 #include "toml.h"
 
-ModManager::ModManager(std::experimental::filesystem::path mod_dir_base_path)
+namespace fs = std::experimental::filesystem;
+
+ModManager::ModManager(fs::path mod_dir_base_path)
     : mod_dir_base_path(mod_dir_base_path)
 {
 }
 
 Mod ModManager::load_mod(const std::string& mod_id)
 {
-    std::experimental::filesystem::path target_mod_dir = mod_dir_base_path / mod_id;
-    std::experimental::filesystem::path target_mod_toml = target_mod_dir / "mod.toml";
+    fs::path target_mod_dir = fs::absolute(mod_dir_base_path / mod_id);
+    fs::path target_mod_toml = target_mod_dir / "mod.toml";
 
     if (!exists(target_mod_toml))
     {
@@ -40,19 +42,19 @@ Mod ModManager::load_mod(const std::string& mod_id)
     mod.title = mod_config["title"].as_string();
     mod.directory = target_mod_dir;
 
-    // TODO : Circular dependencies ?
-
-    if (mod_config.contains("depends"))
+    if (mod_config.contains("bigDirs"))
     {
-        auto d = mod_config["depends"].as_array();
+        auto d = mod_config["bigDirs"].as_array();
         for (const auto& a : d)
         {
-            Mod dependency = load_mod(a.as_string());
-            mod.dependencies.push_back(dependency);
+            mod.bigDirectories.push_back(target_mod_dir / a.as_string());
         }
     }
-
-
+    else
+    {
+        // Default search path is the mod directory root
+        mod.bigDirectories.push_back(target_mod_dir);
+    }
 
     return mod;
 }

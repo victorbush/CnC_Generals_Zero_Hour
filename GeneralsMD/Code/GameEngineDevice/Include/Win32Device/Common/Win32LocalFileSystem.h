@@ -37,7 +37,7 @@
 class Win32LocalFileSystem : public LocalFileSystem
 {
 public:
-	Win32LocalFileSystem(const std::vector<std::experimental::filesystem::path>& ordered_base_paths);
+	Win32LocalFileSystem(const std::vector<std::experimental::filesystem::path>& prioritizedSearchPaths);
 	virtual ~Win32LocalFileSystem();
 
 	virtual void init();
@@ -46,7 +46,7 @@ public:
 
 	virtual File * openFile(const Char *filename, Int access = 0);	///< open the given file.
 	virtual Bool doesFileExist(const Char *filename) const;								///< does the given file exist?
-
+	virtual Bool findFile(const Char* filename, std::experimental::filesystem::path& outAbsolutePath) const;
 	virtual void getFileListInDirectory(const AsciiString& currentDirectory, const AsciiString& originalDirectory, const AsciiString& searchName, FilenameList &filenameList, Bool searchSubdirectories) const; ///< search the given directory for files matching the searchName (egs. *.ini, *.rep).  Possibly search subdirectories.
 	virtual Bool getFileInfo(const AsciiString& filename, FileInfo *fileInfo) const;
 
@@ -60,7 +60,7 @@ private:
 
 	/// List of directories to search for files (or other directories) in when using relative paths. Ordered by priority.
 	/// At least one path is required. The first path in the list is used when creating/writing files using relative paths.
-	std::vector<std::experimental::filesystem::path> m_orderedBasePaths;
+	std::vector<std::experimental::filesystem::path> m_prioritizedSearchPaths;
 };
 
 #endif // __WIN32LOCALFILESYSTEM_H

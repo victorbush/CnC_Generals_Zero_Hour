@@ -36,6 +36,10 @@
 #include "Common/LocalFileSystem.h"
 #include "Win32Device/Common/Win32BIGFile.h"
 #include "Win32Device/Common/Win32BIGFileSystem.h"
+
+#include <experimental/filesystem>
+#include <vector>
+
 #include "Common/registry.h"
 
 #ifdef _INTERNAL
@@ -46,7 +50,9 @@
 
 static const char *BIGFileIdentifier = "BIGF";
 
-Win32BIGFileSystem::Win32BIGFileSystem() : ArchiveFileSystem() {
+Win32BIGFileSystem::Win32BIGFileSystem(const std::vector<std::experimental::filesystem::path>& bigDirectories)
+	: ArchiveFileSystem(),
+	m_bigDirectories(bigDirectories) {
 }
 
 Win32BIGFileSystem::~Win32BIGFileSystem() {
@@ -59,7 +65,10 @@ void Win32BIGFileSystem::init() {
 	}
 
 	// TODO : Load big files from all mod / dependency directories
-	loadBigFilesFromDirectory("", "*.big");
+	for (const auto& path : m_bigDirectories)
+	{
+		loadBigFilesFromDirectory(path.string().c_str(), "*.big");
+	}
 
     // load original Generals assets
 //     AsciiString installPath;

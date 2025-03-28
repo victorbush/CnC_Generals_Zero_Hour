@@ -38,18 +38,18 @@
 
 namespace fs = std::experimental::filesystem;
 
-Win32LocalFileSystem::Win32LocalFileSystem(const std::vector<std::experimental::filesystem::path>& ordered_base_paths)
+Win32LocalFileSystem::Win32LocalFileSystem(const std::vector<std::experimental::filesystem::path>& prioritizedSearchPaths)
 {
-	if (ordered_base_paths.size() == 0)
+	if (prioritizedSearchPaths.size() == 0)
 		throw std::invalid_argument("At least one base path must be provided to Win32LocalFileSystem.");
 
 	// Force absolute paths using current working directory
-	for (int i = 0; i < ordered_base_paths.size(); i++)
+	for (int i = 0; i < prioritizedSearchPaths.size(); i++)
 	{
-		if (ordered_base_paths.at(i).is_relative())
-			m_orderedBasePaths.push_back(fs::current_path() / ordered_base_paths.at(i));
+		if (prioritizedSearchPaths.at(i).is_relative())
+			m_prioritizedSearchPaths.push_back(fs::current_path() / prioritizedSearchPaths.at(i));
 		else
-			m_orderedBasePaths.push_back(ordered_base_paths.at(i));
+			m_prioritizedSearchPaths.push_back(prioritizedSearchPaths.at(i));
 	}
 }
 
@@ -140,9 +140,18 @@ void Win32LocalFileSystem::reset()
 Bool Win32LocalFileSystem::doesFileExist(const Char *filename) const
 {
 	std::experimental::filesystem::path path;
+	return findFile(filename, path);
+}
+
+Bool Win32LocalFileSystem::findFile(const Char* filename, std::experimental::filesystem::path& outAbsolutePath) const
+{
+	std::experimental::filesystem::path path;
 
 	if (tryFindFile(filename, path))
+	{
+		outAbsolutePath = path;
 		return TRUE;
+	}
 
 	return FALSE;
 }
@@ -272,13 +281,13 @@ Bool Win32LocalFileSystem::tryFindFile(const char* rawFileName, fs::path& outPat
 	}
 
 	// For relative paths, search using all base paths in order of priority
-	for (const auto& basePath : m_orderedBasePaths)
+	for (const auto& basePath : m_prioritizedSearchPaths)
 	{
 		fs::path p = basePath / fileName;
 		if (exists(p))
 		{
 			// Convert to absolute path before returning
-			outPath = p;
+			outPath = fs::absolute(p);
 			return true;
 		}
 	}
@@ -297,5 +306,5 @@ fs::path Win32LocalFileSystem::getPreferredFilePath(const char* fileOrDir) const
 	if (path.is_absolute())
 		return path;
 
-	return m_orderedBasePaths.front() / fileOrDir;
+	return m_prioritizedSearchPaths.front() / fileOrDir;
 }

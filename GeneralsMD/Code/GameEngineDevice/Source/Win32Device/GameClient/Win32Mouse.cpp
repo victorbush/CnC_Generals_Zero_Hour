@@ -33,6 +33,10 @@
 #include "Common/Debug.h"
 #include "GameClient/GameClient.h"
 #include "Win32Device/GameClient/Win32Mouse.h"
+
+#include <Common/FileSystem.h>
+#include <Common/LocalFileSystem.h>
+
 #include "WinMain.h"
 
 #ifdef _INTERNAL
@@ -387,7 +391,11 @@ void Win32Mouse::initCursorResources(void)
 				else
 					sprintf(resourcePath,"data\\cursors\\%s.ANI",m_cursorInfo[cursor].textureName.str());
 
-				cursorResources[cursor][direction]=LoadCursorFromFile(resourcePath);
+				std::experimental::filesystem::path absolutePath;
+				Bool exists = TheLocalFileSystem->findFile(resourcePath, absolutePath);
+				DEBUG_ASSERTCRASH(exists, ("MissingCursor %s\n",resourcePath));
+
+				cursorResources[cursor][direction]=LoadCursorFromFile(absolutePath.string().c_str());
 				DEBUG_ASSERTCRASH(cursorResources[cursor][direction], ("MissingCursor %s\n",resourcePath));
 			}
 		}

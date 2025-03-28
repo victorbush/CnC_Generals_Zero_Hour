@@ -344,15 +344,15 @@ void GameEngine::init( int argc, char *argv[] )
 		xferCRC.open("lightCRC");
 
 
-		std::vector<std::experimental::filesystem::path> ordered_base_paths;
-		ordered_base_paths.push_back(mod.directory);
-		for (const auto& d : mod.dependencies)
-		{
-			ordered_base_paths.push_back(d.directory);
-			// TODO : Support recursive dependencies? (Make sure to handle circulars)
-		}
+		// std::vector<std::experimental::filesystem::path> ordered_base_paths;
+		// ordered_base_paths.push_back(mod.directory);
+		// for (const auto& d : mod.dependencies)
+		// {
+		// 	ordered_base_paths.push_back(d.directory);
+		// 	// TODO : Support recursive dependencies? (Make sure to handle circulars)
+		// }
 
-		initSubsystem(TheLocalFileSystem, "TheLocalFileSystem", createLocalFileSystem(ordered_base_paths), NULL);
+		initSubsystem(TheLocalFileSystem, "TheLocalFileSystem", createLocalFileSystem({mod.directory}), NULL);
 
 
     	#ifdef DUMP_PERF_STATS///////////////////////////////////////////////////////////////////////////
@@ -363,7 +363,7 @@ void GameEngine::init( int argc, char *argv[] )
 	#endif/////////////////////////////////////////////////////////////////////////////////////////////
 
 
-		initSubsystem(TheArchiveFileSystem, "TheArchiveFileSystem", createArchiveFileSystem(), NULL); // this MUST come after TheLocalFileSystem creation
+		initSubsystem(TheArchiveFileSystem, "TheArchiveFileSystem", createArchiveFileSystem(mod.bigDirectories), NULL); // this MUST come after TheLocalFileSystem creation
 
     	#ifdef DUMP_PERF_STATS///////////////////////////////////////////////////////////////////////////
 	GetPrecisionTimer(&endTime64);//////////////////////////////////////////////////////////////////

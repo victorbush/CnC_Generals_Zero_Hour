@@ -33,13 +33,16 @@
 
 #include "Common/ArchiveFileSystem.h"
 
+#include <experimental/filesystem>
+#include <vector>
+
 class Win32BIGFileSystem : public ArchiveFileSystem
 {
 public:
-	Win32BIGFileSystem();
+	Win32BIGFileSystem(const std::vector<std::experimental::filesystem::path>& bigDirectories);
 	virtual ~Win32BIGFileSystem();
 
-	virtual void init( void );
+	virtual void init(  );
 	virtual void update( void );
 	virtual void reset( void );
 	virtual void postProcessLoad( void );
@@ -55,6 +58,8 @@ public:
 	virtual Bool loadBigFilesFromDirectory(AsciiString dir, AsciiString fileMask, Bool overwrite = FALSE);
 protected:
 
+private:
+	const std::vector<std::experimental::filesystem::path> m_bigDirectories;
 };
 
 #endif // __WIN32BIGFILESYSTEM_H

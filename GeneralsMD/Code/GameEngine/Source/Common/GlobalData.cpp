@@ -1051,6 +1051,7 @@ GlobalData::GlobalData()
 
 	m_keyboardCameraRotateSpeed = 0.1f;
 
+#if 0
   // Set user data directory based on registry settings instead of INI parameters. This allows us to 
   // localize the leaf name.
   char temp[_MAX_PATH + 1];
@@ -1077,7 +1078,10 @@ GlobalData::GlobalData()
     CreateDirectory(myDocumentsDirectory.str(), NULL);
     m_userDataDir = myDocumentsDirectory;
   }
-	
+#endif
+
+	m_userDataDir = "..\\User\\";
+
 	//-allAdvice feature
 	//m_allAdvice = FALSE;
 

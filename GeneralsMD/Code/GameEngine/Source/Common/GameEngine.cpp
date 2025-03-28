@@ -284,7 +284,7 @@ void GameEngine::init( int argc, char *argv[] )
 
 
 
-		ModManager mm("Mods");
+		ModManager mm("../Mods");
 		Mod mod = mm.load_mod("com.ea.generals.zh");
 
 

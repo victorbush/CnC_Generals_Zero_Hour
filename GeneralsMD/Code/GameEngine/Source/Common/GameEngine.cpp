@@ -591,7 +591,7 @@ void GameEngine::init( int argc, char *argv[] )
 		// for fingerprinting, we need to ensure the presence of these files
 
 
-#if !defined(_INTERNAL) && !defined(_DEBUG)
+#if 0 // !defined(_INTERNAL) && !defined(_DEBUG)
 		AsciiString dirName;
     dirName = TheArchiveFileSystem->getArchiveFilenameForFile("generalsbzh.sec");
 

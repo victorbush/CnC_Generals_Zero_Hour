@@ -38,6 +38,9 @@
 #define DEFINE_BODYDAMAGETYPE_NAMES
 #define DEFINE_PANNING_NAMES
 
+#include <__msvc_filebuf.hpp>
+#include <experimental/filesystem>
+
 #include "Common/CRC.h"
 #include "Common/File.h"
 #include "Common/FileSystem.h"
@@ -1080,7 +1083,8 @@ GlobalData::GlobalData()
   }
 #endif
 
-	m_userDataDir = "..\\User\\";
+	std::experimental::filesystem::path p = std::experimental::filesystem::current_path() / ".." / "User" / "/";
+	m_userDataDir = std::experimental::filesystem::absolute(p).string().c_str();
 
 	//-allAdvice feature
 	//m_allAdvice = FALSE;

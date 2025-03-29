@@ -316,8 +316,6 @@ void StreakRendererClass::RenderStreak
 	unsigned int *personalities			/////////////// DIFFERENT FROM RENDER( )
 )
 {
-// (vmb) TODO: disabled due to crashing. will need to fix.
-#if 0
 	Matrix4x4 view;
 	DX8Wrapper::Get_Transform(D3DTS_VIEW,view);
 
@@ -1403,7 +1401,6 @@ void StreakRendererClass::RenderStreak
 
 	DX8Wrapper::Set_Transform(D3DTS_VIEW,view);
 
-#endif
 }
 
 /////////////////////////////////////////////////////////////////////////////

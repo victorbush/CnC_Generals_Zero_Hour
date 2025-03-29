@@ -222,8 +222,6 @@ void SegLineRendererClass::Render
 	Vector4 * rgbas
 )
 {
-// (vmb) TODO: disabled due to crashing. will need to fix.
-#if 0
 	Matrix4x4 view;
 	DX8Wrapper::Get_Transform(D3DTS_VIEW,view);
 
@@ -1205,7 +1203,6 @@ void SegLineRendererClass::Render
 
 	DX8Wrapper::Set_Transform(D3DTS_VIEW,view);
 
-#endif
 }
 
 

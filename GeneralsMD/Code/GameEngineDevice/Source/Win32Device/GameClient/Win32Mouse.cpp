@@ -392,8 +392,11 @@ void Win32Mouse::initCursorResources(void)
 					sprintf(resourcePath,"data\\cursors\\%s.ANI",m_cursorInfo[cursor].textureName.str());
 
 				std::experimental::filesystem::path absolutePath;
+
 				Bool exists = TheLocalFileSystem->findFile(resourcePath, absolutePath);
 				DEBUG_ASSERTCRASH(exists, ("MissingCursor %s\n",resourcePath));
+				if (!exists)
+					continue;
 
 				cursorResources[cursor][direction]=LoadCursorFromFile(absolutePath.string().c_str());
 				DEBUG_ASSERTCRASH(cursorResources[cursor][direction], ("MissingCursor %s\n",resourcePath));

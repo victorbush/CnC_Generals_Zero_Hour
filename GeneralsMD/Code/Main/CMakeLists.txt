@@ -7,6 +7,8 @@ target_compile_features(RTS PRIVATE cxx_std_17)
 
 target_compile_definitions(RTS PRIVATE _SILENCE_EXPERIMENTAL_FILESYSTEM_DEPRECATION_WARNING)
 
+target_link_libraries(RTS INTERFACE Compiler)
+
 target_include_directories(RTS PRIVATE
     ../GameEngine/Include
     ../GameEngineDevice/Include
@@ -52,3 +54,10 @@ set_target_properties(RTS PROPERTIES RUNTIME_OUTPUT_DIRECTORY_RELEASE "${CMAKE_S
 set_target_properties(RTS PROPERTIES RUNTIME_OUTPUT_DIRECTORY_DEBUG "${CMAKE_SOURCE_DIR}/Run/SystemDebug")
 set_target_properties(RTS PROPERTIES RUNTIME_OUTPUT_DIRECTORY_PROFILE "${CMAKE_SOURCE_DIR}/Run/SystemProfile")
 set_target_properties(RTS PROPERTIES RUNTIME_OUTPUT_DIRECTORY_INTERNAL "${CMAKE_SOURCE_DIR}/Run/SystemInternal")
+
+target_compile_definitions(RTS PRIVATE
+        $<$<CONFIG:Release>:IG_DEBUG_STACKTRACE NDEBUG _RELEASE WIN32 _WINDOWS>
+        $<$<CONFIG:Debug>:_DEBUG WIN32 _WINDOWS BROWSER_DEBUG>
+        $<$<CONFIG:Internal>:NDEBUG _INTERNAL WIN32 _WINDOWS>
+        $<$<CONFIG:Profile>:IG_DEBUG_STACKTRACE NDEBUG _RELEASE WIN32 _WINDOWS _PROFILE>
+)

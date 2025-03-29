@@ -101,4 +101,9 @@ add_library(GameSpy STATIC
     GameSpy/gstats/gstats.c
 )
 
-target_link_libraries(GameSpy INTERFACE Compiler)
+target_compile_definitions(GameSpy PRIVATE
+        $<$<CONFIG:Release>:NDEBUG _RELEASE WIN32 _LIB>
+        $<$<CONFIG:Debug>:_DEBUG WIN32 _LIB>
+        $<$<CONFIG:Internal>:NDEBUG _INTERNAL WIN32 _LIB>
+        $<$<CONFIG:Profile>:NDEBUG _RELEASE WIN32 _LIB _PROFILE>
+)

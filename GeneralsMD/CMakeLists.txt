@@ -5,11 +5,12 @@ set(CMAKE_CONFIGURATION_TYPES "Release;Profile;Internal;Debug")
 
 add_subdirectory(Code)
 
-add_library(Compiler INTERFACE)
-target_compile_definitions(Compiler INTERFACE
-    $<$<CONFIG:Release>:_RELEASE>
-    $<$<CONFIG:Debug>:_DEBUG WWDEBUG DEBUG>
-)
+#add_library(Compiler INTERFACE)
+#target_compile_definitions(Compiler INTERFACE
+#    $<$<CONFIG:Release>:_RELEASE IG_DEBUG_STACKTRACE NDEBUG>
+#    $<$<CONFIG:Debug>:_DEBUG WWDEBUG DEBUG>
+#    $<$<CONFIG:Internal>:_INTERNAL NDEBUG>
+#)
 
 message(Compiler=${CMAKE_CXX_COMPILER_ID}_${CMAKE_CXX_COMPILER_VERSION})
 

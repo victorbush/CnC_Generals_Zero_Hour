@@ -5,6 +5,11 @@ add_library(WWDownload STATIC
     urlBuilder.cpp
 )
 
-target_link_libraries(WWDownload INTERFACE Compiler)
+target_compile_definitions(WWDownload PRIVATE
+        $<$<CONFIG:Release>:WIN32 NDEBUG _LIB>
+        $<$<CONFIG:Debug>:WIN32 _DEBUG _LIB>
+        $<$<CONFIG:Internal>:WIN32 DEBUG _LIB>
+        $<$<CONFIG:Profile>:WIN32 NDEBUG _LIB>
+)
 
 target_include_directories(WWDownload PRIVATE ../)

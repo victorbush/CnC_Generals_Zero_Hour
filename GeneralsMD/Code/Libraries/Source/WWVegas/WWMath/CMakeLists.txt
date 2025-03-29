@@ -36,7 +36,13 @@ add_library(WWMath STATIC
         wwmath.cpp
 )
 
-target_link_libraries(WWMath INTERFACE Compiler)
+target_compile_definitions(WWMath PRIVATE
+        $<$<CONFIG:Release>:WINVER=0x400 _WINDOWS WIN32_LEAN_AND_MEAN NDEBUG WIN32 IG_DEBUG_STACKTRACE>
+        $<$<CONFIG:Debug>:G_CODE_BASE DIRECTX _DEBUG WINVER=0x400 _WINDOWS WIN32_LEAN_AND_MEAN WIN32>
+        $<$<CONFIG:Internal>:NDEBUG WINVER=0x400 _WINDOWS WIN32_LEAN_AND_MEAN WIN32 _INTERNAL>
+        $<$<CONFIG:Profile>:NDEBUG WWDEBUG WINVER=0x400 _WINDOWS WIN32_LEAN_AND_MEAN WIN32 _PROFILE>
+)
+
 
 target_include_directories(WWMath
     PRIVATE

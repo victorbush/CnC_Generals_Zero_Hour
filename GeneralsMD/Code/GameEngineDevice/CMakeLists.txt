@@ -131,4 +131,10 @@ target_compile_options(GameEngineDevice PRIVATE
         "/Zc:forScope-"
 )
 
-target_compile_definitions(GameEngineDevice PRIVATE _SILENCE_EXPERIMENTAL_FILESYSTEM_DEPRECATION_WARNING)
+target_compile_definitions(GameEngineDevice PRIVATE
+        _SILENCE_EXPERIMENTAL_FILESYSTEM_DEPRECATION_WARNING
+        $<$<CONFIG:Release>:_LIB _WINDOWS IG_DEBUG_STACKTRACE WIN32 NDEBUG _RELEASE>
+        $<$<CONFIG:Debug>:_DEBUG WIN32 _LIB _WINDOWS>
+        $<$<CONFIG:Internal>:NDEBUG WIN32 _LIB _WINDOWS _INTERNAL>
+        $<$<CONFIG:Profile>:_LIB _WINDOWS IG_DEBUG_STACKTRACE WIN32 NDEBUG _RELEASE _PROFILE>
+)

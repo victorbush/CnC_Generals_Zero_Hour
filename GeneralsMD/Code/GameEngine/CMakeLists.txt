@@ -623,9 +623,14 @@ target_compile_options(GameEngine PRIVATE
         "/Zc:forScope-"
 )
 
-set_target_properties(GameEngine PROPERTIES OUTPUT_NAME
-    $<$<CONFIG:Debug>:GameEngineDebug>
+set_target_properties(GameEngine PROPERTIES
+    OUTPUT_NAME "$<IF:$<CONFIG:Debug>,GameEngineDebug,$<IF:$<CONFIG:Profile>,GameEngineProfile,$<IF:$<CONFIG:Internal>,GameEngineInternal,GameEngine>>>"
 )
 
-
-target_compile_definitions(GameEngine PRIVATE _SILENCE_EXPERIMENTAL_FILESYSTEM_DEPRECATION_WARNING)
+target_compile_definitions(GameEngine PRIVATE
+        _SILENCE_EXPERIMENTAL_FILESYSTEM_DEPRECATION_WARNING
+        $<$<CONFIG:Release>:IG_DEBUG_STACKTRACE NDEBUG _RELEASE _LIB _WINDOWS WIN32 Z_PREFIX>
+        $<$<CONFIG:Debug>:_DEBUG BROWSER_DEBUG _LIB _WINDOWS WIN32 Z_PREFIX>
+        $<$<CONFIG:Internal>:NDEBUG _INTERNAL _LIB _WINDOWS WIN32 Z_PREFIX>
+        $<$<CONFIG:Profile>:IG_DEBUG_STACKTRACE NDEBUG _RELEASE _LIB _WINDOWS WIN32 Z_PREFIX _PROFILE>
+)

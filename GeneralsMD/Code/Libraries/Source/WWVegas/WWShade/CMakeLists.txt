@@ -24,7 +24,12 @@ add_library(WWShade STATIC
         shdsubmesh.cpp
 )
 
-target_link_libraries(WWShade INTERFACE Compiler)
+target_compile_definitions(WWShade PRIVATE
+        $<$<CONFIG:Release>:WIN32 NDEBUG _LIB>
+        $<$<CONFIG:Debug>:_LIB WWDEBUG _DEBUG WIN32>
+        $<$<CONFIG:Internal>:WINVER=0x400 WWDEBUG NDEBUG WIN32 _WINDOWS _INTERNAL>
+        $<$<CONFIG:Profile>:WIN32 NDEBUG _LIB _PROFILE>
+)
 
 target_include_directories(WWShade PRIVATE
     ../WW3D2

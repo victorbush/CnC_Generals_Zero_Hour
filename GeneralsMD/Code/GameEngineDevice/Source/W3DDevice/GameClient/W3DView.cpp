@@ -211,6 +211,11 @@ void W3DView::setHeight(Int height)
  	m_3DCamera->Get_Viewport(vMin,vMax);
  	vMax.Y=(Real)(m_originY+height)/(Real)TheDisplay->getHeight();
  	m_3DCamera->Set_Viewport(vMin,vMax);
+
+	// m_3DCamera->Set_View_Plane((Real)m_width/(Real)TheDisplay->getWidth()*DEG_TO_RADF(50.0f),
+	// (Real)height / (Real)TheDisplay->getHeight() * DEG_TO_RADF(38.55f));
+	m_3DCamera->Set_View_Plane(-1,
+	(Real)height / (Real)TheDisplay->getHeight() * DEG_TO_RADF(38.55f));
 }
 
 //-------------------------------------------------------------------------------------------------
@@ -229,7 +234,10 @@ void W3DView::setWidth(Int width)
 
 	//we want to maintain the same scale, so we'll need to adjust the fov.
 	//default W3D fov for full-screen is 50 degrees.
-	m_3DCamera->Set_View_Plane((Real)width/(Real)TheDisplay->getWidth()*DEG_TO_RADF(50.0f),-1);
+	// m_3DCamera->Set_View_Plane((Real)width/(Real)TheDisplay->getWidth()*DEG_TO_RADF(50.0f),
+	// 	-1);
+	m_3DCamera->Set_View_Plane(-1,
+		(Real)m_height / (Real)TheDisplay->getHeight() * DEG_TO_RADF(38.55f));
 }
 
 //-------------------------------------------------------------------------------------------------
@@ -609,7 +617,7 @@ void W3DView::setCameraTransform( void )
 	}
 
 #if defined(_DEBUG) || defined(_INTERNAL)
-	m_3DCamera->Set_View_Plane( m_FOV, -1 );
+	// m_3DCamera->Set_View_Plane( m_FOV, -1 );
 #endif
 
 	// rebuild it (even if we just did it due to camera constraints)

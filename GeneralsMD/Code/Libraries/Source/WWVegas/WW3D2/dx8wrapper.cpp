@@ -934,7 +934,7 @@ bool DX8Wrapper::Set_Render_Device(int dev, int width, int height, int bits, int
 		// Is the window the correct size for this resolution?
 		if ((rect.right-rect.left) != ResolutionWidth ||
 			 (rect.bottom-rect.top) != ResolutionHeight) {			
-			
+
 			// Calculate what the main window's bounding rectangle should be to
 			// accomodate this resolution
 			rect.left = 0;
@@ -954,7 +954,7 @@ bool DX8Wrapper::Set_Render_Device(int dev, int width, int height, int bits, int
 								 0,
 								 rect.right-rect.left,
 								 rect.bottom-rect.top,
-								 SWP_NOZORDER | SWP_NOMOVE);
+								 SWP_NOZORDER);
 		}
 	}
 #endif

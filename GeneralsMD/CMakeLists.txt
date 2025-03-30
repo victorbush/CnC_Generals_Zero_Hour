@@ -3,6 +3,13 @@ project(GeneralsMD)
 
 set(CMAKE_CONFIGURATION_TYPES "Release;Profile;Internal;Debug")
 
+# TEMP: Quick hack to get debug symbols in release build. This needs work.
+# Causes streakrenderer crash to come back.
+#add_compile_options("$<$<NOT:$<CONFIG:Debug>>:/Zi>")
+#add_link_options("$<$<NOT:$<CONFIG:Debug>>:/DEBUG>")
+#add_link_options("$<$<NOT:$<CONFIG:Debug>>:/OPT:REF>")
+#add_link_options("$<$<NOT:$<CONFIG:Debug>>:/OPT:ICF>")
+
 add_subdirectory(Code)
 
 #add_library(Compiler INTERFACE)

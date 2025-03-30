@@ -945,16 +945,21 @@ bool DX8Wrapper::Set_Render_Device(int dev, int width, int height, int bits, int
 			AdjustWindowRect (&rect, dwstyle, FALSE);
 
 			// Resize the window to fit this resolution
-			if (!windowed)
-				::SetWindowPos(_Hwnd, HWND_TOPMOST, 0, 0, rect.right-rect.left, rect.bottom-rect.top,SWP_NOSIZE |SWP_NOMOVE);
-			else
-				::SetWindowPos (_Hwnd,
-								 NULL,
-								 0,
-								 0,
-								 rect.right-rect.left,
-								 rect.bottom-rect.top,
-								 SWP_NOZORDER);
+			// if (!windowed)
+			// 	::SetWindowPos(_Hwnd, HWND_TOPMOST, 0, 0, rect.right-rect.left, rect.bottom-rect.top,SWP_NOSIZE |SWP_NOMOVE);
+			// else
+			// 	::SetWindowPos (_Hwnd,
+			// 					 NULL,
+			// 					 0,
+			// 					 0,
+			// 					 rect.right-rect.left,
+			// 					 rect.bottom-rect.top,
+			// 					 SWP_NOZORDER);
+
+			// testing borderless fullscreen
+			SetWindowLongPtr(_Hwnd, GWL_STYLE, WS_POPUP|WS_VISIBLE);
+			::SetWindowPos(_Hwnd, NULL, 0, 0, width, height, SWP_NOZORDER);
+
 		}
 	}
 #endif
@@ -1224,16 +1229,21 @@ bool DX8Wrapper::Set_Device_Resolution(int width,int height,int bits,int windowe
 				AdjustWindowRect (&rect, dwstyle, FALSE);
 
 				// Resize the window to fit this resolution
-				if (!windowed)
-					::SetWindowPos(_Hwnd, HWND_TOPMOST, 0, 0, rect.right-rect.left, rect.bottom-rect.top,SWP_NOSIZE |SWP_NOMOVE);
-				else
-					::SetWindowPos (_Hwnd,
-									 NULL,
-									 0,
-									 0,
-									 rect.right-rect.left,
-									 rect.bottom-rect.top,
-									 SWP_NOZORDER | SWP_NOMOVE);
+
+				// testing borderless fullscreen
+				SetWindowLongPtr(_Hwnd, GWL_STYLE, WS_POPUP);
+				::SetWindowPos(_Hwnd, NULL, 0, 0, width, height, SWP_NOZORDER);
+
+				// if (!windowed)
+				// 	::SetWindowPos(_Hwnd, HWND_TOPMOST, 0, 0, rect.right-rect.left, rect.bottom-rect.top,SWP_NOSIZE |SWP_NOMOVE);
+				// else
+				// 	::SetWindowPos (_Hwnd,
+				// 					 NULL,
+				// 					 0,
+				// 					 0,
+				// 					 rect.right-rect.left,
+				// 					 rect.bottom-rect.top,
+				// 					 SWP_NOZORDER | SWP_NOMOVE);
 			}
 		}
 #pragma message("TODO: support changing windowed status and changing the bit depth")

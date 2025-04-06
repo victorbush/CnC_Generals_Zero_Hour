@@ -285,7 +285,8 @@ void GameEngine::init( int argc, char *argv[] )
 
 
 		ModManager mm("../Mods");
-		Mod mod = mm.load_mod("com.ea.generals.zh");
+		 Mod mod = mm.load_mod("com.ea.generals.zh");
+//		Mod mod = mm.load_mod("com.swp-productions.shockwave");
 
 
 
@@ -352,7 +353,7 @@ void GameEngine::init( int argc, char *argv[] )
 		// 	// TODO : Support recursive dependencies? (Make sure to handle circulars)
 		// }
 
-		initSubsystem(TheLocalFileSystem, "TheLocalFileSystem", createLocalFileSystem({mod.directory}), NULL);
+		initSubsystem(TheLocalFileSystem, "TheLocalFileSystem", createLocalFileSystem(mod.searchDirectories), NULL);
 
 
     	#ifdef DUMP_PERF_STATS///////////////////////////////////////////////////////////////////////////

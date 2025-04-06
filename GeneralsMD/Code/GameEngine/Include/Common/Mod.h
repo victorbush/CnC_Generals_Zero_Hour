@@ -15,6 +15,7 @@ struct Mod
     std::string title;
     std::experimental::filesystem::path directory;
     std::vector<std::experimental::filesystem::path> bigDirectories;
+    std::vector<std::experimental::filesystem::path> searchDirectories;
 };
 
 class ModManager

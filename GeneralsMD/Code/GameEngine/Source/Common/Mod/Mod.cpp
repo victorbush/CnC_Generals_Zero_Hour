@@ -41,6 +41,7 @@ Mod ModManager::load_mod(const std::string& mod_id)
 
     mod.title = mod_config["title"].as_string();
     mod.directory = target_mod_dir;
+    mod.searchDirectories.push_back(target_mod_dir);
 
     if (mod_config.contains("bigDirs"))
     {
@@ -54,6 +55,23 @@ Mod ModManager::load_mod(const std::string& mod_id)
     {
         // Default search path is the mod directory root
         mod.bigDirectories.push_back(target_mod_dir);
+    }
+
+    if (mod_config.contains("depends"))
+    {
+        auto depends = mod_config["depends"].as_array();
+
+        for (const auto& d : depends)
+        {
+            // TODO: Prevent circular dependencies.
+            auto dependency = load_mod(d.as_string());
+
+            for (const auto& dir : dependency.bigDirectories)
+                mod.bigDirectories.push_back(dir);
+
+            for (const auto& dir : dependency.searchDirectories)
+                mod.searchDirectories.push_back(dir);
+        }
     }
 
     return mod;

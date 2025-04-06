@@ -107,3 +107,6 @@ cmake*/
 
 # CLion
 .idea/
+
+# Visual Studio CMake
+out/

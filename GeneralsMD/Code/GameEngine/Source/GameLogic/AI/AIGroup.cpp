@@ -256,7 +256,7 @@ Bool AIGroup::containsAnyObjectsNotOwnedByPlayer( const Player *ownerPlayer )
 /**
  * Remove any objects that aren't owned by the player, and return true if the group was destroyed due to emptiness
  */
-Bool AIGroup::removeAnyObjectsNotOwnedByPlayer( const Player *ownerPlayer )
+Bool AIGroup::removeAnyObjectsNotOwnedByPlayer( const Player *ownerPlayer, Bool allowAllies )
 {
 	ListObjectPtrIt it;
 
@@ -266,14 +266,23 @@ Bool AIGroup::removeAnyObjectsNotOwnedByPlayer( const Player *ownerPlayer )
 			continue;
 		}
 
-		if (obj->getControllingPlayer() != ownerPlayer) {
-			// Advance the iterator first, its about to become invalid.
-			++it;
+		const Player* owner = obj->getControllingPlayer();
+		const Relationship rel = owner->getRelationship(obj->getTeam());
 
-			if (remove(obj)) {
-				return TRUE;
+		if (obj->getControllingPlayer() != ownerPlayer) {
+			
+			if (allowAllies && rel == ALLIES) {
+				// If the object belongs to an allow, don't remove it.
 			}
-			continue;
+			else {
+				// Advance the iterator first, its about to become invalid.
+				++it;
+
+				if (remove(obj)) {
+					return TRUE;
+				}
+				continue;
+			}
 		}
 
 		++it;

@@ -1688,11 +1688,26 @@ Color Object::getNightIndicatorColor() const
 }
 
 //=============================================================================
+// Object::isAllyControlled
+//=============================================================================
+Bool Object::isAllyControlled() const
+{
+	Player* controllingPlayer = getControllingPlayer();
+	if (controllingPlayer == NULL)
+		return false;
+
+	Player* localPlayer = ThePlayerList->getLocalPlayer();
+	PlayerMaskType localPlayerAllies = ThePlayerList->getPlayersWithRelationship(localPlayer->getPlayerIndex(), ALLOW_ALLIES);
+
+	return BitTestWW(localPlayerAllies, controllingPlayer->getPlayerMask());
+}
+
+//=============================================================================
 // Object::isLocallyControlled
 //=============================================================================
 Bool Object::isLocallyControlled() const
 {
-	return getControllingPlayer() == ThePlayerList->getLocalPlayer();
+	return (getControllingPlayer() == ThePlayerList->getLocalPlayer()) || isAllyControlled();
 }
 
 //=============================================================================

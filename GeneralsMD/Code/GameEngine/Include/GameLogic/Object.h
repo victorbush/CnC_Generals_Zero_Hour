@@ -259,6 +259,7 @@ public:
 	void setCustomIndicatorColor(Color c);
 	void removeCustomIndicatorColor();
 
+	Bool isAllyControlled() const;
 	Bool isLocallyControlled() const;
 	Bool isNeutralControlled() const;
 	

@@ -436,12 +436,6 @@ void GameLogic::reset( void )
 	m_thingTemplateBuildableOverrides.clear();
 	m_controlBarOverrides.clear();
 
-	// set the hash to be rather large. We need to optimize this value later.
-//	m_objHash.clear();
-//	m_objHash.resize(OBJ_HASH_SIZE);
-	m_objVector.clear();
-	m_objVector.resize(OBJ_HASH_SIZE, NULL);
-
 	m_gamePaused = FALSE;
 	m_inputEnabledMemory = TRUE;
 	m_mouseVisibleMemory = TRUE;
@@ -449,6 +443,12 @@ void GameLogic::reset( void )
 
 	// destroy all objects
 	destroyAllObjectsImmediate();
+
+	// set the hash to be rather large. We need to optimize this value later.
+//	m_objHash.clear();
+//	m_objHash.resize(OBJ_HASH_SIZE);
+	m_objVector.clear();
+	m_objVector.resize(OBJ_HASH_SIZE, NULL);
 
 	m_nextObjID = (ObjectID)1;
 

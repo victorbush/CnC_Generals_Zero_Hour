@@ -382,7 +382,7 @@ void GameLogic::logicMessageDispatcher( GameMessage *msg, void *userData )
 
 				// If there are any units that the player doesn't own, then remove them from the "currentlySelectedGroup"
 				if (currentlySelectedGroup)
-					if (currentlySelectedGroup->removeAnyObjectsNotOwnedByPlayer(thisPlayer, true))
+					if (currentlySelectedGroup->removeAnyObjectsNotOwnedByPlayer(thisPlayer, TheGameInfo->getAllowAllyControl()))
 						currentlySelectedGroup = NULL;
 
 				if(TheStatsCollector)

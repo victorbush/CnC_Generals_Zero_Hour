@@ -196,6 +196,8 @@ public:
 	inline Int getSeed( void ) const;												///< Get the game seed
 	inline Int getUseStats( void ) const;		///< Does this game count towards gamespy stats?
 	inline void setUseStats( Int useStats );
+	inline Bool getAllowAllyControl() const;                 ///< Does this game allow players to control allied units?
+	inline void setAllowAllyControl(Bool allowAllyControl);  ///< Set whether this game allows players to control allied units.
 
   inline UnsignedShort getSuperweaponRestriction( void ) const; ///< Get any optional limits on superweapons
   void setSuperweaponRestriction( UnsignedShort restriction ); ///< Set the optional limits on superweapons
@@ -251,9 +253,10 @@ protected:
 	Int m_mapMask;
 	Int m_seed;
 	Int m_useStats;
-  Money         m_startingCash;
-  UnsignedShort m_superweaponRestriction;
-  Bool m_oldFactionsOnly; // Only USA, China, GLA -- not USA Air Force General, GLA Toxic General, et al
+	Money         m_startingCash;
+	UnsignedShort m_superweaponRestriction;
+	Bool m_oldFactionsOnly; // Only USA, China, GLA -- not USA Air Force General, GLA Toxic General, et al
+	Bool m_allowAllyControl;
 };
 
 extern GameInfo *TheGameInfo;
@@ -275,6 +278,9 @@ const Money&GameInfo::getStartingCash( void ) const         { return m_startingC
 UnsignedShort GameInfo::getSuperweaponRestriction( void ) const { return m_superweaponRestriction; }
 Bool        GameInfo::oldFactionsOnly(void) const           { return m_oldFactionsOnly; }
 void        GameInfo::setOldFactionsOnly( Bool oldFactionsOnly ) { m_oldFactionsOnly = oldFactionsOnly; }
+Bool GameInfo::getAllowAllyControl() const { return m_allowAllyControl; }
+void GameInfo::setAllowAllyControl(Bool allowAllyControl) { m_allowAllyControl = allowAllyControl; }
+
 
 AsciiString GameInfoToAsciiString( const GameInfo *game );
 Bool ParseAsciiStringToGameInfo( GameInfo *game, AsciiString options );

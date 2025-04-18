@@ -106,6 +106,8 @@
 #include "GameLogic/Module/RadarUpdate.h"
 #include "GameLogic/Module/PowerPlantUpdate.h"
 
+#include "GameNetwork/GameInfo.h"
+
 #include "Common/CRCDebug.h"
 #include "Common/MiscAudio.h"
 #include "Common/AudioEventInfo.h"
@@ -1707,7 +1709,8 @@ Bool Object::isAllyControlled() const
 //=============================================================================
 Bool Object::isLocallyControlled() const
 {
-	return (getControllingPlayer() == ThePlayerList->getLocalPlayer()) || isAllyControlled();
+	return (getControllingPlayer() == ThePlayerList->getLocalPlayer()) 
+		|| (TheGameInfo && TheGameInfo->getAllowAllyControl() && isAllyControlled());
 }
 
 //=============================================================================

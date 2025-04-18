@@ -320,6 +320,7 @@ void GameInfo::reset( void )
 	m_mapSize = 0;
   m_superweaponRestriction = 0; 
   m_startingCash = TheGlobalData->m_defaultStartingCash;
+  m_allowAllyControl = TRUE;
   
 	//
 

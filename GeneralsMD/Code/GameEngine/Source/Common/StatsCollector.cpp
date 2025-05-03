@@ -161,7 +161,7 @@ void StatsCollector::collectUnitCountStats( void )
 	for(Object *obj =	TheGameLogic->getFirstObject(); obj; obj = obj->getNextObject())
 	{
 		
-		if((!(obj->isKindOf(KINDOF_INFANTRY) || obj->isKindOf(KINDOF_VEHICLE))) || ( obj->isNeutralControlled()) ||(obj->getControllingPlayer()->getSide().compare("Civilian") == 0))
+		if((!(obj->isKindOf(KINDOF_INFANTRY) || obj->isKindOf(KINDOF_VEHICLE))) || ( obj->isNeutralOwned()) ||(obj->getControllingPlayer()->getSide().compare("Civilian") == 0))
 			continue;
 		
 		if(obj->getControllingPlayer()->isLocalPlayer())

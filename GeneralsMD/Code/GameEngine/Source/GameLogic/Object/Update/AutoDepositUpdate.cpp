@@ -157,7 +157,7 @@ UpdateSleepTime AutoDepositUpdate::update( void )
 		}
 		m_depositOnFrame = TheGameLogic->getFrame() + modData->m_depositFrame;
 		
-		if(getObject()->isNeutralControlled() || modData->m_depositAmount <= 0 )
+		if(getObject()->isNeutralOwned() || modData->m_depositAmount <= 0 )
 			return UPDATE_SLEEP_NONE;
 
 		// makes sure that buildings under construction do not get a bonus CCB
@@ -176,7 +176,7 @@ UpdateSleepTime AutoDepositUpdate::update( void )
 		if( getObject()->testStatus(OBJECT_STATUS_STEALTHED) )
 		{
 			// OY LOOK!  I AM USING LOCAL PLAYER.  Do not put anything other than TheInGameUI->addFloatingText in the block this controls!!!
-			if( !getObject()->isLocallyControlled() && !getObject()->testStatus(OBJECT_STATUS_DETECTED) )
+			if( !getObject()->isLocallyOwned() && !getObject()->testStatus(OBJECT_STATUS_DETECTED) )
 			{
 				displayMoney = FALSE;
 			}

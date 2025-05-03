@@ -840,7 +840,7 @@ Bool SpawnBehavior::shouldTryToSpawn()
 	if( getObject()->testStatus(OBJECT_STATUS_UNDER_CONSTRUCTION) || getObject()->testStatus(OBJECT_STATUS_SOLD) )
 		return FALSE;
 	// Not if we are civilian controlled
-	if( getObject()->isNeutralControlled() )
+	if( getObject()->isNeutralOwned() )
 		return FALSE;
 
 	return TRUE;

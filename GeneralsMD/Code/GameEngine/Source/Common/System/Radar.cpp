@@ -473,7 +473,7 @@ void Radar::addObject( Object *obj )
 	// we will put this on either the local object list for objects that belong to the
 	// local player, or on the regular object list for all other objects
 	//
-	if( obj->isLocallyControlled() )
+	if( obj->isLocallyOwned() )
 		list = &m_localObjectList;
 	else
 		list = &m_objectList;

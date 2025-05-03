@@ -2375,7 +2375,7 @@ static void findAndSelectCommandCenter(Object *obj, void* alreadyFound)
 	if (!((*(Bool*)alreadyFound)) && obj && obj->isKindOf(KINDOF_COMMANDCENTER) )
 	{
 		((*(Bool*)alreadyFound)) = TRUE;
-		TheGameLogic->selectObject(obj, TRUE, obj->getControllingPlayer()->getPlayerMask(), obj->isLocallyControlled());
+		TheGameLogic->selectObject(obj, TRUE, obj->getControllingPlayer()->getPlayerMask(), obj->isLocallyOwned());
 
 	}
 }

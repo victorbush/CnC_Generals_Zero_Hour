@@ -932,7 +932,7 @@ UnsignedInt WeaponTemplate::fireWeaponTemplate
 
 		Bool handled;
 		
-		if(!sourceObj->isLocallyControlled()									// if user watching is not controller and
+		if(!sourceObj->isLocallyOwned()									// if user watching is not controller and
 			&&  sourceObj->testStatus(OBJECT_STATUS_STEALTHED)	// if unit is stealthed (like a Pathfinder)
 			&& !sourceObj->testStatus(OBJECT_STATUS_DETECTED)		// but not detected...
 			&& !sourceObj->testStatus(OBJECT_STATUS_DISGUISED)  // and not disguised...

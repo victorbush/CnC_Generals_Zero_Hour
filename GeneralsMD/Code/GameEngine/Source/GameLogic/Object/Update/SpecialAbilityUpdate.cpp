@@ -1037,7 +1037,7 @@ void SpecialAbilityUpdate::startPreparation()
         draw->setAnimationCompletionTime(data->m_preparationFrames);
 
       //Warn the victim so he might have a chance to react!
-      if( target && target->isLocallyControlled() )
+      if( target && target->isLocallyOwned() )
       {
         TheEva->setShouldPlay( EVA_BuildingBeingStolen );
       }
@@ -1072,7 +1072,7 @@ void SpecialAbilityUpdate::startPreparation()
         }
 
         //Warn the victim so he might have a chance to react!
-        if( spTemplate->getSpecialPowerType() == SPECIAL_BLACKLOTUS_CAPTURE_BUILDING && target && target->isLocallyControlled() )
+        if( spTemplate->getSpecialPowerType() == SPECIAL_BLACKLOTUS_CAPTURE_BUILDING && target && target->isLocallyOwned() )
         {
           TheEva->setShouldPlay( EVA_BuildingBeingStolen );
         }
@@ -1458,7 +1458,7 @@ void SpecialAbilityUpdate::triggerAbilityEffect()
       }
 
       //Play the "building stolen" EVA event if the local player is the victim!
-      if( target && target->isLocallyControlled() )
+      if( target && target->isLocallyOwned() )
       {
         TheEva->setShouldPlay( EVA_BuildingStolen );
       }
@@ -1504,7 +1504,7 @@ void SpecialAbilityUpdate::triggerAbilityEffect()
             controller->getScoreKeeper()->addMoneyEarned( cash );
 
           //Play the "cash stolen" EVA event if the local player is the victim!
-          if( target && target->isLocallyControlled() )
+          if( target && target->isLocallyOwned() )
           {
             TheEva->setShouldPlay( EVA_CashStolen );
           }

@@ -1484,7 +1484,7 @@ CommandAvailability ControlBar::getCommandAvailability( const CommandButton *com
 			for( DrawableListCIt it = selected->begin(); it != selected->end(); ++it )
 			{
 				Drawable *draw = *it;
-				if( draw && draw->getObject() && draw->getObject()->isLocallyControlled() && draw->getObject()->getCurrentWeapon())
+				if( draw && draw->getObject() && draw->getObject()->canBeLocallyControlled() && draw->getObject()->getCurrentWeapon())
 				{
 					WeaponSlotType wslot = draw->getObject()->getCurrentWeapon()->getWeaponSlot();
 					if (wslot != command->getWeaponSlot())

@@ -137,7 +137,7 @@ Bool SupplyCenterDockUpdate::action( Object* docker, Object *drone )
 	if( getObject()->testStatus(OBJECT_STATUS_STEALTHED) )
 	{
 		// OY LOOK!  I AM USING LOCAL PLAYER.  Do not put anything other than TheInGameUI->addFloatingText in the block this controls!!!
-		if( !getObject()->isLocallyControlled() && !getObject()->testStatus(OBJECT_STATUS_DETECTED) )
+		if( !getObject()->isLocallyOwned() && !getObject()->testStatus(OBJECT_STATUS_DETECTED) )
 		{
 			displayMoney = FALSE;
 		}

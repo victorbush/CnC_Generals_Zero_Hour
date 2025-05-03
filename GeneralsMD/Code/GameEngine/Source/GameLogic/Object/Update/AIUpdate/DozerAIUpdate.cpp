@@ -618,7 +618,7 @@ StateReturnType DozerActionDoActionState::update( void )
 					/// @todo need to write this
 
 					// do some UI stuff for the constrolling player
-					if( dozer->isLocallyControlled() )
+					if( dozer->isLocallyOwned() )
 					{
 
 						// message the the building player

@@ -1692,7 +1692,7 @@ Color Object::getNightIndicatorColor() const
 //=============================================================================
 // Object::isAllyControlled
 //=============================================================================
-Bool Object::isAllyControlled() const
+Bool Object::isAllyOwned() const
 {
 	Player* controllingPlayer = getControllingPlayer();
 	if (controllingPlayer == NULL)
@@ -1705,20 +1705,28 @@ Bool Object::isAllyControlled() const
 }
 
 //=============================================================================
-// Object::isLocallyControlled
+// Object::isLocallyOwned
 //=============================================================================
-Bool Object::isLocallyControlled() const
+Bool Object::isLocallyOwned() const
 {
-	return (getControllingPlayer() == ThePlayerList->getLocalPlayer()) 
-		|| (TheGameInfo && TheGameInfo->getAllowAllyControl() && isAllyControlled());
+	return (getControllingPlayer() == ThePlayerList->getLocalPlayer());
 }
 
 //=============================================================================
 // Object::isLocallyControlled
 //=============================================================================
-Bool Object::isNeutralControlled() const
+Bool Object::isNeutralOwned() const
 {
 	return getControllingPlayer() == ThePlayerList->getNeutralPlayer();
+}
+
+//=============================================================================
+// Object::canBeLocallyControlled
+//=============================================================================
+Bool Object::canBeLocallyControlled() const
+{
+	return (getControllingPlayer() == ThePlayerList->getLocalPlayer())
+		|| (TheGameInfo && TheGameInfo->getAllowAllyControl() && isAllyOwned());
 }
 
 //-------------------------------------------------------------------------------------------------
@@ -3116,7 +3124,7 @@ void Object::onVeterancyLevelChanged( VeterancyLevel oldLevel, VeterancyLevel ne
 		body->onVeterancyLevelChanged( oldLevel, newLevel, provideFeedback );
 	
 	Bool hideAnimationForStealth = FALSE;
-	if( !isLocallyControlled() && 
+	if( !isLocallyOwned() &&
 			testStatus( OBJECT_STATUS_STEALTHED ) && 
 			!testStatus( OBJECT_STATUS_DETECTED ) && 
 			!testStatus( OBJECT_STATUS_DISGUISED ) )
@@ -4634,7 +4642,7 @@ void Object::onDie( DamageInfo *damageInfo )
 	if(m_team)
 		m_team->notifyTeamOfObjectDeath();
 
-	if (isLocallyControlled() && !selfInflicted) // wasLocallyControlled? :-)
+	if (isLocallyOwned() && !selfInflicted) // wasLocallyControlled? :-)
 	{
 		if (isKindOf(KINDOF_STRUCTURE) && isKindOf(KINDOF_MP_COUNT_FOR_VICTORY)) 
 		{

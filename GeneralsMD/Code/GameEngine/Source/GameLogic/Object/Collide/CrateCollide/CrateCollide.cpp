@@ -155,7 +155,7 @@ Bool CrateCollide::isValidToExecute( const Object *other ) const
 		return FALSE;
 
 	//Nothing Neutral can pick up any type of crate
-	if( other->isNeutralControlled() )
+	if( other->isNeutralOwned() )
 		return FALSE;
 
 	const CrateCollideModuleData* md = getCrateCollideModuleData();

@@ -136,7 +136,7 @@ static void doMoveTo( Object *obj, const Coord3D *pos )
 // ------------------------------------------------------------------------------------------------
 static void doSetRallyPoint( Object *obj, const Coord3D& pos )
 {
-	Bool isLocalPlayer = obj->isLocallyControlled();
+	Bool isLocalPlayer = obj->canBeLocallyControlled();
 
 	//
 	// we must be able to find a path from the object to the point they have chosen, cause setting

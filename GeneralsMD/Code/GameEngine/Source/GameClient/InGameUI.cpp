@@ -132,7 +132,7 @@ static Bool kindOfUnitSelection( Drawable *test, void *userData )
 
 		// only select objects if not already selected
 		if( object && isKindOfMatch 
-					&& object->isLocallyControlled() 
+					&& object->canBeLocallyControlled()
 					&& !object->isContained() 
 					&& !object->getDrawable()->isSelected() 
 					&& !object->isEffectivelyDead()
@@ -192,7 +192,7 @@ static Bool similarUnitSelection( Drawable *test, void *userData )
 
 		// only select objects if not already selected
 		if( object && isEquivalent 
-			  && object->isLocallyControlled() 
+			  && object->canBeLocallyControlled()
 				&& !object->isContained()
 				&& !( object->getDrawable()->isSelected() ) 
 				&& object->isMassSelectable() // And only if they can be multiply selected. (otherwise the drawable will be, but the object will not be)
@@ -2497,7 +2497,7 @@ void InGameUI::createMouseoverHint( const GameMessage *msg )
 				drawSelectable = false;
 			}
 
-			if( drawSelectable && obj->isLocallyControlled() )
+			if( drawSelectable && obj->canBeLocallyControlled() )
 			{
 				setMouseCursor(Mouse::SELECTING);
 			}
@@ -2609,7 +2609,7 @@ void InGameUI::createCommandHint( const GameMessage *msg )
 		case MOUSEMODE_DEFAULT:
 			{ 
 				// This section of code only gets called when there is no specific cursor mode happening.
-				if (underWindow || (srcObj && !srcObj->isLocallyControlled()))
+				if (underWindow || (srcObj && !srcObj->canBeLocallyControlled()))
 				{
 					setMouseCursor(Mouse::ARROW);
 					return;
@@ -2618,9 +2618,9 @@ void InGameUI::createCommandHint( const GameMessage *msg )
 				{
 					case GameMessage::MSG_DO_MOVETO_HINT:
 					{
-						if( !drawSelectable && srcObj && srcObj->isLocallyControlled() && srcObj->isKindOf(KINDOF_STRUCTURE))
+						if( !drawSelectable && srcObj && srcObj->canBeLocallyControlled() && srcObj->isKindOf(KINDOF_STRUCTURE))
 							setMouseCursor( Mouse::GENERIC_INVALID );
-						else if( drawSelectable && obj->isLocallyControlled() && !obj->isKindOf(KINDOF_MINE))
+						else if( drawSelectable && obj->canBeLocallyControlled() && !obj->isKindOf(KINDOF_MINE))
 							setMouseCursor( Mouse::SELECTING );
 						else if( TheRadar->isRadarWindow( window ) &&
 										 TheRadar->isRadarForced() == FALSE &&
@@ -2632,7 +2632,7 @@ void InGameUI::createCommandHint( const GameMessage *msg )
 						break;
 					}
 					case GameMessage::MSG_DO_ATTACKMOVETO_HINT:
-						if( drawSelectable && obj->isLocallyControlled()  )
+						if( drawSelectable && obj->canBeLocallyControlled()  )
 							setMouseCursor( Mouse::SELECTING );
 						else
 							setMouseCursor( Mouse::ATTACKMOVETO );
@@ -3314,7 +3314,7 @@ const DrawableList *InGameUI::getAllSelectedLocalDrawables( void )
 	for (DrawableList::const_iterator it = m_selectedDrawables.begin(); it != m_selectedDrawables.end(); ++it)
 	{
 		Drawable *draw = (*it);
-		if (draw && draw->getObject() && draw->getObject()->isLocallyControlled())
+		if (draw && draw->getObject() && draw->getObject()->canBeLocallyControlled())
 			m_selectedLocalDrawables.push_back( draw );
 	}
 	return &m_selectedLocalDrawables;
@@ -4150,7 +4150,7 @@ Bool InGameUI::areSelectedObjectsControllable() const
 
 		// All selected objects will have the same local controller, so 
 		// simply return the first one.
-		return draw->getObject()->isLocallyControlled();
+		return draw->getObject()->canBeLocallyControlled();
 	}
 
 	// Nothing selected...
@@ -4401,7 +4401,7 @@ Bool InGameUI::canSelectedObjectsDoAction( ActionType action, const Object *obje
 					success = false;
 					break;
 				}
-				success = (obj->isKindOf(KINDOF_AUTO_RALLYPOINT) && obj->isLocallyControlled());
+				success = (obj->isKindOf(KINDOF_AUTO_RALLYPOINT) && obj->canBeLocallyControlled());
 				break;
 			}
 		}
@@ -4710,7 +4710,7 @@ Int InGameUI::selectMatchingAcrossRegion( IRegion2D *region )
 	{
 		// get this drawable
 		draw = *it;
-		if( draw && draw->getObject() && draw->getObject()->isLocallyControlled() )
+		if( draw && draw->getObject() && draw->getObject()->canBeLocallyControlled() )
 		{
 			// Use the Object's thing template, doing so will prevent wierdness for disguised vehicles.
 			drawableList.insert( draw->getObject()->getTemplate() );

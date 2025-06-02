@@ -326,6 +326,10 @@ void CameraClass::Set_View_Plane(const Vector2 & vmin,const Vector2 & vmax)
  *=============================================================================================*/
 void CameraClass::Set_View_Plane(float hfov,float vfov)
 {
+	// VMB : Hack widescreen fix
+	if (hfov == -1) {
+		hfov = 2.0f * atan(tan(vfov / 2.0f) * AspectRatio);
+	}
 
 	float width_half = tan(hfov/2.0);
 	float height_half = 0.0f;

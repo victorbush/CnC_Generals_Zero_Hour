@@ -959,8 +959,6 @@ void DX8Wrapper::Resize_And_Position_Window()
 			rectClient.bottom = rectClient.top + ResolutionHeight;
 			MoveRectIntoOtherRect(rectClient, mi.rcMonitor, &left, &top);
 
-			// VMB : Hack borderless fullscreen
-			SetWindowLongPtr(_Hwnd, GWL_STYLE, WS_POPUP | WS_VISIBLE);
 			::SetWindowPos (_Hwnd, NULL, left, top, width, height, SWP_NOZORDER);
 
 			DEBUG_LOG(("Window positioned to x:%d y:%d, resized to w:%d h:%d\n", left, top, width, height));

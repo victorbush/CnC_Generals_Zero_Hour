@@ -136,7 +136,7 @@ static void doMoveTo( Object *obj, const Coord3D *pos )
 // ------------------------------------------------------------------------------------------------
 static void doSetRallyPoint( Object *obj, const Coord3D& pos )
 {
-	Bool isLocalPlayer = obj->isLocallyControlled();
+	Bool isLocalPlayer = obj->canBeLocallyControlled();
 
 	//
 	// we must be able to find a path from the object to the point they have chosen, cause setting
@@ -382,7 +382,7 @@ void GameLogic::logicMessageDispatcher( GameMessage *msg, void *userData )
 
 				// If there are any units that the player doesn't own, then remove them from the "currentlySelectedGroup"
 				if (currentlySelectedGroup)
-					if (currentlySelectedGroup->removeAnyObjectsNotOwnedByPlayer(thisPlayer))
+					if (currentlySelectedGroup->removeAnyObjectsNotOwnedByPlayer(thisPlayer, TheGameInfo->getAllowAllyControl()))
 						currentlySelectedGroup = NULL;
 
 				if(TheStatsCollector)

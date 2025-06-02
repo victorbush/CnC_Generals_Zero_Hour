@@ -987,7 +987,7 @@ public:
 	Bool containsAnyObjectsNotOwnedByPlayer( const Player *ownerPlayer );
 
 	// Remove any objects that aren't owned by the player, and return true if the group was destroyed due to emptiness
-	Bool removeAnyObjectsNotOwnedByPlayer( const Player *ownerPlayer );
+	Bool removeAnyObjectsNotOwnedByPlayer( const Player *ownerPlayer, Bool allowAllies );
 	
 	UnsignedInt getID( void );
 		

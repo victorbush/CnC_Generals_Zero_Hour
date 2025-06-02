@@ -133,7 +133,7 @@ Bool SabotageCommandCenterCrateCollide::executeCrateBehavior( Object *other )
 
 	//When the sabotage occurs, play the appropriate EVA
 	//event if the local player is the victim!
-	if( other->isLocallyControlled() )
+	if( other->isLocallyOwned() )
 	{
 		TheEva->setShouldPlay( EVA_BuildingSabotaged );
 	}

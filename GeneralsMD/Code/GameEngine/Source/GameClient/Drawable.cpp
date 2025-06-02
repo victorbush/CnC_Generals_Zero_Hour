@@ -2736,7 +2736,7 @@ Bool Drawable::drawsAnyUIText( void )
 		return FALSE;
 
 	const Object *obj = getObject();
-	if ( !obj || !obj->isLocallyControlled() )  
+	if ( !obj || !obj->canBeLocallyControlled() )  
 		return FALSE;
 
 	Player *owner = obj->getControllingPlayer();

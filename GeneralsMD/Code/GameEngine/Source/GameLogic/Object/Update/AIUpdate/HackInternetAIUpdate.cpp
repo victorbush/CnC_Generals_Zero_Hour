@@ -542,7 +542,7 @@ StateReturnType HackInternetState::update()
 				if( owner->testStatus(OBJECT_STATUS_STEALTHED) )
 				{
 					// OY LOOK!  I AM USING LOCAL PLAYER.  Do not put anything other than TheInGameUI->addFloatingText in the block this controls!!!
-					if( !owner->isLocallyControlled() && !owner->testStatus(OBJECT_STATUS_DETECTED) )
+					if( !owner->isLocallyOwned() && !owner->testStatus(OBJECT_STATUS_DETECTED) )
 					{
 						displayMoney = FALSE;
 					}
@@ -550,7 +550,7 @@ StateReturnType HackInternetState::update()
 				if( owner->getContainedBy() && owner->getContainedBy()->testStatus(OBJECT_STATUS_STEALTHED) )
 				{
 					// OY LOOK!  I AM USING LOCAL PLAYER.  Do not put anything other than TheInGameUI->addFloatingText in the block this controls!!!
-					if( !owner->getContainedBy()->isLocallyControlled() && !owner->getContainedBy()->testStatus(OBJECT_STATUS_DETECTED) )
+					if( !owner->getContainedBy()->isLocallyOwned() && !owner->getContainedBy()->testStatus(OBJECT_STATUS_DETECTED) )
 					{
 						displayMoney = FALSE;
 					}

@@ -257,9 +257,11 @@ public:
 	void setCustomIndicatorColor(Color c);
 	void removeCustomIndicatorColor();
 
-	Bool isLocallyControlled() const;
-	Bool isNeutralControlled() const;
-	
+	Bool isAllyOwned() const;
+	Bool isLocallyOwned() const;
+	Bool isNeutralOwned() const;
+	Bool canBeLocallyControlled() const;
+
 	Bool getIsUndetectedDefector(void) const { return BitIsSet(m_privateStatus, UNDETECTED_DEFECTOR); }
 	void friend_setUndetectedDefector(Bool status);
 

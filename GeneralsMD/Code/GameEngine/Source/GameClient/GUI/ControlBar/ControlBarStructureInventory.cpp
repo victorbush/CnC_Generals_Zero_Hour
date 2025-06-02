@@ -212,7 +212,7 @@ void ControlBar::updateContextStructureInventory( void )
 	// in that case we want to unselect the building so that we can't see the contents
 	//
 	Player *localPlayer = ThePlayerList->getLocalPlayer();
-	if( source->isLocallyControlled() == FALSE && 
+	if( source->canBeLocallyControlled() == FALSE &&
 			localPlayer->getRelationship( source->getTeam() ) != NEUTRAL )
 	{
 		Drawable *draw = source->getDrawable();

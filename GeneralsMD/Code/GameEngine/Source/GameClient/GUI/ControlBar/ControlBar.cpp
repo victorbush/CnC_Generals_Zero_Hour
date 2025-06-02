@@ -1890,7 +1890,7 @@ void ControlBar::evaluateContextUI( void )
 
 				// we cannot select objects that are controlled by our enemies
 				relationship = localPlayer->getRelationship( obj->getTeam() );
-				if( obj->isLocallyControlled() == TRUE || relationship == NEUTRAL )
+				if( obj->canBeLocallyControlled() == TRUE || relationship == NEUTRAL )
 					switchToContext( CB_CONTEXT_STRUCTURE_INVENTORY, drawToEvaluateFor );
 
 			}  // end else if
@@ -2598,7 +2598,7 @@ void ControlBar::setPortraitByObject( Object *obj )
 
 	if( obj )
 	{
-		if( obj->isKindOf( KINDOF_SHOW_PORTRAIT_WHEN_CONTROLLED ) && !obj->isLocallyControlled() )
+		if( obj->isKindOf( KINDOF_SHOW_PORTRAIT_WHEN_CONTROLLED ) && !obj->canBeLocallyControlled() )
 		{
 			//Handles civ vehicles without terrorists in them
 			setPortraitByObject( NULL );

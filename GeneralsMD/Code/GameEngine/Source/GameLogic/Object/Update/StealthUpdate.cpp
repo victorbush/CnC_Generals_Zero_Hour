@@ -800,7 +800,7 @@ UpdateSleepTime StealthUpdate::update( void )
 		{
 			detectedStatusChangedThisFrame = TRUE;
 			//Only play sound effect if the selected object is controllable.
-			if( self->isLocallyControlled() )
+			if( self->isLocallyOwned() )
 			{
 				AudioEventRTS soundEvent = *self->getTemplate()->getSoundStealthOn();
 				soundEvent.setObjectID(self->getID());

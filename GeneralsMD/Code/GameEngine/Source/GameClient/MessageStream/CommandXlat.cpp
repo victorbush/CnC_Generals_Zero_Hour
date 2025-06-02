@@ -1445,7 +1445,7 @@ GameMessage::Type CommandTranslator::evaluateContextCommand( Drawable *draw,
 	}  //  end if
 
 	// If the thing is a mine, and is locally controlled, then we should issue a moveto to its location.
-	if (obj && obj->isLocallyControlled() && obj->isKindOf(KINDOF_MINE)) {
+	if (obj && obj->canBeLocallyControlled() && obj->isKindOf(KINDOF_MINE)) {
 		draw = NULL;
 		obj = NULL;
 	}
@@ -1467,7 +1467,7 @@ GameMessage::Type CommandTranslator::evaluateContextCommand( Drawable *draw,
 	// Then we should determine if the game currently prefers selection events. If it does, then return
 	// the invalid message.
 	if (obj) {
-		if (obj->isLocallyControlled() && TheInGameUI->isInPreferSelectionMode()) {
+		if (obj->canBeLocallyControlled() && TheInGameUI->isInPreferSelectionMode()) {
 			return msgType;
 		}
 	}
@@ -2393,7 +2393,7 @@ GameMessageDisposition CommandTranslator::translateGameMessage(const GameMessage
 					{
 						break;
 					}
-					else if( object && object->isMobile() && object->isLocallyControlled() && !object->isContained() && !object->isKindOf( KINDOF_NO_SELECT ) )
+					else if( object && object->isMobile() && object->canBeLocallyControlled() && !object->isContained() && !object->isKindOf( KINDOF_NO_SELECT ) )
 					{
 						// create a new group.
 						GameMessage *teamMsg = TheMessageStream->appendMessage( GameMessage::MSG_CREATE_SELECTED_GROUP );
@@ -2417,7 +2417,7 @@ GameMessageDisposition CommandTranslator::translateGameMessage(const GameMessage
 				Bool hack = FALSE;
 				Drawable *selectedDrawable = TheInGameUI->getFirstSelectedDrawable();
 				Object *selectedObject = selectedDrawable->getObject();
-				if( selectedObject->isLocallyControlled() )
+				if( selectedObject->canBeLocallyControlled() )
 				{
 					// find the previous selectable drawable
 					temp = selectedDrawable->getPrevDrawable();
@@ -2441,7 +2441,7 @@ GameMessageDisposition CommandTranslator::translateGameMessage(const GameMessage
 						else
 						{
 							const Object *tempObject = temp->getObject();
-							if( tempObject && tempObject->isMobile() && tempObject->isLocallyControlled() && !tempObject->isContained() && !tempObject->isKindOf( KINDOF_NO_SELECT ) )
+							if( tempObject && tempObject->isMobile() && tempObject->canBeLocallyControlled() && !tempObject->isContained() && !tempObject->isKindOf( KINDOF_NO_SELECT ) )
 							{
 								newDrawable = temp;
 								break;
@@ -2499,7 +2499,7 @@ GameMessageDisposition CommandTranslator::translateGameMessage(const GameMessage
 					{
 						break;
 					}
-					else if( object && object->isMobile() && object->isLocallyControlled() && !object->isContained() && !object->isKindOf( KINDOF_NO_SELECT ) )
+					else if( object && object->isMobile() && object->canBeLocallyControlled() && !object->isContained() && !object->isKindOf( KINDOF_NO_SELECT ) )
 					{
 						// create a new group.
 						GameMessage *teamMsg = TheMessageStream->appendMessage( GameMessage::MSG_CREATE_SELECTED_GROUP );
@@ -2524,7 +2524,7 @@ GameMessageDisposition CommandTranslator::translateGameMessage(const GameMessage
 				Bool hack = FALSE; // takes care of when for loop skips firstdrawable
 				Drawable *selectedDrawable = TheInGameUI->getFirstSelectedDrawable();
 				Object *selectedObject = selectedDrawable->getObject();
-				if( selectedObject->isLocallyControlled() )
+				if( selectedObject->canBeLocallyControlled() )
 				{
 					// find the next selectable drawable
 					temp = selectedDrawable->getNextDrawable();
@@ -2548,7 +2548,7 @@ GameMessageDisposition CommandTranslator::translateGameMessage(const GameMessage
 							const Object *tempObject = temp->getObject();
 							// must take case of this case here or else the loop will break without getting newDrawable
 							if( tempObject && temp->getNextDrawable() == selectedDrawable && !temp->isSelected() 
-								&& tempObject->isMobile() && tempObject->isLocallyControlled() && !tempObject->isContained() && !tempObject->isKindOf( KINDOF_NO_SELECT ) )
+								&& tempObject->isMobile() && tempObject->canBeLocallyControlled() && !tempObject->isContained() && !tempObject->isKindOf( KINDOF_NO_SELECT ) )
 							{
 								newDrawable = temp;
 								break;
@@ -2558,7 +2558,7 @@ GameMessageDisposition CommandTranslator::translateGameMessage(const GameMessage
 						else
 						{
 							const Object *tempObject = temp->getObject();
-							if( tempObject && !temp->isSelected() && tempObject->isMobile() && tempObject->isLocallyControlled() && !tempObject->isContained() )
+							if( tempObject && !temp->isSelected() && tempObject->isMobile() && tempObject->canBeLocallyControlled() && !tempObject->isContained() )
 							{
 								newDrawable = temp;
 								break;
@@ -2620,7 +2620,7 @@ GameMessageDisposition CommandTranslator::translateGameMessage(const GameMessage
 						break;
 					}
 					// make sure you select only workers
-					else if( object && object->isLocallyControlled() && !object->isContained() && object->isKindOf(KINDOF_DOZER) )
+					else if( object && object->canBeLocallyControlled() && !object->isContained() && object->isKindOf(KINDOF_DOZER) )
 					{
 						// create a new group.
 						GameMessage *teamMsg = TheMessageStream->appendMessage( GameMessage::MSG_CREATE_SELECTED_GROUP );
@@ -2646,7 +2646,7 @@ GameMessageDisposition CommandTranslator::translateGameMessage(const GameMessage
 				Bool hack = FALSE;
 				Drawable *selectedDrawable = TheInGameUI->getFirstSelectedDrawable();
 				Object *selectedObject = selectedDrawable->getObject();
-				if( selectedObject->isLocallyControlled() )
+				if( selectedObject->canBeLocallyControlled() )
 				{
 					// find the previous selectable drawable
 					temp = selectedDrawable->getPrevDrawable();
@@ -2670,7 +2670,7 @@ GameMessageDisposition CommandTranslator::translateGameMessage(const GameMessage
 						else
 						{
 							const Object *tempObject = temp->getObject();
-							if( tempObject && tempObject->isLocallyControlled() && !tempObject->isContained() && tempObject->isKindOf( KINDOF_DOZER ) )
+							if( tempObject && tempObject->canBeLocallyControlled() && !tempObject->isContained() && tempObject->isKindOf( KINDOF_DOZER ) )
 							{
 								newDrawable = temp;
 								break;
@@ -2726,7 +2726,7 @@ GameMessageDisposition CommandTranslator::translateGameMessage(const GameMessage
 					{
 						break;
 					}
-					else if( object && object->isMobile() && object->isLocallyControlled() && !object->isContained() && object->isKindOf( KINDOF_DOZER ))
+					else if( object && object->isMobile() && object->canBeLocallyControlled() && !object->isContained() && object->isKindOf( KINDOF_DOZER ))
 					{
 						// create a new group.
 						GameMessage *teamMsg = TheMessageStream->appendMessage( GameMessage::MSG_CREATE_SELECTED_GROUP );
@@ -2751,7 +2751,7 @@ GameMessageDisposition CommandTranslator::translateGameMessage(const GameMessage
 				Bool hack = FALSE; // takes care of when for loop skips firstdrawable
 				Drawable *selectedDrawable = TheInGameUI->getFirstSelectedDrawable();
 				Object *selectedObject = selectedDrawable->getObject();
-				if( selectedObject->isLocallyControlled() )
+				if( selectedObject->canBeLocallyControlled() )
 				{
 					// find the next selectable drawable
 					temp = selectedDrawable->getNextDrawable();
@@ -2775,7 +2775,7 @@ GameMessageDisposition CommandTranslator::translateGameMessage(const GameMessage
 							const Object *tempObject = temp->getObject();
 							// must take case of this case here or else the loop will break without getting newDrawable
 							if( tempObject && temp->getNextDrawable() == selectedDrawable && !temp->isSelected() 
-								&& tempObject->isMobile() && tempObject->isLocallyControlled() && !tempObject->isContained() )
+								&& tempObject->isMobile() && tempObject->canBeLocallyControlled() && !tempObject->isContained() )
 							{
 								newDrawable = temp;
 								break;
@@ -2786,7 +2786,7 @@ GameMessageDisposition CommandTranslator::translateGameMessage(const GameMessage
 						{
 							const Object *tempObject = temp->getObject();
 							if( tempObject && !temp->isSelected() && tempObject->isMobile()
-								  && tempObject->isLocallyControlled() && !tempObject->isContained() && tempObject->isKindOf( KINDOF_DOZER ) )
+								  && tempObject->canBeLocallyControlled() && !tempObject->isContained() && tempObject->isKindOf( KINDOF_DOZER ) )
 							{
 								newDrawable = temp;
 								break;
@@ -3558,7 +3558,7 @@ GameMessageDisposition CommandTranslator::translateGameMessage(const GameMessage
 			DrawableList listOfUnits = *TheInGameUI->getAllSelectedDrawables();
 			for (DrawableListIt it = listOfUnits.begin(); it != listOfUnits.end(); /* empty */) {
 				Drawable *draw = *it;
-				if (draw->getObject() && draw->getObject()->isLocallyControlled()) {
+				if (draw->getObject() && draw->getObject()->canBeLocallyControlled()) {
 					// This thing can emit a unit response.
 					++it;
 					continue;

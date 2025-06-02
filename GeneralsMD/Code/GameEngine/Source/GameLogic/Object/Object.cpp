@@ -106,6 +106,8 @@
 #include "GameLogic/Module/RadarUpdate.h"
 #include "GameLogic/Module/PowerPlantUpdate.h"
 
+#include "GameNetwork/GameInfo.h"
+
 #include "Common/CRCDebug.h"
 #include "Common/MiscAudio.h"
 #include "Common/AudioEventInfo.h"
@@ -1686,19 +1688,43 @@ Color Object::getNightIndicatorColor() const
 }
 
 //=============================================================================
-// Object::isLocallyControlled
+// Object::isAllyOwned
 //=============================================================================
-Bool Object::isLocallyControlled() const
+Bool Object::isAllyOwned() const
 {
-	return getControllingPlayer() == ThePlayerList->getLocalPlayer();
+	Player* controllingPlayer = getControllingPlayer();
+	if (controllingPlayer == NULL)
+		return false;
+
+	Player* localPlayer = ThePlayerList->getLocalPlayer();
+	PlayerMaskType localPlayerAllies = ThePlayerList->getPlayersWithRelationship(localPlayer->getPlayerIndex(), ALLOW_ALLIES);
+
+	return BitIsSet(localPlayerAllies, controllingPlayer->getPlayerMask());
 }
 
 //=============================================================================
-// Object::isLocallyControlled
+// Object::isLocallyOwned
 //=============================================================================
-Bool Object::isNeutralControlled() const
+Bool Object::isLocallyOwned() const
+{
+	return (getControllingPlayer() == ThePlayerList->getLocalPlayer());
+}
+
+//=============================================================================
+// Object::isNeutralOwned
+//=============================================================================
+Bool Object::isNeutralOwned() const
 {
 	return getControllingPlayer() == ThePlayerList->getNeutralPlayer();
+}
+
+//=============================================================================
+// Object::canBeLocallyControlled
+//=============================================================================
+Bool Object::canBeLocallyControlled() const
+{
+	return (getControllingPlayer() == ThePlayerList->getLocalPlayer())
+		|| (TheGameInfo && TheGameInfo->getAllowAllyControl() && isAllyOwned());
 }
 
 //-------------------------------------------------------------------------------------------------
@@ -3096,7 +3122,7 @@ void Object::onVeterancyLevelChanged( VeterancyLevel oldLevel, VeterancyLevel ne
 		body->onVeterancyLevelChanged( oldLevel, newLevel, provideFeedback );
 	
 	Bool hideAnimationForStealth = FALSE;
-	if( !isLocallyControlled() && 
+	if( !isLocallyOwned() &&
 			testStatus( OBJECT_STATUS_STEALTHED ) && 
 			!testStatus( OBJECT_STATUS_DETECTED ) && 
 			!testStatus( OBJECT_STATUS_DISGUISED ) )
@@ -4594,7 +4620,7 @@ void Object::onDie( DamageInfo *damageInfo )
 	if(m_team)
 		m_team->notifyTeamOfObjectDeath();
 
-	if (isLocallyControlled() && !selfInflicted) // wasLocallyControlled? :-)
+	if (isLocallyOwned() && !selfInflicted) // wasLocallyControlled? :-)
 	{
 		if (isKindOf(KINDOF_STRUCTURE) && isKindOf(KINDOF_MP_COUNT_FOR_VICTORY)) 
 		{

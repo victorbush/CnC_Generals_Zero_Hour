@@ -236,7 +236,7 @@ void W3DWaypointBuffer::drawWaypoints(RenderInfoClass &rinfo)
 			Int numPoints = 0;
 			if( obj )
 			{
-				if ( ! obj->isLocallyControlled())
+				if ( ! obj->canBeLocallyControlled())
 					continue;
 
 

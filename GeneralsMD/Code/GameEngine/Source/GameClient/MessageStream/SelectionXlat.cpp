@@ -204,7 +204,7 @@ Bool CanSelectDrawable( const Drawable *draw, Bool dragSelecting )
 	}
 	//Now allowing the selection of everything including enemies... but only if not drag selecting.
 	//In fact the only way you can drag select is if the unit is on your team.
-	if( dragSelecting && !obj->isLocallyControlled() )
+	if( dragSelecting && !obj->canBeLocallyControlled() )
 	{
 		return FALSE;
 	}
@@ -504,7 +504,7 @@ GameMessageDisposition SelectionTranslator::translateGameMessage(const GameMessa
 				// We have to have an object in order to be able to do interesting double click stuff on
 				// him. Also, if it is a structure, it is already selected, so don't select all the units
 				// like him.
-				if (pickedObj == NULL || !pickedObj->isLocallyControlled())
+				if (pickedObj == NULL || !pickedObj->canBeLocallyControlled())
 					break;
 
 				// Ok. The logic is a little bit weird here. What we need to do is deselect everything 
@@ -790,7 +790,7 @@ GameMessageDisposition SelectionTranslator::translateGameMessage(const GameMessa
 
 					Drawable *drawToSelect = NULL;
 					ObjectID objToAppend = INVALID_ID;
-					if (si.selectMine && obj->isLocallyControlled()) 
+					if (si.selectMine && obj->canBeLocallyControlled())
 					{
 						if (!obj->isKindOf(KINDOF_STRUCTURE) || si.selectMineBuildings) 
 						{
@@ -1072,7 +1072,7 @@ GameMessageDisposition SelectionTranslator::translateGameMessage(const GameMessa
 				Drawable *drawable = TheGameClient->getDrawableList();
 				while (drawable != NULL)
 				{
-					if (drawable->isSelected() && drawable->getObject() && drawable->getObject()->isLocallyControlled())
+					if (drawable->isSelected() && drawable->getObject() && drawable->getObject()->canBeLocallyControlled())
 					{
 						newmsg->appendObjectIDArgument(drawable->getObject()->getID());
 					}

@@ -55,7 +55,7 @@ void ControlBar::populateBeacon( Object *beacon )
 	GameWindow *staticTextWin = TheWindowManager->winGetWindowFromId(NULL, staticTextID);
 	GameWindow *buttonWin = TheWindowManager->winGetWindowFromId(NULL, clearButtonID);
 
-	if (beacon->isLocallyControlled())
+	if (beacon->isLocallyOwned())
 	{
 		if (textEntryWin)
 		{
